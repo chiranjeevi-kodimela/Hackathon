@@ -1,0 +1,272 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum KycStatus {
+  VERIFIED
+  PENDING
+}
+
+enum AccountType {
+  CURRENT
+  SAVINGS
+}
+
+enum AccountStatus {
+  ACTIVE
+  DORMANT
+  CLOSED
+}
+
+enum TransactionType {
+  CREDIT
+  DEBIT
+  TRANSFER_OUT
+  TRANSFER_IN
+}
+
+model Customer {
+  customerId String    @id @db.VarChar(20)
+  firstName  String    @db.VarChar(80)
+  lastName   String    @db.VarChar(80)
+  email      String    @unique @db.VarChar(150)
+  phone      String    @db.VarChar(20)
+  kycStatus  KycStatus
+  createdAt  DateTime  @db.DateTime(3)
+
+  accounts Account[]
+
+  @@map("customers")
+}
+
+model Account {
+  accountId      String        @id @db.VarChar(64)
+  customerId     String        @db.VarChar(20)
+  accountType    AccountType
+  status         AccountStatus
+  currency       String        @default("INR") @db.VarChar(3)
+  initialBalance Decimal       @db.Decimal(18, 2)
+  overdraftLimit Decimal       @default(0) @db.Decimal(18, 2)
+  openedAt       DateTime      @db.DateTime(3)
+
+  customer          Customer      @relation(fields: [customerId], references: [customerId], onDelete: Restrict)
+  transactions      Transaction[]
+  outgoingTransfers Transfer[]    @relation("SourceAccount")
+  incomingTransfers Transfer[]    @relation("DestinationAccount")
+  alerts            Alert[]
+
+  @@index([customerId])
+  @@index([status])
+  @@map("accounts")
+}
+
+model Merchant {
+  merchantId String @id @db.VarChar(20)
+  name       String @db.VarChar(120)
+  category   String @db.VarChar(50)
+  country    String @db.VarChar(2)
+  status     String @db.VarChar(30)
+
+  transactions Transaction[]
+
+  @@index([category])
+  @@map("merchants")
+}
+
+model Device {
+  deviceId        String  @id @db.VarChar(20)
+  deviceType      String  @db.VarChar(50)
+  operatingSystem String  @db.VarChar(80)
+  trusted         Boolean @default(false)
+
+  transactions Transaction[]
+
+  @@map("devices")
+}
+
+model Transaction {
+  transactionId String          @id @db.VarChar(30)
+  accountId     String          @db.VarChar(64)
+  merchantId    String          @db.VarChar(20)
+  deviceId      String          @db.VarChar(20)
+  type          TransactionType
+  amount        Decimal         @db.Decimal(18, 2)
+  currency      String          @db.VarChar(3)
+  balanceBefore Decimal         @db.Decimal(18, 2)
+  balanceAfter  Decimal         @db.Decimal(18, 2)
+  status        String          @db.VarChar(30)
+  timestamp     DateTime        @db.DateTime(3)
+
+  account           Account    @relation(fields: [accountId], references: [accountId], onDelete: Restrict)
+  merchant          Merchant   @relation(fields: [merchantId], references: [merchantId], onDelete: Restrict)
+  device            Device     @relation(fields: [deviceId], references: [deviceId], onDelete: Restrict)
+  outgoingTransfers Transfer[] @relation("SourceTransaction")
+  incomingTransfers Transfer[] @relation("DestinationTransaction")
+  alerts            Alert[]
+
+  @@index([accountId, timestamp])
+  @@index([merchantId])
+  @@index([deviceId])
+  @@index([type])
+  @@index([timestamp])
+  @@map("transactions")
+}
+
+model Transfer {
+  transferId               String  @id @db.VarChar(30)
+  sourceAccountId          String  @db.VarChar(64)
+  destinationAccountId     String  @db.VarChar(64)
+  sourceTransactionId      String  @unique @db.VarChar(30)
+  destinationTransactionId String  @unique @db.VarChar(30)
+  amount                   Decimal @db.Decimal(18, 2)
+  status                   String  @db.VarChar(30)
+
+  sourceAccount      Account @relation("SourceAccount", fields: [sourceAccountId], references: [accountId], onDelete: Restrict)
+  destinationAccount Account @relation("DestinationAccount", fields: [destinationAccountId], references: [accountId], onDelete: Restrict)
+
+  sourceTransaction      Transaction @relation("SourceTransaction", fields: [sourceTransactionId], references: [transactionId], onDelete: Restrict)
+  destinationTransaction Transaction @relation("DestinationTransaction", fields: [destinationTransactionId], references: [transactionId], onDelete: Restrict)
+
+  @@index([sourceAccountId])
+  @@index([destinationAccountId])
+  @@map("transfers")
+}
+
+enum AlertSeverity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum AlertStatus {
+  OPEN
+  ESCALATED
+  DISMISSED
+  RESOLVED
+}
+
+enum CaseStatus {
+  OPEN
+  IN_REVIEW
+  ESCALATED
+  RESOLVED
+  CLOSED
+}
+
+enum AnalystActionType {
+  ESCALATE_ALERT
+  DISMISS_ALERT
+  RESOLVE_CASE
+  REOPEN_CASE
+  ADD_NOTE
+}
+
+model RiskRule {
+  ruleId      String   @id @db.VarChar(10)
+  name        String   @db.VarChar(120)
+  description String   @db.Text
+  points      Int
+  enabled     Boolean  @default(true)
+  createdAt   DateTime @default(now()) @db.DateTime(3)
+  updatedAt   DateTime @updatedAt @db.DateTime(3)
+
+  @@map("risk_rules")
+}
+
+model Alert {
+  alertId        String        @id @db.VarChar(30)
+  transactionId  String        @db.VarChar(30)
+  accountId      String        @db.VarChar(64)
+  riskScore      Int
+  severity       AlertSeverity
+  status         AlertStatus   @default(OPEN)
+  triggeredRules Json
+  createdAt      DateTime      @db.DateTime(3)
+
+  transaction    Transaction     @relation(fields: [transactionId], references: [transactionId], onDelete: Restrict)
+  account        Account         @relation(fields: [accountId], references: [accountId], onDelete: Restrict)
+  caseLinks      CaseAlert[]
+  analystActions AnalystAction[]
+
+  @@index([accountId])
+  @@index([severity, status])
+  @@index([riskScore])
+  @@index([createdAt])
+  @@map("alerts")
+}
+
+model RiskCase {
+  caseId      String        @id @db.VarChar(30)
+  title       String        @db.VarChar(150)
+  description String?       @db.Text
+  status      CaseStatus    @default(OPEN)
+  priority    AlertSeverity
+  assignedTo  String?       @db.VarChar(30)
+  createdAt   DateTime      @default(now()) @db.DateTime(3)
+  updatedAt   DateTime      @updatedAt @db.DateTime(3)
+  resolvedAt  DateTime?     @db.DateTime(3)
+
+  alerts  CaseAlert[]
+  actions AnalystAction[]
+
+  @@index([status])
+  @@index([priority])
+  @@index([assignedTo])
+  @@map("cases")
+}
+
+model CaseAlert {
+  caseId  String @db.VarChar(30)
+  alertId String @db.VarChar(30)
+
+  riskCase RiskCase        @relation(fields: [caseId], references: [caseId], onDelete: Restrict)
+  alert    Alert           @relation(fields: [alertId], references: [alertId], onDelete: Restrict)
+  actions  AnalystAction[]
+
+  @@id([caseId, alertId])
+  @@index([alertId])
+  @@map("case_alerts")
+}
+
+model AnalystAction {
+  actionId   String            @id @db.VarChar(30)
+  alertId    String?           @db.VarChar(30)
+  caseId     String?           @db.VarChar(30)
+  analystId  String            @db.VarChar(30)
+  actionType AnalystActionType
+  notes      String?           @db.Text
+  createdAt  DateTime          @default(now()) @db.DateTime(3)
+
+  riskCase         RiskCase?  @relation(fields: [caseId], references: [caseId], onDelete: Restrict)
+  alert            Alert?     @relation(fields: [alertId], references: [alertId], onDelete: Restrict)
+  caseAlert        CaseAlert? @relation(fields: [caseAlertCaseId, caseAlertAlertId], references: [caseId, alertId])
+  caseAlertCaseId  String?    @db.VarChar(30)
+  caseAlertAlertId String?    @db.VarChar(30)
+
+  @@index([alertId])
+  @@index([caseId])
+  @@index([analystId, createdAt])
+  @@map("analyst_actions")
+}
+
+model AuditEvent {
+  eventId    String   @id @db.VarChar(30)
+  entityType String   @db.VarChar(40)
+  entityId   String   @db.VarChar(64)
+  eventType  String   @db.VarChar(60)
+  actorId    String   @db.VarChar(30)
+  details    Json?
+  createdAt  DateTime @default(now()) @db.DateTime(3)
+
+  @@index([entityType, entityId])
+  @@index([actorId, createdAt])
+  @@index([createdAt])
+  @@map("audit_events")
+}
