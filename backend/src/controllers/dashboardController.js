@@ -1,8 +1,8 @@
-import { getDashboardMetrics } from "../services/dataService.js";
+import { getDashboardMetrics } from "../services/dashboardService.js";
 
-export function getDashboard(req, res, next) {
+export async function getDashboard(req, res, next) {
   try {
-    const metrics = getDashboardMetrics();
+    const metrics = await getDashboardMetrics();
 
     res.status(200).json({
       success: true,

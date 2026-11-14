@@ -1,6 +1,6 @@
 import { getCustomers, getCustomerById } from "../services/customerService.js";
 
-export function listCustomers(req, res, next) {
+export async function listCustomers(req, res, next) {
   try {
     const page = Number.parseInt(req.query.page ?? "1", 10);
     const limit = Number.parseInt(req.query.limit ?? "10", 10);
@@ -23,7 +23,19 @@ export function listCustomers(req, res, next) {
       });
     }
 
-    const result = getCustomers({ page, limit, search, kycStatus });
+    if (kycStatus && !["VERIFIED", "PENDING"].includes(kycStatus)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid KYC status",
+      });
+    }
+
+    const result = await getCustomers({
+      page,
+      limit,
+      search,
+      kycStatus,
+    });
 
     res.status(200).json({
       success: true,
@@ -35,9 +47,9 @@ export function listCustomers(req, res, next) {
   }
 }
 
-export function showCustomer(req, res, next) {
+export async function showCustomer(req, res, next) {
   try {
-    const customer = getCustomerById(req.params.customerId);
+    const customer = await getCustomerById(req.params.customerId);
 
     if (!customer) {
       return res.status(404).json({

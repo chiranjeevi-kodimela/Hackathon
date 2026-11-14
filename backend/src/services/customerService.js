@@ -1,52 +1,49 @@
-import { getDataset } from "./dataService.js";
+import prisma from "../config/prisma.js";
 
-export function getCustomers({
+export async function getCustomers({
   page = 1,
   limit = 10,
   search = "",
   kycStatus = "",
 }) {
-  let customers = getDataset("customers");
+  const where = {};
 
   if (search) {
-    const term = search.toLowerCase();
-
-    customers = customers.filter((customer) =>
-      [
-        customer.customerId,
-        customer.firstName,
-        customer.lastName,
-        customer.email,
-      ]
-        .join(" ")
-        .toLowerCase()
-        .includes(term),
-    );
+    where.OR = [
+      { customerId: { contains: search } },
+      { firstName: { contains: search } },
+      { lastName: { contains: search } },
+      { email: { contains: search } },
+    ];
   }
 
   if (kycStatus) {
-    customers = customers.filter(
-      (customer) => customer.kycStatus === kycStatus,
-    );
+    where.kycStatus = kycStatus;
   }
 
-  const total = customers.length;
-  const totalPages = Math.ceil(total / limit);
-  const startIndex = (page - 1) * limit;
+  const [customers, total] = await Promise.all([
+    prisma.customer.findMany({
+      where,
+      skip: (page - 1) * limit,
+      take: limit,
+      orderBy: { customerId: "asc" },
+    }),
+    prisma.customer.count({ where }),
+  ]);
 
   return {
-    customers: customers.slice(startIndex, startIndex + limit),
+    customers,
     pagination: {
       page,
       limit,
       total,
-      totalPages,
+      totalPages: Math.ceil(total / limit),
     },
   };
 }
 
-export function getCustomerById(customerId) {
-  return getDataset("customers").find(
-    (customer) => customer.customerId === customerId,
-  );
+export async function getCustomerById(customerId) {
+  return prisma.customer.findUnique({
+    where: { customerId },
+  });
 }
