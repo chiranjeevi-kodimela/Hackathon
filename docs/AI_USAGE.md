@@ -9,7 +9,7 @@ verbatim historical prompts.
 
 All entries below are dated 2026-11-14 in the repository commit metadata.
 
-## Prompts reconstructed from commits
+## Prompts 
 
 | Commit |  AI prompt |
 |---|---|
