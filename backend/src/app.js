@@ -7,6 +7,7 @@ import dataRoutes from "./routes/dataRoutes.js";
 import customerRoutes from "./routes/customerRoutes.js";
 import accountRoutes from "./routes/accountRoutes.js";
 import transactionRoutes from "./routes/transactionRoutes.js";
+import alertRoutes from "./routes/alertRoutes.js";
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use("/api", dataRoutes);
 app.use("/api/customers", customerRoutes);
 app.use("/api/accounts", accountRoutes);
 app.use("/api/transactions", transactionRoutes);
+app.use("/api/alerts", alertRoutes);
 
 app.use("/api/health", healthRoutes);
 
