@@ -108,11 +108,11 @@ export default function Dashboard() {
         }
     }
 
-    if (loading) {
+    if (loading && !dashboard) {
         return <div className="page-state">Loading RiskLens dashboard...</div>;
     }
 
-    if (error) {
+    if (error && !dashboard) {
         return (
             <div className="page-state error-state">
                 <ShieldAlert size={30} />
@@ -126,14 +126,17 @@ export default function Dashboard() {
     }
 
     const totals = dashboard?.totals || {};
+    const risk = dashboard?.risk || {};
+    const transactionMetrics = dashboard?.transactions || {};
+    const accountMetrics = dashboard?.accounts || {};
 
     const severityData = toChartData(
-        dashboard?.severityDistribution,
+        risk.severityDistribution,
         "severity"
     );
 
     const transactionData = toChartData(
-        dashboard?.transactionTypeCounts,
+        transactionMetrics.typeDistribution,
         "type"
     );
 
@@ -144,6 +147,11 @@ export default function Dashboard() {
                     <div className="eyebrow">RISK OPERATIONS / OVERVIEW</div>
                     <h1>Dashboard</h1>
                     <p>Monitor transaction activity and financial risk signals.</p>
+                    {error && (
+                        <p className="dashboard-refresh-error" role="alert">
+                            Refresh failed: {error}. Showing the last loaded data.
+                        </p>
+                    )}
                 </div>
 
                 <button className="refresh-button" onClick={loadDashboard}>
@@ -176,7 +184,7 @@ export default function Dashboard() {
                 <MetricCard
                     title="Risk Alerts"
                     value={totals.alerts?.toLocaleString("en-IN")}
-                    subtitle={`${dashboard?.highRiskAlerts ?? 0} high-risk alerts`}
+                    subtitle={`${risk.highRiskAlerts ?? 0} high-risk alerts`}
                     icon={ShieldAlert}
                 />
             </div>
@@ -277,12 +285,12 @@ export default function Dashboard() {
 
                     <div className="summary-row">
                         <span>High-risk alerts</span>
-                        <strong>{dashboard?.highRiskAlerts ?? 0}</strong>
+                        <strong>{risk.highRiskAlerts ?? 0}</strong>
                     </div>
 
                     <div className="summary-row">
                         <span>Average risk score</span>
-                        <strong>{dashboard?.averageRiskScore ?? 0}</strong>
+                        <strong>{risk.averageRiskScore ?? 0}</strong>
                     </div>
 
                     <div className="summary-row">
@@ -293,7 +301,7 @@ export default function Dashboard() {
                     <div className="summary-row">
                         <span>Transaction amount</span>
                         <strong>
-                            ₹{Number(dashboard?.transactionAmount ?? 0).toLocaleString("en-IN")}
+                            ₹{Number(transactionMetrics.totalAmount ?? 0).toLocaleString("en-IN")}
                         </strong>
                     </div>
                 </div>
@@ -301,11 +309,15 @@ export default function Dashboard() {
                 <div className="panel status-panel">
                     <h3>Account status</h3>
 
-                    {Object.entries(dashboard?.accountStatuses || {}).map(
+                    {[
+                        ["ACTIVE", accountMetrics.active],
+                        ["DORMANT", accountMetrics.dormant],
+                        ["CLOSED", accountMetrics.closed],
+                    ].map(
                         ([status, count]) => (
                             <div className="summary-row" key={status}>
                                 <span>{status.replaceAll("_", " ")}</span>
-                                <strong>{count}</strong>
+                                <strong>{count ?? 0}</strong>
                             </div>
                         )
                     )}

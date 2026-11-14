@@ -235,6 +235,10 @@ button {
   margin: 7px 0 0;
 }
 
+.page-heading .dashboard-refresh-error {
+  color: var(--color-danger);
+}
+
 .refresh-button,
 .retry-button {
   display: flex;
