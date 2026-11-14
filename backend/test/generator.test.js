@@ -104,6 +104,33 @@ test("starter and full exports are deterministic and validate against ground tru
       fs.existsSync(path.join(firstOutput, "ground_truth", "ground_truth.csv")),
       "ground-truth CSV should be generated separately",
     );
+    assert.ok(
+      fs.existsSync(path.join(firstOutput, "generated", "exceptions.csv")),
+      "labelled exception records should be exported separately",
+    );
+    const exceptions = JSON.parse(
+      fs.readFileSync(
+        path.join(firstOutput, "generated", "exceptions.json"),
+        "utf8",
+      ),
+    );
+    assert.equal(exceptions.length, 5);
+    assert.ok(
+      exceptions.every(
+        (exception) =>
+          exception.issue_type &&
+          exception.expectedDecision &&
+          exception.records &&
+          exception.recordIds,
+      ),
+      "each exception should include linked records and its expected decision",
+    );
+    assert.equal(
+      exceptions.find(
+        (exception) => exception.issue_type === "TRANSFER_LEG_MISMATCH",
+      ).records.transfer.status,
+      "MISMATCHED",
+    );
 
     runNode(validator, firstOutput);
     const report = JSON.parse(

@@ -591,6 +591,8 @@ for (const [index, [accountId, items]] of groups.entries()) {
       actionId,
       alertId: alert.alertId,
       caseId,
+      caseAlertCaseId: caseId,
+      caseAlertAlertId: alert.alertId,
       analystId: "ANL-0001",
       actionType,
       notes,
@@ -608,66 +610,207 @@ for (const [index, [accountId, items]] of groups.entries()) {
   }
 }
 
-// 8. Negative scenarios kept outside valid baseline data
-groundTruth.knownExceptions = [
-  {
-    issue_type: "TRANSACTION_ON_CLOSED_ACCOUNT",
-    expectedOutcome: "REJECT_TRANSACTION",
-  },
-  {
-    issue_type: "NEGATIVE_BALANCE_WITHOUT_OVERDRAFT",
-    expectedOutcome: "FLAG_BALANCE_VIOLATION",
-  },
-  {
-    issue_type: "TRANSFER_LEG_MISMATCH",
-    expectedOutcome: "FLAG_RECONCILIATION_FAILURE",
-  },
-  {
-    issue_type: "ALERT_WITHOUT_TRANSACTION",
-    expectedOutcome: "FLAG_INVALID_ALERT",
-  },
-  {
-    issue_type: "CASE_DISPOSITION_PRECEDES_ALERT",
-    expectedOutcome: "REJECT_INVALID_LIFECYCLE",
-  },
-];
+// 8. Add complete, labelled edge-case records in a separate fixture collection.
+const closedAccount = accounts.find((account) => account.status === "CLOSED");
+if (!closedAccount || activeAccounts.length < 2) {
+  throw new Error("Exception fixtures require a closed account and two active accounts");
+}
+
+const exceptionTimestamp = new Date(timeCursor + 60_000).toISOString();
+const closedAccountTransaction = {
+  transactionId: "TXN-2026-90000001",
+  accountId: closedAccount.accountId,
+  merchantId: merchants[0].merchantId,
+  deviceId: devices[0].deviceId,
+  type: "DEBIT",
+  amount: 100,
+  currency: "INR",
+  balanceBefore: 1000,
+  balanceAfter: 1000,
+  status: "FAILED",
+  timestamp: exceptionTimestamp,
+};
+
+const negativeBalanceAccount = activeAccounts[0];
+const negativeBalanceTransaction = {
+  transactionId: "TXN-2026-90000002",
+  accountId: negativeBalanceAccount.accountId,
+  merchantId: merchants[0].merchantId,
+  deviceId: devices[0].deviceId,
+  type: "DEBIT",
+  amount: 200,
+  currency: "INR",
+  balanceBefore: 100,
+  balanceAfter: -100,
+  status: "COMPLETED",
+  timestamp: new Date(timeCursor + 120_000).toISOString(),
+};
+
+const transferSource = activeAccounts[0];
+const transferDestination = activeAccounts[1];
+const mismatchSourceTransaction = {
+  transactionId: "TXN-2026-90000003",
+  accountId: transferSource.accountId,
+  merchantId: merchants[0].merchantId,
+  deviceId: devices[0].deviceId,
+  type: "TRANSFER_OUT",
+  amount: 1000,
+  currency: "INR",
+  balanceBefore: 10_000,
+  balanceAfter: 9_000,
+  status: "COMPLETED",
+  timestamp: new Date(timeCursor + 180_000).toISOString(),
+};
+const mismatchDestinationTransaction = {
+  transactionId: "TXN-2026-90000004",
+  accountId: transferDestination.accountId,
+  merchantId: merchants[0].merchantId,
+  deviceId: devices[0].deviceId,
+  type: "TRANSFER_IN",
+  amount: 900,
+  currency: "INR",
+  balanceBefore: 10_000,
+  balanceAfter: 10_900,
+  status: "COMPLETED",
+  timestamp: new Date(timeCursor + 240_000).toISOString(),
+};
+
+const orphanAlertAccount = activeAccounts[1];
+const orphanAlert = {
+  alertId: "ALT-2026-900001",
+  transactionId: "TXN-2026-99999999",
+  accountId: orphanAlertAccount.accountId,
+  riskScore: 20,
+  severity: "LOW",
+  status: "OPEN",
+  triggeredRules: [
+    {
+      ruleId: "R001",
+      ruleName: "High Transaction Amount",
+      points: 20,
+      reason: "Transaction amount exceeds INR 100,000",
+    },
+  ],
+  createdAt: new Date(timeCursor + 300_000).toISOString(),
+};
+
+const dispositionSourceAlert = alerts[0];
+const dispositionAlertCreatedAt = new Date(
+  Date.parse(dispositionSourceAlert.createdAt) + 180_000,
+).toISOString();
+const dispositionCaseCreatedAt = new Date(
+  Date.parse(dispositionSourceAlert.createdAt) + 60_000,
+).toISOString();
+const earlyDispositionAt = new Date(
+  Date.parse(dispositionSourceAlert.createdAt) + 120_000,
+).toISOString();
+const dispositionAlert = {
+  ...dispositionSourceAlert,
+  alertId: "ALT-2026-900002",
+  status: "DISMISSED",
+  createdAt: dispositionAlertCreatedAt,
+};
+const dispositionCase = {
+  caseId: "CASE-2026-900001",
+  title: "Lifecycle exception fixture",
+  description: "Analyst disposition precedes this alert",
+  status: "OPEN",
+  priority: dispositionAlert.severity,
+  assignedTo: "ANL-0001",
+  createdAt: dispositionCaseCreatedAt,
+  updatedAt: earlyDispositionAt,
+  resolvedAt: null,
+};
+const earlyDispositionAction = {
+  actionId: "ACT-2026-900001",
+  alertId: dispositionAlert.alertId,
+  caseId: dispositionCase.caseId,
+  caseAlertCaseId: dispositionCase.caseId,
+  caseAlertAlertId: dispositionAlert.alertId,
+  analystId: "ANL-0001",
+  actionType: "DISMISS_ALERT",
+  notes: "Deliberately invalid fixture: disposition predates alert",
+  createdAt: earlyDispositionAt,
+};
 
 const exceptionRecords = [
   {
     exceptionId: "EXC-001",
     issue_type: "TRANSACTION_ON_CLOSED_ACCOUNT",
-    accountId: accounts.find((a) => a.status === "CLOSED")?.accountId,
+    expectedDecision: "REJECT_TRANSACTION",
     expectedOutcome: "REJECT_TRANSACTION",
+    recordIds: { transactionId: closedAccountTransaction.transactionId },
+    records: { transaction: closedAccountTransaction },
   },
   {
     exceptionId: "EXC-002",
     issue_type: "NEGATIVE_BALANCE_WITHOUT_OVERDRAFT",
-    balanceBefore: 100,
-    transactionAmount: 200,
-    balanceAfter: -100,
+    expectedDecision: "FLAG_BALANCE_VIOLATION",
     expectedOutcome: "FLAG_BALANCE_VIOLATION",
+    recordIds: { transactionId: negativeBalanceTransaction.transactionId },
+    records: { transaction: negativeBalanceTransaction },
   },
   {
     exceptionId: "EXC-003",
     issue_type: "TRANSFER_LEG_MISMATCH",
-    sourceAmount: 1000,
-    destinationAmount: 900,
+    expectedDecision: "FLAG_RECONCILIATION_FAILURE",
     expectedOutcome: "FLAG_RECONCILIATION_FAILURE",
+    recordIds: {
+      transferId: "TRF-9000001",
+      sourceTransactionId: mismatchSourceTransaction.transactionId,
+      destinationTransactionId: mismatchDestinationTransaction.transactionId,
+    },
+    records: {
+      transfer: {
+        transferId: "TRF-9000001",
+        sourceAccountId: transferSource.accountId,
+        destinationAccountId: transferDestination.accountId,
+        sourceTransactionId: mismatchSourceTransaction.transactionId,
+        destinationTransactionId: mismatchDestinationTransaction.transactionId,
+        amount: 1000,
+        status: "MISMATCHED",
+      },
+      sourceTransaction: mismatchSourceTransaction,
+      destinationTransaction: mismatchDestinationTransaction,
+    },
   },
   {
     exceptionId: "EXC-004",
     issue_type: "ALERT_WITHOUT_TRANSACTION",
-    transactionId: "TXN-2026-99999999",
+    expectedDecision: "REJECT_ALERT",
     expectedOutcome: "FLAG_INVALID_ALERT",
+    recordIds: { alertId: orphanAlert.alertId },
+    records: { alert: orphanAlert },
   },
   {
     exceptionId: "EXC-005",
     issue_type: "CASE_DISPOSITION_PRECEDES_ALERT",
-    dispositionAt: "2026-01-01T09:00:00.000Z",
-    alertCreatedAt: "2026-01-01T10:00:00.000Z",
+    expectedDecision: "REJECT_INVALID_LIFECYCLE",
     expectedOutcome: "REJECT_INVALID_LIFECYCLE",
+    recordIds: {
+      caseId: dispositionCase.caseId,
+      alertId: dispositionAlert.alertId,
+      actionId: earlyDispositionAction.actionId,
+    },
+    records: {
+      riskCase: dispositionCase,
+      alert: dispositionAlert,
+      caseAlert: {
+        caseId: dispositionCase.caseId,
+        alertId: dispositionAlert.alertId,
+      },
+      analystAction: earlyDispositionAction,
+    },
   },
 ];
+
+groundTruth.knownExceptions = exceptionRecords.map((exception) => ({
+  exceptionId: exception.exceptionId,
+  issue_type: exception.issue_type,
+  expectedDecision: exception.expectedDecision,
+  expectedOutcome: exception.expectedOutcome,
+  recordIds: exception.recordIds,
+}));
 
 // 9. Export
 saveJSON("generated", "customers.json", customers);
@@ -699,14 +842,12 @@ const groundTruthRows = [
   ...exceptionRecords.map((exception) => ({
     record_type: "KNOWN_EXCEPTION",
     issue_type: exception.issue_type,
+    exceptionId: exception.exceptionId,
+    entityIds: exception.recordIds,
     alertId: "",
-    transactionId:
-      exception.transactionId ??
-      exception.sourceTransactionId ??
-      exception.destinationTransactionId ??
-      "",
+    transactionId: exception.recordIds.transactionId ?? "",
     expectedLabel: "",
-    expectedDecision: "",
+    expectedDecision: exception.expectedDecision,
     expectedOutcome: exception.expectedOutcome,
     basis: "",
   })),
@@ -714,6 +855,8 @@ const groundTruthRows = [
 const groundTruthFields = [
   "record_type",
   "issue_type",
+  "exceptionId",
+  "entityIds",
   "alertId",
   "transactionId",
   "expectedLabel",
@@ -768,6 +911,7 @@ const sourceManifest = {
   sourceType: "Synthetic only; generated internally",
   externalSources: [],
   groundTruthPath: "../ground_truth/ground_truth.json",
+  exceptionPath: "exceptions.json",
 };
 saveJSON("generated", "source_manifest.json", sourceManifest);
 
@@ -814,6 +958,23 @@ for (const [name, [table, records]] of Object.entries(exportTables)) {
     }
   }
 }
+const exceptionCsvFields = [
+  "exceptionId",
+  "issue_type",
+  "expectedDecision",
+  "expectedOutcome",
+  "recordIds",
+  "records",
+];
+fs.writeFileSync(
+  path.join(DATA_DIR, "generated", "exceptions.csv"),
+  [
+    exceptionCsvFields.map(csvValue).join(","),
+    ...exceptionRecords.map((record) =>
+      exceptionCsvFields.map((field) => csvValue(record[field])).join(","),
+    ),
+  ].join("\n") + "\n",
+);
 sql += "SET FOREIGN_KEY_CHECKS = 1;\n";
 fs.writeFileSync(path.join(DATA_DIR, "generated", "seed.sql"), sql);
 

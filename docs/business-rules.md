@@ -37,7 +37,11 @@ rule basis and expected analyst decision.
 
 Known negative scenarios are represented in `exceptions.json` and the ground
 truth `knownExceptions` collection rather than corrupting otherwise valid
-baseline rows:
+baseline rows. Each labelled fixture now contains the complete relevant
+transaction/transfer/alert/case/action records and stable entity IDs, with
+valid parent IDs except for the deliberately broken relationship. The fixtures
+are exported to `exceptions.csv` for review but are excluded from baseline CSV
+tables and SQL seed inserts:
 
 - A closed-account transaction is rejected.
 - A negative balance without overdraft is flagged.
@@ -45,7 +49,11 @@ baseline rows:
 - An alert referencing no transaction is rejected.
 - A disposition earlier than the alert is rejected.
 
-These are labelled exception fixtures, not production input rows.
+These are labelled exception fixtures, not production input rows. The
+validator checks their record-level evidence, foreign-key exceptions, stable
+ID formats, lifecycle dates, and expected decisions separately from baseline
+integrity checks. Ground-truth CSV rows identify each fixture and its relevant
+entity IDs; labels remain separate from features.
 
 ## Cases, dispositions, and history
 

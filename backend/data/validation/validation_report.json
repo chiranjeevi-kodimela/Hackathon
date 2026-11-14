@@ -2,7 +2,7 @@
   "project": "RiskLens",
   "seed": 20261022,
   "scale": "full",
-  "validatedAt": "2026-11-14T12:38:15.526Z",
+  "validatedAt": "2026-11-14T12:49:01.680Z",
   "counts": {
     "customers": 5000,
     "accounts": 7000,
@@ -29,7 +29,7 @@
     "recallPercent": 100,
     "falsePositiveRatePercent": 0
   },
-  "checksPassed": 56,
+  "checksPassed": 60,
   "errorsFound": 0,
   "status": "PASSED",
   "checks": [
@@ -47,6 +47,7 @@
     "Cases: unique caseId values",
     "Analyst actions: unique actionId values",
     "Audit events: unique eventId values",
+    "IDs: all baseline IDs match deterministic formats and account ownership (0 invalid)",
     "Accounts: all customerId references exist (0 invalid)",
     "Account status events: all accountId references exist (0 invalid)",
     "Transactions: all accountId references exist (0 invalid)",
@@ -82,12 +83,15 @@
     "Ground truth: seed and scale match the generation manifest",
     "Source manifest: synthetic provenance and generation settings match",
     "Ground truth CSV: header and all alert/exception rows exported",
+    "Exception CSV: complete labelled fixtures are exported separately",
+    "SQL seed: invalid exception fixtures are excluded from baseline inserts",
     "Cases: valid, unique bridge rows and ordered dates (0 invalid)",
     "Cases: valid lifecycle and alert membership (0 invalid)",
     "Analyst actions: valid targets, transitions and dates (0 invalid)",
     "Audit events: valid entity references and timestamps (0 invalid)",
     "Alert-rule links: all and only triggered rules are materialized (1840 rows)",
-    "Exceptions: all five labelled negative scenarios are reproducible (5 valid)",
+    "Exceptions: all five labelled, linked negative scenarios are reproducible (5 valid; invalid: none)",
+    "Exceptions: fixture IDs are formatted, consistent, and isolated from baseline IDs (0 errors)",
     "Manifest: generated record counts match (0 mismatches)"
   ],
   "errors": []

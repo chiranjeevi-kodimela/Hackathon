@@ -47,7 +47,10 @@ override it. The health endpoint is `http://localhost:5000/api/health`.
 The generator is deterministic and uses seed `20261022` by default. It writes
 JSON, CSV, and MySQL SQL seed files under `backend/data/generated`, separate
 ground-truth CSV/JSON files under `backend/data/ground_truth`, and a provenance
-manifest.
+manifest. Five complete, labelled negative-scenario bundles are also exported
+as `backend/data/generated/exceptions.json` and `exceptions.csv`; they remain
+outside baseline table exports and SQL seed inserts so intentional integrity
+violations do not contaminate valid records.
 No external or personal data is used.
 
 ```powershell
@@ -77,6 +80,8 @@ planted labels and expected decisions. Validation reports counts, key/FK and
 lifecycle checks, account-balance and transfer reconciliation, and confusion
 matrix metrics derived from those labels. The metrics measure the planted
 scenarios only; they are not evidence of real-world fraud performance.
+Validation checks the separately labelled exception records, deterministic ID
+formats, expected decisions, and each scenario's linked records as well.
 
 ## Tests and checks
 

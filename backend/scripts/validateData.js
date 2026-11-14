@@ -56,6 +56,13 @@ function checkReferences(records, field, validIds, label) {
   );
 }
 
+function countInvalidIds(records, field, pattern) {
+  return records.filter(
+    (record) =>
+      typeof record[field] !== "string" || !pattern.test(record[field]),
+  ).length;
+}
+
 // Load generated datasets
 const customers = loadJSON(path.join(GENERATED_DIR, "customers.json"));
 const accounts = loadJSON(path.join(GENERATED_DIR, "accounts.json"));
@@ -70,6 +77,18 @@ const riskRules = loadJSON(path.join(GENERATED_DIR, "risk_rules.json"));
 const alerts = loadJSON(path.join(GENERATED_DIR, "alerts.json"));
 const alertRules = loadJSON(path.join(GENERATED_DIR, "alert_rules.json"));
 const exceptions = loadJSON(path.join(GENERATED_DIR, "exceptions.json"));
+const exceptionEntityIds = exceptions.flatMap((exception) => {
+  const records = exception.records || {};
+  return [
+    records.transaction?.transactionId,
+    records.sourceTransaction?.transactionId,
+    records.destinationTransaction?.transactionId,
+    records.transfer?.transferId,
+    records.alert?.alertId,
+    records.riskCase?.caseId,
+    records.analystAction?.actionId,
+  ].filter((id) => typeof id === "string");
+});
 const cases = loadJSON(path.join(GENERATED_DIR, "cases.json"));
 const caseAlerts = loadJSON(path.join(GENERATED_DIR, "case_alerts.json"));
 const analystActions = loadJSON(
@@ -119,6 +138,40 @@ checkUnique(exceptions, "exceptionId", "Exceptions");
 checkUnique(cases, "caseId", "Cases");
 checkUnique(analystActions, "actionId", "Analyst actions");
 checkUnique(auditEvents, "eventId", "Audit events");
+
+const accountIdPattern = /^ACC-(CUS-\d{6})-\d{2}$/;
+const invalidIdCounts = {
+  customers: countInvalidIds(customers, "customerId", /^CUS-\d{6}$/),
+  accounts: accounts.filter((account) => {
+    const match =
+      typeof account.accountId === "string"
+        ? account.accountId.match(accountIdPattern)
+        : null;
+    return !match || match[1] !== account.customerId;
+  }).length,
+  merchants: countInvalidIds(merchants, "merchantId", /^MER-\d{5}$/),
+  devices: countInvalidIds(devices, "deviceId", /^DEV-\d{5}$/),
+  transactions: countInvalidIds(
+    transactions,
+    "transactionId",
+    /^TXN-2026-\d{8}$/,
+  ),
+  transfers: countInvalidIds(transfers, "transferId", /^TRF-\d{7}$/),
+  riskRules: countInvalidIds(riskRules, "ruleId", /^R\d{3}$/),
+  alerts: countInvalidIds(alerts, "alertId", /^ALT-2026-\d{6}$/),
+  cases: countInvalidIds(cases, "caseId", /^CASE-2026-\d{6}$/),
+  actions: countInvalidIds(analystActions, "actionId", /^ACT-2026-\d{6}$/),
+  statusEvents: countInvalidIds(
+    accountStatusEvents,
+    "eventId",
+    /^ASE-2026-\d{6}$/,
+  ),
+  auditEvents: countInvalidIds(auditEvents, "eventId", /^AUD-2026-\d{6}$/),
+};
+check(
+  Object.values(invalidIdCounts).every((count) => count === 0),
+  `IDs: all baseline IDs match deterministic formats and account ownership (${Object.values(invalidIdCounts).reduce((sum, count) => sum + count, 0)} invalid)`,
+);
 
 // 2. Foreign key integrity
 checkReferences(accounts, "customerId", customerIds, "Accounts");
@@ -492,7 +545,20 @@ const missingExceptionTypes = expectedExceptionTypes.filter(
 );
 
 const invalidGroundTruthExceptions = expectedExceptionTypes.filter(
-  (type) => !knownExceptions.some((item) => item.issue_type === type),
+  (type) =>
+    !knownExceptions.some((item) => item.issue_type === type) ||
+    !exceptions.some((item) => {
+      const truth = knownExceptions.find(
+        (known) => known.issue_type === type,
+      );
+      return (
+        item.issue_type === type &&
+        item.exceptionId === truth?.exceptionId &&
+        item.expectedDecision === truth?.expectedDecision &&
+        item.expectedOutcome === truth?.expectedOutcome &&
+        JSON.stringify(item.recordIds) === JSON.stringify(truth?.recordIds)
+      );
+    }),
 );
 
 check(
@@ -514,6 +580,7 @@ check(
   sourceManifest.seed === manifest.seed &&
     sourceManifest.scale === manifest.scale &&
     sourceManifest.sourceType === "Synthetic only; generated internally" &&
+    sourceManifest.exceptionPath === "exceptions.json" &&
     Array.isArray(sourceManifest.externalSources) &&
     sourceManifest.externalSources.length === 0,
   "Source manifest: synthetic provenance and generation settings match",
@@ -525,10 +592,28 @@ const groundTruthCsvLines = groundTruthCsvExists
 check(
   groundTruthCsvExists &&
     groundTruthCsvLines[0] ===
-      '"record_type","issue_type","alertId","transactionId","expectedLabel","expectedDecision","expectedOutcome","basis"' &&
+      '"record_type","issue_type","exceptionId","entityIds","alertId","transactionId","expectedLabel","expectedDecision","expectedOutcome","basis"' &&
     groundTruthCsvLines.length ===
       labels.length + exceptions.length + 1,
   "Ground truth CSV: header and all alert/exception rows exported",
+);
+const exceptionCsvPath = path.join(GENERATED_DIR, "exceptions.csv");
+const exceptionCsvLines = fs.existsSync(exceptionCsvPath)
+  ? fs.readFileSync(exceptionCsvPath, "utf8").trimEnd().split(/\r?\n/)
+  : [];
+check(
+  exceptionCsvLines.length === exceptions.length + 1 &&
+    exceptionCsvLines[0] ===
+      '"exceptionId","issue_type","expectedDecision","expectedOutcome","recordIds","records"',
+  "Exception CSV: complete labelled fixtures are exported separately",
+);
+const sqlSeed = fs.existsSync(path.join(GENERATED_DIR, "seed.sql"))
+  ? fs.readFileSync(path.join(GENERATED_DIR, "seed.sql"), "utf8")
+  : "";
+check(
+  exceptions.every((exception) => !sqlSeed.includes(exception.exceptionId)) &&
+    exceptionEntityIds.every((id) => !sqlSeed.includes(id)),
+  "SQL seed: invalid exception fixtures are excluded from baseline inserts",
 );
 
 // 8. Case, disposition and audit lifecycle validation
@@ -579,6 +664,10 @@ for (const action of analystActions) {
     (action.caseId &&
       action.alertId &&
       !caseAlertKeys.has(`${action.caseId}|${action.alertId}`)) ||
+    (action.caseId &&
+      action.alertId &&
+      (action.caseAlertCaseId !== action.caseId ||
+        action.caseAlertAlertId !== action.alertId)) ||
     (alert && Date.parse(action.createdAt) < Date.parse(alert.createdAt)) ||
     (action.actionType === "DISMISS_ALERT" && alert?.status !== "DISMISSED") ||
     (action.actionType === "ESCALATE_ALERT" && alert?.status !== "ESCALATED")
@@ -621,29 +710,158 @@ check(
 );
 
 const expectedExceptionChecks = exceptions.filter((item) => {
+  const record = item.records || {};
   if (item.issue_type === "TRANSACTION_ON_CLOSED_ACCOUNT") {
-    return accountMap.get(item.accountId)?.status === "CLOSED";
+    const transaction = record.transaction;
+    const account = accountMap.get(transaction?.accountId);
+    return (
+      account?.status === "CLOSED" &&
+      merchantIds.has(transaction?.merchantId) &&
+      deviceIds.has(transaction?.deviceId) &&
+      transaction?.type === "DEBIT" &&
+      transaction?.status === "FAILED" &&
+      transaction?.balanceBefore === transaction?.balanceAfter &&
+      item.expectedDecision === "REJECT_TRANSACTION"
+    );
   }
   if (item.issue_type === "NEGATIVE_BALANCE_WITHOUT_OVERDRAFT") {
+    const transaction = record.transaction;
+    const account = accountMap.get(transaction?.accountId);
     return (
-      item.balanceBefore - item.transactionAmount === item.balanceAfter &&
-      item.balanceAfter < 0
+      account?.status === "ACTIVE" &&
+      merchantIds.has(transaction?.merchantId) &&
+      deviceIds.has(transaction?.deviceId) &&
+      transaction?.type === "DEBIT" &&
+      transaction.balanceBefore - transaction.amount ===
+        transaction.balanceAfter &&
+      transaction.balanceAfter < -account.overdraftLimit &&
+      item.expectedDecision === "FLAG_BALANCE_VIOLATION"
     );
   }
   if (item.issue_type === "TRANSFER_LEG_MISMATCH") {
-    return item.sourceAmount !== item.destinationAmount;
+    const transfer = record.transfer;
+    const source = record.sourceTransaction;
+    const destination = record.destinationTransaction;
+    return (
+      transfer?.status === "MISMATCHED" &&
+      transfer.sourceAccountId === source?.accountId &&
+      transfer.destinationAccountId === destination?.accountId &&
+      accountIds.has(transfer.sourceAccountId) &&
+      accountIds.has(transfer.destinationAccountId) &&
+      transfer.sourceTransactionId === source?.transactionId &&
+      transfer.destinationTransactionId === destination?.transactionId &&
+      source?.type === "TRANSFER_OUT" &&
+      destination?.type === "TRANSFER_IN" &&
+      source.amount === transfer.amount &&
+      destination.amount !== transfer.amount &&
+      source.balanceBefore - source.amount === source.balanceAfter &&
+      destination.balanceBefore + destination.amount ===
+        destination.balanceAfter &&
+      item.expectedDecision === "FLAG_RECONCILIATION_FAILURE"
+    );
   }
   if (item.issue_type === "ALERT_WITHOUT_TRANSACTION") {
-    return !transactionIds.has(item.transactionId);
+    const alert = record.alert;
+    return (
+      !transactionIds.has(alert?.transactionId) &&
+      !exceptions.some((other) =>
+        [
+          other.records?.transaction,
+          other.records?.sourceTransaction,
+          other.records?.destinationTransaction,
+        ].some((transaction) => transaction?.transactionId === alert?.transactionId),
+      ) &&
+      accountIds.has(alert?.accountId) &&
+      alert?.triggeredRules?.every((rule) => riskRuleIds.has(rule.ruleId)) &&
+      item.expectedDecision === "REJECT_ALERT"
+    );
   }
   if (item.issue_type === "CASE_DISPOSITION_PRECEDES_ALERT") {
-    return Date.parse(item.dispositionAt) < Date.parse(item.alertCreatedAt);
+    const alert = record.alert;
+    const riskCase = record.riskCase;
+    const action = record.analystAction;
+    const transaction = transactionMap.get(alert?.transactionId);
+    return (
+      transaction?.accountId === alert?.accountId &&
+      record.caseAlert?.caseId === riskCase?.caseId &&
+      record.caseAlert?.alertId === alert?.alertId &&
+      action?.caseId === riskCase?.caseId &&
+      action?.alertId === alert?.alertId &&
+      Date.parse(riskCase?.createdAt) <= Date.parse(action?.createdAt) &&
+      Date.parse(action?.createdAt) < Date.parse(alert?.createdAt) &&
+      item.expectedDecision === "REJECT_INVALID_LIFECYCLE"
+    );
   }
   return false;
 });
+const invalidExceptionScenarios = exceptions
+  .filter((item) => !expectedExceptionChecks.includes(item))
+  .map((item) => item.issue_type);
 check(
   expectedExceptionChecks.length === expectedExceptionTypes.length,
-  `Exceptions: all five labelled negative scenarios are reproducible (${expectedExceptionChecks.length} valid)`,
+  `Exceptions: all five labelled, linked negative scenarios are reproducible (${expectedExceptionChecks.length} valid; invalid: ${invalidExceptionScenarios.join(", ") || "none"})`,
+);
+const fixtureIdPatterns = exceptions.flatMap((exception) => {
+  const records = exception.records || {};
+  const candidates = [
+    [records.transaction, "transactionId", /^TXN-2026-\d{8}$/],
+    [records.sourceTransaction, "transactionId", /^TXN-2026-\d{8}$/],
+    [records.destinationTransaction, "transactionId", /^TXN-2026-\d{8}$/],
+    [records.transfer, "transferId", /^TRF-\d{7}$/],
+    [records.alert, "alertId", /^ALT-2026-\d{6}$/],
+    [records.riskCase, "caseId", /^CASE-2026-\d{6}$/],
+    [records.analystAction, "actionId", /^ACT-2026-\d{6}$/],
+  ];
+  return candidates.filter(
+    ([entity, field, pattern]) =>
+      entity && (typeof entity[field] !== "string" || !pattern.test(entity[field])),
+  );
+});
+const fixtureRecordIdErrors = exceptions.filter((exception) => {
+  const recordIds = exception.recordIds || {};
+  const records = exception.records || {};
+  const expectedIds = {
+    TRANSACTION_ON_CLOSED_ACCOUNT: {
+      transactionId: records.transaction?.transactionId,
+    },
+    NEGATIVE_BALANCE_WITHOUT_OVERDRAFT: {
+      transactionId: records.transaction?.transactionId,
+    },
+    TRANSFER_LEG_MISMATCH: {
+      transferId: records.transfer?.transferId,
+      sourceTransactionId: records.sourceTransaction?.transactionId,
+      destinationTransactionId: records.destinationTransaction?.transactionId,
+    },
+    ALERT_WITHOUT_TRANSACTION: { alertId: records.alert?.alertId },
+    CASE_DISPOSITION_PRECEDES_ALERT: {
+      caseId: records.riskCase?.caseId,
+      alertId: records.alert?.alertId,
+      actionId: records.analystAction?.actionId,
+    },
+  }[exception.issue_type];
+  return (
+    !/^EXC-\d{3}$/.test(exception.exceptionId || "") ||
+    !expectedIds ||
+    Object.keys(expectedIds).length !== Object.keys(recordIds).length ||
+    Object.entries(expectedIds).some(([field, id]) => recordIds[field] !== id)
+  );
+});
+const baselineEntityIds = new Set([
+  ...customerIds,
+  ...accountIds,
+  ...merchantIds,
+  ...deviceIds,
+  ...transactionIds,
+  ...alertIds,
+  ...caseIds,
+  ...new Set(transfers.map((item) => item.transferId)),
+  ...new Set(analystActions.map((item) => item.actionId)),
+]);
+check(
+  fixtureIdPatterns.length === 0 &&
+    fixtureRecordIdErrors.length === 0 &&
+    exceptionEntityIds.every((id) => !baselineEntityIds.has(id)),
+  `Exceptions: fixture IDs are formatted, consistent, and isolated from baseline IDs (${fixtureIdPatterns.length + fixtureRecordIdErrors.length} errors)`,
 );
 
 // 9. Manifest count validation and ground-truth evaluation metrics
