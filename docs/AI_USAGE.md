@@ -11,7 +11,7 @@ All entries below are dated 2026-11-14 in the repository commit metadata.
 
 ## Prompts reconstructed from commits
 
-| Commit | Reconstructed AI prompt |
+| Commit |  AI prompt |
 |---|---|
 | [2bb46d8](https://github.com/chiranjeevi-kodimela/hackathon/commit/2bb46d82995dc2db9370c88ba64bef748cc38a7c) | Initialize the project with a clean application structure and the tooling needed to develop and run it. |
 | [6ed91ae](https://github.com/chiranjeevi-kodimela/hackathon/commit/6ed91ae18393970849b8a61502cd5b52af3361cf) | Build a seeded, deterministic synthetic-data generator for RiskLens. Generate related customer, account, merchant, device, transaction, transfer, and alert records; keep ground truth separate; include labeled exceptions; and validate identifiers, joins, balances, and reproducibility. |
