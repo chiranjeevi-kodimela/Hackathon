@@ -7,6 +7,7 @@ import "./styles/global.css";
 import Accounts from "./pages/Accounts";
 import Transactions from "./pages/Transactions";
 import Alerts from "./pages/Alerts";
+import Cases from "./pages/Cases";
 
 function AppLayout() {
   return (
@@ -31,6 +32,7 @@ function AppLayout() {
             <Route path="/accounts" element={<Accounts />} />
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/alerts" element={<Alerts />} />
+            <Route path="/cases" element={<Cases />} />
             
           </Routes>
         </div>
