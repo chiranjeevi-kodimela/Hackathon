@@ -15,6 +15,7 @@
     "start": "node src/server.js",
     "generate:starter": "node scripts/generateData.js --scale=starter",
     "generate:full": "node scripts/generateData.js --scale=full",
-    "validate": "node scripts/validateData.js"
+    "validate": "node scripts/validateData.js",
+    "seed": "node scripts/seedDatabase.js"
   }
 }
