@@ -1,0 +1,36 @@
+[
+  {
+    "exceptionId": "EXC-001",
+    "issue_type": "TRANSACTION_ON_CLOSED_ACCOUNT",
+    "accountId": "ACC-CUS-000052-01",
+    "expectedOutcome": "REJECT_TRANSACTION"
+  },
+  {
+    "exceptionId": "EXC-002",
+    "issue_type": "NEGATIVE_BALANCE_WITHOUT_OVERDRAFT",
+    "balanceBefore": 100,
+    "transactionAmount": 200,
+    "balanceAfter": -100,
+    "expectedOutcome": "FLAG_BALANCE_VIOLATION"
+  },
+  {
+    "exceptionId": "EXC-003",
+    "issue_type": "TRANSFER_LEG_MISMATCH",
+    "sourceAmount": 1000,
+    "destinationAmount": 900,
+    "expectedOutcome": "FLAG_RECONCILIATION_FAILURE"
+  },
+  {
+    "exceptionId": "EXC-004",
+    "issue_type": "ALERT_WITHOUT_TRANSACTION",
+    "transactionId": "TXN-2026-99999999",
+    "expectedOutcome": "FLAG_INVALID_ALERT"
+  },
+  {
+    "exceptionId": "EXC-005",
+    "issue_type": "CASE_DISPOSITION_PRECEDES_ALERT",
+    "dispositionAt": "2026-01-01T09:00:00.000Z",
+    "alertCreatedAt": "2026-01-01T10:00:00.000Z",
+    "expectedOutcome": "REJECT_INVALID_LIFECYCLE"
+  }
+]

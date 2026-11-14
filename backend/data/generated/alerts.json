@@ -1,0 +1,208 @@
+[
+  {
+    "alertId": "ALT-2026-000001",
+    "transactionId": "TXN-2026-00000001",
+    "accountId": "ACC-CUS-000001-02",
+    "riskScore": 40,
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      },
+      {
+        "ruleId": "R003",
+        "ruleName": "New Device Activity",
+        "points": 20,
+        "reason": "Transaction initiated from a new device"
+      }
+    ],
+    "createdAt": "2026-01-01T00:10:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000002",
+    "transactionId": "TXN-2026-00000002",
+    "accountId": "ACC-CUS-000002-01",
+    "riskScore": 55,
+    "severity": "HIGH",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      },
+      {
+        "ruleId": "R005",
+        "ruleName": "Circular Fund Transfer",
+        "points": 35,
+        "reason": "Circular fund transfer pattern detected"
+      }
+    ],
+    "createdAt": "2026-01-01T00:25:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000003",
+    "transactionId": "TXN-2026-00000003",
+    "accountId": "ACC-CUS-000003-01",
+    "riskScore": 20,
+    "severity": "LOW",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      }
+    ],
+    "createdAt": "2026-01-01T00:28:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000004",
+    "transactionId": "TXN-2026-00000004",
+    "accountId": "ACC-CUS-000003-02",
+    "riskScore": 45,
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      },
+      {
+        "ruleId": "R002",
+        "ruleName": "High Transaction Velocity",
+        "points": 25,
+        "reason": "Five or more transactions within 10 minutes"
+      }
+    ],
+    "createdAt": "2026-01-01T00:37:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000005",
+    "transactionId": "TXN-2026-00000005",
+    "accountId": "ACC-CUS-000004-01",
+    "riskScore": 20,
+    "severity": "LOW",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      }
+    ],
+    "createdAt": "2026-01-01T00:48:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000006",
+    "transactionId": "TXN-2026-00000006",
+    "accountId": "ACC-CUS-000005-01",
+    "riskScore": 55,
+    "severity": "HIGH",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      },
+      {
+        "ruleId": "R005",
+        "ruleName": "Circular Fund Transfer",
+        "points": 35,
+        "reason": "Circular fund transfer pattern detected"
+      }
+    ],
+    "createdAt": "2026-01-01T01:02:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000007",
+    "transactionId": "TXN-2026-00000007",
+    "accountId": "ACC-CUS-000006-01",
+    "riskScore": 20,
+    "severity": "LOW",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      }
+    ],
+    "createdAt": "2026-01-01T01:05:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000008",
+    "transactionId": "TXN-2026-00000008",
+    "accountId": "ACC-CUS-000006-02",
+    "riskScore": 45,
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      },
+      {
+        "ruleId": "R002",
+        "ruleName": "High Transaction Velocity",
+        "points": 25,
+        "reason": "Five or more transactions within 10 minutes"
+      }
+    ],
+    "createdAt": "2026-01-01T01:16:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000009",
+    "transactionId": "TXN-2026-00000009",
+    "accountId": "ACC-CUS-000007-01",
+    "riskScore": 40,
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      },
+      {
+        "ruleId": "R003",
+        "ruleName": "New Device Activity",
+        "points": 20,
+        "reason": "Transaction initiated from a new device"
+      }
+    ],
+    "createdAt": "2026-01-01T01:22:00.000Z"
+  },
+  {
+    "alertId": "ALT-2026-000010",
+    "transactionId": "TXN-2026-00000010",
+    "accountId": "ACC-CUS-000008-01",
+    "riskScore": 20,
+    "severity": "LOW",
+    "status": "OPEN",
+    "triggeredRules": [
+      {
+        "ruleId": "R001",
+        "ruleName": "High Transaction Amount",
+        "points": 20,
+        "reason": "Transaction amount exceeds ₹1,00,000"
+      }
+    ],
+    "createdAt": "2026-01-01T01:23:00.000Z"
+  }
+]

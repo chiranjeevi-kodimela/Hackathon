@@ -1,0 +1,812 @@
+[
+  {
+    "transferId": "TRF-0000001",
+    "sourceAccountId": "ACC-CUS-000069-01",
+    "destinationAccountId": "ACC-CUS-000016-01",
+    "sourceTransactionId": "TXN-2026-00000011",
+    "destinationTransactionId": "TXN-2026-00000012",
+    "amount": 1313,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000002",
+    "sourceAccountId": "ACC-CUS-000011-01",
+    "destinationAccountId": "ACC-CUS-000026-01",
+    "sourceTransactionId": "TXN-2026-00000022",
+    "destinationTransactionId": "TXN-2026-00000023",
+    "amount": 544,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000003",
+    "sourceAccountId": "ACC-CUS-000092-01",
+    "destinationAccountId": "ACC-CUS-000028-02",
+    "sourceTransactionId": "TXN-2026-00000033",
+    "destinationTransactionId": "TXN-2026-00000034",
+    "amount": 4806,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000004",
+    "sourceAccountId": "ACC-CUS-000008-01",
+    "destinationAccountId": "ACC-CUS-000093-01",
+    "sourceTransactionId": "TXN-2026-00000044",
+    "destinationTransactionId": "TXN-2026-00000045",
+    "amount": 1906,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000005",
+    "sourceAccountId": "ACC-CUS-000048-01",
+    "destinationAccountId": "ACC-CUS-000005-01",
+    "sourceTransactionId": "TXN-2026-00000055",
+    "destinationTransactionId": "TXN-2026-00000056",
+    "amount": 2491,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000006",
+    "sourceAccountId": "ACC-CUS-000100-01",
+    "destinationAccountId": "ACC-CUS-000095-01",
+    "sourceTransactionId": "TXN-2026-00000066",
+    "destinationTransactionId": "TXN-2026-00000067",
+    "amount": 4777,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000007",
+    "sourceAccountId": "ACC-CUS-000026-01",
+    "destinationAccountId": "ACC-CUS-000042-01",
+    "sourceTransactionId": "TXN-2026-00000077",
+    "destinationTransactionId": "TXN-2026-00000078",
+    "amount": 3118,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000008",
+    "sourceAccountId": "ACC-CUS-000079-01",
+    "destinationAccountId": "ACC-CUS-000017-01",
+    "sourceTransactionId": "TXN-2026-00000088",
+    "destinationTransactionId": "TXN-2026-00000089",
+    "amount": 3429,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000009",
+    "sourceAccountId": "ACC-CUS-000002-01",
+    "destinationAccountId": "ACC-CUS-000088-01",
+    "sourceTransactionId": "TXN-2026-00000099",
+    "destinationTransactionId": "TXN-2026-00000100",
+    "amount": 124,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000010",
+    "sourceAccountId": "ACC-CUS-000043-01",
+    "destinationAccountId": "ACC-CUS-000086-02",
+    "sourceTransactionId": "TXN-2026-00000110",
+    "destinationTransactionId": "TXN-2026-00000111",
+    "amount": 1174,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000011",
+    "sourceAccountId": "ACC-CUS-000088-02",
+    "destinationAccountId": "ACC-CUS-000047-01",
+    "sourceTransactionId": "TXN-2026-00000121",
+    "destinationTransactionId": "TXN-2026-00000122",
+    "amount": 2456,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000012",
+    "sourceAccountId": "ACC-CUS-000003-02",
+    "destinationAccountId": "ACC-CUS-000096-02",
+    "sourceTransactionId": "TXN-2026-00000132",
+    "destinationTransactionId": "TXN-2026-00000133",
+    "amount": 4278,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000013",
+    "sourceAccountId": "ACC-CUS-000042-01",
+    "destinationAccountId": "ACC-CUS-000100-01",
+    "sourceTransactionId": "TXN-2026-00000143",
+    "destinationTransactionId": "TXN-2026-00000144",
+    "amount": 3560,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000014",
+    "sourceAccountId": "ACC-CUS-000073-02",
+    "destinationAccountId": "ACC-CUS-000029-01",
+    "sourceTransactionId": "TXN-2026-00000154",
+    "destinationTransactionId": "TXN-2026-00000155",
+    "amount": 1152,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000015",
+    "sourceAccountId": "ACC-CUS-000086-02",
+    "destinationAccountId": "ACC-CUS-000044-01",
+    "sourceTransactionId": "TXN-2026-00000165",
+    "destinationTransactionId": "TXN-2026-00000166",
+    "amount": 4083,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000016",
+    "sourceAccountId": "ACC-CUS-000073-02",
+    "destinationAccountId": "ACC-CUS-000013-01",
+    "sourceTransactionId": "TXN-2026-00000176",
+    "destinationTransactionId": "TXN-2026-00000177",
+    "amount": 3901,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000017",
+    "sourceAccountId": "ACC-CUS-000023-01",
+    "destinationAccountId": "ACC-CUS-000045-01",
+    "sourceTransactionId": "TXN-2026-00000187",
+    "destinationTransactionId": "TXN-2026-00000188",
+    "amount": 436,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000018",
+    "sourceAccountId": "ACC-CUS-000075-01",
+    "destinationAccountId": "ACC-CUS-000013-02",
+    "sourceTransactionId": "TXN-2026-00000198",
+    "destinationTransactionId": "TXN-2026-00000199",
+    "amount": 2812,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000019",
+    "sourceAccountId": "ACC-CUS-000043-02",
+    "destinationAccountId": "ACC-CUS-000003-01",
+    "sourceTransactionId": "TXN-2026-00000209",
+    "destinationTransactionId": "TXN-2026-00000210",
+    "amount": 879,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000020",
+    "sourceAccountId": "ACC-CUS-000033-02",
+    "destinationAccountId": "ACC-CUS-000086-01",
+    "sourceTransactionId": "TXN-2026-00000220",
+    "destinationTransactionId": "TXN-2026-00000221",
+    "amount": 2026,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000021",
+    "sourceAccountId": "ACC-CUS-000031-01",
+    "destinationAccountId": "ACC-CUS-000057-01",
+    "sourceTransactionId": "TXN-2026-00000231",
+    "destinationTransactionId": "TXN-2026-00000232",
+    "amount": 4948,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000022",
+    "sourceAccountId": "ACC-CUS-000033-02",
+    "destinationAccountId": "ACC-CUS-000086-02",
+    "sourceTransactionId": "TXN-2026-00000242",
+    "destinationTransactionId": "TXN-2026-00000243",
+    "amount": 2700,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000023",
+    "sourceAccountId": "ACC-CUS-000016-01",
+    "destinationAccountId": "ACC-CUS-000094-01",
+    "sourceTransactionId": "TXN-2026-00000253",
+    "destinationTransactionId": "TXN-2026-00000254",
+    "amount": 178,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000024",
+    "sourceAccountId": "ACC-CUS-000003-01",
+    "destinationAccountId": "ACC-CUS-000005-01",
+    "sourceTransactionId": "TXN-2026-00000264",
+    "destinationTransactionId": "TXN-2026-00000265",
+    "amount": 1212,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000025",
+    "sourceAccountId": "ACC-CUS-000027-01",
+    "destinationAccountId": "ACC-CUS-000041-01",
+    "sourceTransactionId": "TXN-2026-00000275",
+    "destinationTransactionId": "TXN-2026-00000276",
+    "amount": 4450,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000026",
+    "sourceAccountId": "ACC-CUS-000035-01",
+    "destinationAccountId": "ACC-CUS-000015-01",
+    "sourceTransactionId": "TXN-2026-00000286",
+    "destinationTransactionId": "TXN-2026-00000287",
+    "amount": 208,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000027",
+    "sourceAccountId": "ACC-CUS-000002-01",
+    "destinationAccountId": "ACC-CUS-000026-01",
+    "sourceTransactionId": "TXN-2026-00000297",
+    "destinationTransactionId": "TXN-2026-00000298",
+    "amount": 3544,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000028",
+    "sourceAccountId": "ACC-CUS-000018-01",
+    "destinationAccountId": "ACC-CUS-000073-02",
+    "sourceTransactionId": "TXN-2026-00000308",
+    "destinationTransactionId": "TXN-2026-00000309",
+    "amount": 2726,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000029",
+    "sourceAccountId": "ACC-CUS-000090-01",
+    "destinationAccountId": "ACC-CUS-000016-01",
+    "sourceTransactionId": "TXN-2026-00000319",
+    "destinationTransactionId": "TXN-2026-00000320",
+    "amount": 1924,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000030",
+    "sourceAccountId": "ACC-CUS-000065-01",
+    "destinationAccountId": "ACC-CUS-000036-01",
+    "sourceTransactionId": "TXN-2026-00000330",
+    "destinationTransactionId": "TXN-2026-00000331",
+    "amount": 2518,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000031",
+    "sourceAccountId": "ACC-CUS-000036-01",
+    "destinationAccountId": "ACC-CUS-000062-01",
+    "sourceTransactionId": "TXN-2026-00000341",
+    "destinationTransactionId": "TXN-2026-00000342",
+    "amount": 4209,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000032",
+    "sourceAccountId": "ACC-CUS-000013-01",
+    "destinationAccountId": "ACC-CUS-000042-01",
+    "sourceTransactionId": "TXN-2026-00000352",
+    "destinationTransactionId": "TXN-2026-00000353",
+    "amount": 3466,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000033",
+    "sourceAccountId": "ACC-CUS-000051-01",
+    "destinationAccountId": "ACC-CUS-000016-01",
+    "sourceTransactionId": "TXN-2026-00000363",
+    "destinationTransactionId": "TXN-2026-00000364",
+    "amount": 2361,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000034",
+    "sourceAccountId": "ACC-CUS-000099-01",
+    "destinationAccountId": "ACC-CUS-000091-01",
+    "sourceTransactionId": "TXN-2026-00000374",
+    "destinationTransactionId": "TXN-2026-00000375",
+    "amount": 2605,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000035",
+    "sourceAccountId": "ACC-CUS-000094-01",
+    "destinationAccountId": "ACC-CUS-000002-01",
+    "sourceTransactionId": "TXN-2026-00000385",
+    "destinationTransactionId": "TXN-2026-00000386",
+    "amount": 3481,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000036",
+    "sourceAccountId": "ACC-CUS-000074-01",
+    "destinationAccountId": "ACC-CUS-000085-01",
+    "sourceTransactionId": "TXN-2026-00000396",
+    "destinationTransactionId": "TXN-2026-00000397",
+    "amount": 1120,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000037",
+    "sourceAccountId": "ACC-CUS-000048-02",
+    "destinationAccountId": "ACC-CUS-000017-01",
+    "sourceTransactionId": "TXN-2026-00000407",
+    "destinationTransactionId": "TXN-2026-00000408",
+    "amount": 4470,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000038",
+    "sourceAccountId": "ACC-CUS-000026-02",
+    "destinationAccountId": "ACC-CUS-000086-02",
+    "sourceTransactionId": "TXN-2026-00000418",
+    "destinationTransactionId": "TXN-2026-00000419",
+    "amount": 4364,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000039",
+    "sourceAccountId": "ACC-CUS-000077-01",
+    "destinationAccountId": "ACC-CUS-000074-01",
+    "sourceTransactionId": "TXN-2026-00000429",
+    "destinationTransactionId": "TXN-2026-00000430",
+    "amount": 3421,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000040",
+    "sourceAccountId": "ACC-CUS-000023-02",
+    "destinationAccountId": "ACC-CUS-000057-01",
+    "sourceTransactionId": "TXN-2026-00000440",
+    "destinationTransactionId": "TXN-2026-00000441",
+    "amount": 784,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000041",
+    "sourceAccountId": "ACC-CUS-000023-02",
+    "destinationAccountId": "ACC-CUS-000015-01",
+    "sourceTransactionId": "TXN-2026-00000451",
+    "destinationTransactionId": "TXN-2026-00000452",
+    "amount": 3751,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000042",
+    "sourceAccountId": "ACC-CUS-000075-01",
+    "destinationAccountId": "ACC-CUS-000006-02",
+    "sourceTransactionId": "TXN-2026-00000462",
+    "destinationTransactionId": "TXN-2026-00000463",
+    "amount": 524,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000043",
+    "sourceAccountId": "ACC-CUS-000031-01",
+    "destinationAccountId": "ACC-CUS-000093-02",
+    "sourceTransactionId": "TXN-2026-00000473",
+    "destinationTransactionId": "TXN-2026-00000474",
+    "amount": 3981,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000044",
+    "sourceAccountId": "ACC-CUS-000082-01",
+    "destinationAccountId": "ACC-CUS-000061-02",
+    "sourceTransactionId": "TXN-2026-00000484",
+    "destinationTransactionId": "TXN-2026-00000485",
+    "amount": 2620,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000045",
+    "sourceAccountId": "ACC-CUS-000021-01",
+    "destinationAccountId": "ACC-CUS-000066-01",
+    "sourceTransactionId": "TXN-2026-00000495",
+    "destinationTransactionId": "TXN-2026-00000496",
+    "amount": 3738,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000046",
+    "sourceAccountId": "ACC-CUS-000016-01",
+    "destinationAccountId": "ACC-CUS-000007-01",
+    "sourceTransactionId": "TXN-2026-00000506",
+    "destinationTransactionId": "TXN-2026-00000507",
+    "amount": 3718,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000047",
+    "sourceAccountId": "ACC-CUS-000061-02",
+    "destinationAccountId": "ACC-CUS-000035-01",
+    "sourceTransactionId": "TXN-2026-00000517",
+    "destinationTransactionId": "TXN-2026-00000518",
+    "amount": 2475,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000048",
+    "sourceAccountId": "ACC-CUS-000006-01",
+    "destinationAccountId": "ACC-CUS-000008-02",
+    "sourceTransactionId": "TXN-2026-00000528",
+    "destinationTransactionId": "TXN-2026-00000529",
+    "amount": 1666,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000049",
+    "sourceAccountId": "ACC-CUS-000091-01",
+    "destinationAccountId": "ACC-CUS-000069-01",
+    "sourceTransactionId": "TXN-2026-00000539",
+    "destinationTransactionId": "TXN-2026-00000540",
+    "amount": 1777,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000050",
+    "sourceAccountId": "ACC-CUS-000076-01",
+    "destinationAccountId": "ACC-CUS-000023-01",
+    "sourceTransactionId": "TXN-2026-00000550",
+    "destinationTransactionId": "TXN-2026-00000551",
+    "amount": 3078,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000051",
+    "sourceAccountId": "ACC-CUS-000021-02",
+    "destinationAccountId": "ACC-CUS-000029-01",
+    "sourceTransactionId": "TXN-2026-00000561",
+    "destinationTransactionId": "TXN-2026-00000562",
+    "amount": 1558,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000052",
+    "sourceAccountId": "ACC-CUS-000009-01",
+    "destinationAccountId": "ACC-CUS-000092-01",
+    "sourceTransactionId": "TXN-2026-00000572",
+    "destinationTransactionId": "TXN-2026-00000573",
+    "amount": 3836,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000053",
+    "sourceAccountId": "ACC-CUS-000042-01",
+    "destinationAccountId": "ACC-CUS-000076-01",
+    "sourceTransactionId": "TXN-2026-00000583",
+    "destinationTransactionId": "TXN-2026-00000584",
+    "amount": 600,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000054",
+    "sourceAccountId": "ACC-CUS-000061-01",
+    "destinationAccountId": "ACC-CUS-000083-01",
+    "sourceTransactionId": "TXN-2026-00000594",
+    "destinationTransactionId": "TXN-2026-00000595",
+    "amount": 3064,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000055",
+    "sourceAccountId": "ACC-CUS-000017-01",
+    "destinationAccountId": "ACC-CUS-000074-01",
+    "sourceTransactionId": "TXN-2026-00000605",
+    "destinationTransactionId": "TXN-2026-00000606",
+    "amount": 2529,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000056",
+    "sourceAccountId": "ACC-CUS-000035-01",
+    "destinationAccountId": "ACC-CUS-000099-01",
+    "sourceTransactionId": "TXN-2026-00000616",
+    "destinationTransactionId": "TXN-2026-00000617",
+    "amount": 2932,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000057",
+    "sourceAccountId": "ACC-CUS-000016-01",
+    "destinationAccountId": "ACC-CUS-000051-02",
+    "sourceTransactionId": "TXN-2026-00000627",
+    "destinationTransactionId": "TXN-2026-00000628",
+    "amount": 1542,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000058",
+    "sourceAccountId": "ACC-CUS-000024-01",
+    "destinationAccountId": "ACC-CUS-000050-01",
+    "sourceTransactionId": "TXN-2026-00000638",
+    "destinationTransactionId": "TXN-2026-00000639",
+    "amount": 3579,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000059",
+    "sourceAccountId": "ACC-CUS-000026-01",
+    "destinationAccountId": "ACC-CUS-000038-01",
+    "sourceTransactionId": "TXN-2026-00000649",
+    "destinationTransactionId": "TXN-2026-00000650",
+    "amount": 3958,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000060",
+    "sourceAccountId": "ACC-CUS-000038-01",
+    "destinationAccountId": "ACC-CUS-000066-01",
+    "sourceTransactionId": "TXN-2026-00000660",
+    "destinationTransactionId": "TXN-2026-00000661",
+    "amount": 4945,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000061",
+    "sourceAccountId": "ACC-CUS-000016-01",
+    "destinationAccountId": "ACC-CUS-000094-01",
+    "sourceTransactionId": "TXN-2026-00000671",
+    "destinationTransactionId": "TXN-2026-00000672",
+    "amount": 4246,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000062",
+    "sourceAccountId": "ACC-CUS-000053-02",
+    "destinationAccountId": "ACC-CUS-000081-02",
+    "sourceTransactionId": "TXN-2026-00000682",
+    "destinationTransactionId": "TXN-2026-00000683",
+    "amount": 772,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000063",
+    "sourceAccountId": "ACC-CUS-000030-01",
+    "destinationAccountId": "ACC-CUS-000062-01",
+    "sourceTransactionId": "TXN-2026-00000693",
+    "destinationTransactionId": "TXN-2026-00000694",
+    "amount": 3609,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000064",
+    "sourceAccountId": "ACC-CUS-000005-01",
+    "destinationAccountId": "ACC-CUS-000085-01",
+    "sourceTransactionId": "TXN-2026-00000704",
+    "destinationTransactionId": "TXN-2026-00000705",
+    "amount": 3812,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000065",
+    "sourceAccountId": "ACC-CUS-000069-01",
+    "destinationAccountId": "ACC-CUS-000009-01",
+    "sourceTransactionId": "TXN-2026-00000715",
+    "destinationTransactionId": "TXN-2026-00000716",
+    "amount": 2449,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000066",
+    "sourceAccountId": "ACC-CUS-000076-01",
+    "destinationAccountId": "ACC-CUS-000091-02",
+    "sourceTransactionId": "TXN-2026-00000726",
+    "destinationTransactionId": "TXN-2026-00000727",
+    "amount": 4938,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000067",
+    "sourceAccountId": "ACC-CUS-000021-02",
+    "destinationAccountId": "ACC-CUS-000063-02",
+    "sourceTransactionId": "TXN-2026-00000737",
+    "destinationTransactionId": "TXN-2026-00000738",
+    "amount": 3811,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000068",
+    "sourceAccountId": "ACC-CUS-000066-02",
+    "destinationAccountId": "ACC-CUS-000095-01",
+    "sourceTransactionId": "TXN-2026-00000748",
+    "destinationTransactionId": "TXN-2026-00000749",
+    "amount": 3393,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000069",
+    "sourceAccountId": "ACC-CUS-000030-01",
+    "destinationAccountId": "ACC-CUS-000090-01",
+    "sourceTransactionId": "TXN-2026-00000759",
+    "destinationTransactionId": "TXN-2026-00000760",
+    "amount": 4131,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000070",
+    "sourceAccountId": "ACC-CUS-000050-01",
+    "destinationAccountId": "ACC-CUS-000043-02",
+    "sourceTransactionId": "TXN-2026-00000770",
+    "destinationTransactionId": "TXN-2026-00000771",
+    "amount": 1527,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000071",
+    "sourceAccountId": "ACC-CUS-000064-01",
+    "destinationAccountId": "ACC-CUS-000068-01",
+    "sourceTransactionId": "TXN-2026-00000781",
+    "destinationTransactionId": "TXN-2026-00000782",
+    "amount": 1383,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000072",
+    "sourceAccountId": "ACC-CUS-000005-01",
+    "destinationAccountId": "ACC-CUS-000096-02",
+    "sourceTransactionId": "TXN-2026-00000792",
+    "destinationTransactionId": "TXN-2026-00000793",
+    "amount": 2955,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000073",
+    "sourceAccountId": "ACC-CUS-000069-01",
+    "destinationAccountId": "ACC-CUS-000016-01",
+    "sourceTransactionId": "TXN-2026-00000803",
+    "destinationTransactionId": "TXN-2026-00000804",
+    "amount": 4372,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000074",
+    "sourceAccountId": "ACC-CUS-000088-01",
+    "destinationAccountId": "ACC-CUS-000033-01",
+    "sourceTransactionId": "TXN-2026-00000814",
+    "destinationTransactionId": "TXN-2026-00000815",
+    "amount": 1563,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000075",
+    "sourceAccountId": "ACC-CUS-000040-01",
+    "destinationAccountId": "ACC-CUS-000053-02",
+    "sourceTransactionId": "TXN-2026-00000825",
+    "destinationTransactionId": "TXN-2026-00000826",
+    "amount": 3402,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000076",
+    "sourceAccountId": "ACC-CUS-000059-01",
+    "destinationAccountId": "ACC-CUS-000046-01",
+    "sourceTransactionId": "TXN-2026-00000836",
+    "destinationTransactionId": "TXN-2026-00000837",
+    "amount": 2834,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000077",
+    "sourceAccountId": "ACC-CUS-000025-01",
+    "destinationAccountId": "ACC-CUS-000022-01",
+    "sourceTransactionId": "TXN-2026-00000847",
+    "destinationTransactionId": "TXN-2026-00000848",
+    "amount": 1483,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000078",
+    "sourceAccountId": "ACC-CUS-000087-01",
+    "destinationAccountId": "ACC-CUS-000051-01",
+    "sourceTransactionId": "TXN-2026-00000858",
+    "destinationTransactionId": "TXN-2026-00000859",
+    "amount": 1812,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000079",
+    "sourceAccountId": "ACC-CUS-000066-02",
+    "destinationAccountId": "ACC-CUS-000063-01",
+    "sourceTransactionId": "TXN-2026-00000869",
+    "destinationTransactionId": "TXN-2026-00000870",
+    "amount": 4312,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000080",
+    "sourceAccountId": "ACC-CUS-000097-01",
+    "destinationAccountId": "ACC-CUS-000019-01",
+    "sourceTransactionId": "TXN-2026-00000880",
+    "destinationTransactionId": "TXN-2026-00000881",
+    "amount": 383,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000081",
+    "sourceAccountId": "ACC-CUS-000078-01",
+    "destinationAccountId": "ACC-CUS-000013-01",
+    "sourceTransactionId": "TXN-2026-00000891",
+    "destinationTransactionId": "TXN-2026-00000892",
+    "amount": 2268,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000082",
+    "sourceAccountId": "ACC-CUS-000088-02",
+    "destinationAccountId": "ACC-CUS-000074-01",
+    "sourceTransactionId": "TXN-2026-00000902",
+    "destinationTransactionId": "TXN-2026-00000903",
+    "amount": 3840,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000083",
+    "sourceAccountId": "ACC-CUS-000064-01",
+    "destinationAccountId": "ACC-CUS-000048-02",
+    "sourceTransactionId": "TXN-2026-00000913",
+    "destinationTransactionId": "TXN-2026-00000914",
+    "amount": 3668,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000084",
+    "sourceAccountId": "ACC-CUS-000056-01",
+    "destinationAccountId": "ACC-CUS-000031-01",
+    "sourceTransactionId": "TXN-2026-00000924",
+    "destinationTransactionId": "TXN-2026-00000925",
+    "amount": 2700,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000085",
+    "sourceAccountId": "ACC-CUS-000026-01",
+    "destinationAccountId": "ACC-CUS-000078-02",
+    "sourceTransactionId": "TXN-2026-00000935",
+    "destinationTransactionId": "TXN-2026-00000936",
+    "amount": 3949,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000086",
+    "sourceAccountId": "ACC-CUS-000036-02",
+    "destinationAccountId": "ACC-CUS-000100-01",
+    "sourceTransactionId": "TXN-2026-00000946",
+    "destinationTransactionId": "TXN-2026-00000947",
+    "amount": 931,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000087",
+    "sourceAccountId": "ACC-CUS-000087-01",
+    "destinationAccountId": "ACC-CUS-000086-02",
+    "sourceTransactionId": "TXN-2026-00000957",
+    "destinationTransactionId": "TXN-2026-00000958",
+    "amount": 770,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000088",
+    "sourceAccountId": "ACC-CUS-000050-01",
+    "destinationAccountId": "ACC-CUS-000072-01",
+    "sourceTransactionId": "TXN-2026-00000968",
+    "destinationTransactionId": "TXN-2026-00000969",
+    "amount": 2424,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000089",
+    "sourceAccountId": "ACC-CUS-000077-01",
+    "destinationAccountId": "ACC-CUS-000088-01",
+    "sourceTransactionId": "TXN-2026-00000979",
+    "destinationTransactionId": "TXN-2026-00000980",
+    "amount": 4271,
+    "status": "RECONCILED"
+  },
+  {
+    "transferId": "TRF-0000090",
+    "sourceAccountId": "ACC-CUS-000096-01",
+    "destinationAccountId": "ACC-CUS-000098-01",
+    "sourceTransactionId": "TXN-2026-00000990",
+    "destinationTransactionId": "TXN-2026-00000991",
+    "amount": 210,
+    "status": "RECONCILED"
+  }
+]

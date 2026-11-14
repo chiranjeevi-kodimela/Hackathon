@@ -1,0 +1,98 @@
+{
+  "seed": 20261022,
+  "scale": "starter",
+  "labels": [
+    {
+      "alertId": "ALT-2026-000001",
+      "transactionId": "TXN-2026-00000001",
+      "expectedLabel": "SUSPICIOUS",
+      "expectedDecision": "INVESTIGATE",
+      "basis": "Additional risk indicators were triggered"
+    },
+    {
+      "alertId": "ALT-2026-000002",
+      "transactionId": "TXN-2026-00000002",
+      "expectedLabel": "SUSPICIOUS",
+      "expectedDecision": "INVESTIGATE",
+      "basis": "Additional risk indicators were triggered"
+    },
+    {
+      "alertId": "ALT-2026-000003",
+      "transactionId": "TXN-2026-00000003",
+      "expectedLabel": "SUSPICIOUS",
+      "expectedDecision": "INVESTIGATE",
+      "basis": "Additional risk indicators were triggered"
+    },
+    {
+      "alertId": "ALT-2026-000004",
+      "transactionId": "TXN-2026-00000004",
+      "expectedLabel": "SUSPICIOUS",
+      "expectedDecision": "INVESTIGATE",
+      "basis": "Additional risk indicators were triggered"
+    },
+    {
+      "alertId": "ALT-2026-000005",
+      "transactionId": "TXN-2026-00000005",
+      "expectedLabel": "FALSE_POSITIVE",
+      "expectedDecision": "CLOSE_FALSE_POSITIVE",
+      "basis": "High transaction amount alone is insufficient evidence of fraud"
+    },
+    {
+      "alertId": "ALT-2026-000006",
+      "transactionId": "TXN-2026-00000006",
+      "expectedLabel": "SUSPICIOUS",
+      "expectedDecision": "INVESTIGATE",
+      "basis": "Additional risk indicators were triggered"
+    },
+    {
+      "alertId": "ALT-2026-000007",
+      "transactionId": "TXN-2026-00000007",
+      "expectedLabel": "SUSPICIOUS",
+      "expectedDecision": "INVESTIGATE",
+      "basis": "Additional risk indicators were triggered"
+    },
+    {
+      "alertId": "ALT-2026-000008",
+      "transactionId": "TXN-2026-00000008",
+      "expectedLabel": "SUSPICIOUS",
+      "expectedDecision": "INVESTIGATE",
+      "basis": "Additional risk indicators were triggered"
+    },
+    {
+      "alertId": "ALT-2026-000009",
+      "transactionId": "TXN-2026-00000009",
+      "expectedLabel": "SUSPICIOUS",
+      "expectedDecision": "INVESTIGATE",
+      "basis": "Additional risk indicators were triggered"
+    },
+    {
+      "alertId": "ALT-2026-000010",
+      "transactionId": "TXN-2026-00000010",
+      "expectedLabel": "FALSE_POSITIVE",
+      "expectedDecision": "CLOSE_FALSE_POSITIVE",
+      "basis": "High transaction amount alone is insufficient evidence of fraud"
+    }
+  ],
+  "knownExceptions": [
+    {
+      "issue_type": "TRANSACTION_ON_CLOSED_ACCOUNT",
+      "expectedOutcome": "REJECT_TRANSACTION"
+    },
+    {
+      "issue_type": "NEGATIVE_BALANCE_WITHOUT_OVERDRAFT",
+      "expectedOutcome": "FLAG_BALANCE_VIOLATION"
+    },
+    {
+      "issue_type": "TRANSFER_LEG_MISMATCH",
+      "expectedOutcome": "FLAG_RECONCILIATION_FAILURE"
+    },
+    {
+      "issue_type": "ALERT_WITHOUT_TRANSACTION",
+      "expectedOutcome": "FLAG_INVALID_ALERT"
+    },
+    {
+      "issue_type": "CASE_DISPOSITION_PRECEDES_ALERT",
+      "expectedOutcome": "REJECT_INVALID_LIFECYCLE"
+    }
+  ]
+}

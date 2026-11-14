@@ -1,0 +1,17 @@
+{
+  "project": "RiskLens",
+  "seed": 20261022,
+  "scale": "starter",
+  "source": "Internally generated synthetic data",
+  "counts": {
+    "customers": 100,
+    "accounts": 140,
+    "merchants": 50,
+    "devices": 100,
+    "transactions": 1000,
+    "transfers": 90,
+    "alerts": 10,
+    "exceptions": 5,
+    "falsePositives": 2
+  }
+}

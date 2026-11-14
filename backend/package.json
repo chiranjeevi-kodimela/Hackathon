@@ -10,6 +10,9 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "generate:starter": "node scripts/generateData.js --scale=starter",
+    "generate:full": "node scripts/generateData.js --scale=full",
+    "validate": "node scripts/validateData.js"
   }
 }

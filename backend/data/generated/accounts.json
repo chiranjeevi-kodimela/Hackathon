@@ -1,0 +1,1402 @@
+[
+  {
+    "accountId": "ACC-CUS-000001-01",
+    "customerId": "CUS-000001",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 51935,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000001-02",
+    "customerId": "CUS-000001",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 10239,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000002-01",
+    "customerId": "CUS-000002",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 71942,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000003-01",
+    "customerId": "CUS-000003",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 53231,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000003-02",
+    "customerId": "CUS-000003",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 90479,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000004-01",
+    "customerId": "CUS-000004",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 32709,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000005-01",
+    "customerId": "CUS-000005",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 83137,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000006-01",
+    "customerId": "CUS-000006",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 31391,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000006-02",
+    "customerId": "CUS-000006",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 82572,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000007-01",
+    "customerId": "CUS-000007",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 13054,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000008-01",
+    "customerId": "CUS-000008",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 12310,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000008-02",
+    "customerId": "CUS-000008",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 25139,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000009-01",
+    "customerId": "CUS-000009",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 50508,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000010-01",
+    "customerId": "CUS-000010",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 15721,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000011-01",
+    "customerId": "CUS-000011",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 60190,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000011-02",
+    "customerId": "CUS-000011",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 55092,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000012-01",
+    "customerId": "CUS-000012",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 15371,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000013-01",
+    "customerId": "CUS-000013",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 76880,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000013-02",
+    "customerId": "CUS-000013",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 90180,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000014-01",
+    "customerId": "CUS-000014",
+    "accountType": "CURRENT",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 36365,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000015-01",
+    "customerId": "CUS-000015",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 54825,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000016-01",
+    "customerId": "CUS-000016",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 47352,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000016-02",
+    "customerId": "CUS-000016",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 24487,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000017-01",
+    "customerId": "CUS-000017",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 66383,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000018-01",
+    "customerId": "CUS-000018",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 77140,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000018-02",
+    "customerId": "CUS-000018",
+    "accountType": "CURRENT",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 93400,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000019-01",
+    "customerId": "CUS-000019",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 44513,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000020-01",
+    "customerId": "CUS-000020",
+    "accountType": "SAVINGS",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 72694,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000021-01",
+    "customerId": "CUS-000021",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 72659,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000021-02",
+    "customerId": "CUS-000021",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 45949,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000022-01",
+    "customerId": "CUS-000022",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 57471,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000023-01",
+    "customerId": "CUS-000023",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 91541,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000023-02",
+    "customerId": "CUS-000023",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 51512,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000024-01",
+    "customerId": "CUS-000024",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 44001,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000025-01",
+    "customerId": "CUS-000025",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 49010,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000026-01",
+    "customerId": "CUS-000026",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 52297,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000026-02",
+    "customerId": "CUS-000026",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 75629,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000027-01",
+    "customerId": "CUS-000027",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 93817,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000028-01",
+    "customerId": "CUS-000028",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 16651,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000028-02",
+    "customerId": "CUS-000028",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 31150,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000029-01",
+    "customerId": "CUS-000029",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 24586,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000030-01",
+    "customerId": "CUS-000030",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 82427,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000031-01",
+    "customerId": "CUS-000031",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 85895,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000031-02",
+    "customerId": "CUS-000031",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 47751,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000032-01",
+    "customerId": "CUS-000032",
+    "accountType": "CURRENT",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 70166,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000033-01",
+    "customerId": "CUS-000033",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 46283,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000033-02",
+    "customerId": "CUS-000033",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 42079,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000034-01",
+    "customerId": "CUS-000034",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 90835,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000035-01",
+    "customerId": "CUS-000035",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 25906,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000036-01",
+    "customerId": "CUS-000036",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 50599,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000036-02",
+    "customerId": "CUS-000036",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 34999,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000037-01",
+    "customerId": "CUS-000037",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 43167,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000038-01",
+    "customerId": "CUS-000038",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 70144,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000038-02",
+    "customerId": "CUS-000038",
+    "accountType": "SAVINGS",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 83356,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000039-01",
+    "customerId": "CUS-000039",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 58574,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000040-01",
+    "customerId": "CUS-000040",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 77469,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000041-01",
+    "customerId": "CUS-000041",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 34143,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000041-02",
+    "customerId": "CUS-000041",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 72278,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000042-01",
+    "customerId": "CUS-000042",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 60080,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000043-01",
+    "customerId": "CUS-000043",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 75714,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000043-02",
+    "customerId": "CUS-000043",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 35542,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000044-01",
+    "customerId": "CUS-000044",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 95526,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000045-01",
+    "customerId": "CUS-000045",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 87242,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000046-01",
+    "customerId": "CUS-000046",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 21691,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000046-02",
+    "customerId": "CUS-000046",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 77488,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000047-01",
+    "customerId": "CUS-000047",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 59843,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000048-01",
+    "customerId": "CUS-000048",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 99641,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000048-02",
+    "customerId": "CUS-000048",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 57889,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000049-01",
+    "customerId": "CUS-000049",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 76823,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000050-01",
+    "customerId": "CUS-000050",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 80710,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000051-01",
+    "customerId": "CUS-000051",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 39988,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000051-02",
+    "customerId": "CUS-000051",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 80961,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000052-01",
+    "customerId": "CUS-000052",
+    "accountType": "CURRENT",
+    "status": "CLOSED",
+    "currency": "INR",
+    "initialBalance": 74753,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000053-01",
+    "customerId": "CUS-000053",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 74289,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000053-02",
+    "customerId": "CUS-000053",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 48605,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000054-01",
+    "customerId": "CUS-000054",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 49372,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000055-01",
+    "customerId": "CUS-000055",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 74917,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000056-01",
+    "customerId": "CUS-000056",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 90026,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000056-02",
+    "customerId": "CUS-000056",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 73383,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000057-01",
+    "customerId": "CUS-000057",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 87300,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000058-01",
+    "customerId": "CUS-000058",
+    "accountType": "CURRENT",
+    "status": "CLOSED",
+    "currency": "INR",
+    "initialBalance": 75233,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000058-02",
+    "customerId": "CUS-000058",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 50871,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000059-01",
+    "customerId": "CUS-000059",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 45615,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000060-01",
+    "customerId": "CUS-000060",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 49066,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000061-01",
+    "customerId": "CUS-000061",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 46061,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000061-02",
+    "customerId": "CUS-000061",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 43560,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000062-01",
+    "customerId": "CUS-000062",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 56811,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000063-01",
+    "customerId": "CUS-000063",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 79181,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000063-02",
+    "customerId": "CUS-000063",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 14114,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000064-01",
+    "customerId": "CUS-000064",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 92537,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000065-01",
+    "customerId": "CUS-000065",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 71110,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000066-01",
+    "customerId": "CUS-000066",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 10899,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000066-02",
+    "customerId": "CUS-000066",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 37119,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000067-01",
+    "customerId": "CUS-000067",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 39960,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000068-01",
+    "customerId": "CUS-000068",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 27003,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000068-02",
+    "customerId": "CUS-000068",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 20254,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000069-01",
+    "customerId": "CUS-000069",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 20577,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000070-01",
+    "customerId": "CUS-000070",
+    "accountType": "CURRENT",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 55670,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000071-01",
+    "customerId": "CUS-000071",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 50687,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000071-02",
+    "customerId": "CUS-000071",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 85712,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000072-01",
+    "customerId": "CUS-000072",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 90588,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000073-01",
+    "customerId": "CUS-000073",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 62220,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000073-02",
+    "customerId": "CUS-000073",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 97316,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000074-01",
+    "customerId": "CUS-000074",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 41452,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000075-01",
+    "customerId": "CUS-000075",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 47364,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000076-01",
+    "customerId": "CUS-000076",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 38775,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000076-02",
+    "customerId": "CUS-000076",
+    "accountType": "CURRENT",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 91394,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000077-01",
+    "customerId": "CUS-000077",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 24588,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000078-01",
+    "customerId": "CUS-000078",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 56311,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000078-02",
+    "customerId": "CUS-000078",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 65322,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000079-01",
+    "customerId": "CUS-000079",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 42289,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000080-01",
+    "customerId": "CUS-000080",
+    "accountType": "SAVINGS",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 79404,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000081-01",
+    "customerId": "CUS-000081",
+    "accountType": "SAVINGS",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 46332,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000081-02",
+    "customerId": "CUS-000081",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 42148,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000082-01",
+    "customerId": "CUS-000082",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 36622,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000083-01",
+    "customerId": "CUS-000083",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 28913,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000083-02",
+    "customerId": "CUS-000083",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 85022,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000084-01",
+    "customerId": "CUS-000084",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 35986,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000085-01",
+    "customerId": "CUS-000085",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 92072,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000086-01",
+    "customerId": "CUS-000086",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 95724,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000086-02",
+    "customerId": "CUS-000086",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 75293,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000087-01",
+    "customerId": "CUS-000087",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 36680,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000088-01",
+    "customerId": "CUS-000088",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 72270,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000088-02",
+    "customerId": "CUS-000088",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 50729,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000089-01",
+    "customerId": "CUS-000089",
+    "accountType": "CURRENT",
+    "status": "DORMANT",
+    "currency": "INR",
+    "initialBalance": 95090,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000090-01",
+    "customerId": "CUS-000090",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 93858,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000091-01",
+    "customerId": "CUS-000091",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 97709,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000091-02",
+    "customerId": "CUS-000091",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 41887,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000092-01",
+    "customerId": "CUS-000092",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 28929,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000093-01",
+    "customerId": "CUS-000093",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 29125,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000093-02",
+    "customerId": "CUS-000093",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 69491,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000094-01",
+    "customerId": "CUS-000094",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 63910,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000095-01",
+    "customerId": "CUS-000095",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 69527,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000096-01",
+    "customerId": "CUS-000096",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 89985,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000096-02",
+    "customerId": "CUS-000096",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 88441,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000097-01",
+    "customerId": "CUS-000097",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 65648,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000098-01",
+    "customerId": "CUS-000098",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 55089,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000098-02",
+    "customerId": "CUS-000098",
+    "accountType": "SAVINGS",
+    "status": "CLOSED",
+    "currency": "INR",
+    "initialBalance": 81237,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000099-01",
+    "customerId": "CUS-000099",
+    "accountType": "SAVINGS",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 56943,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "accountId": "ACC-CUS-000100-01",
+    "customerId": "CUS-000100",
+    "accountType": "CURRENT",
+    "status": "ACTIVE",
+    "currency": "INR",
+    "initialBalance": 12430,
+    "overdraftLimit": 0,
+    "openedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

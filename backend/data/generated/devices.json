@@ -1,0 +1,602 @@
+[
+  {
+    "deviceId": "DEV-00001",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00002",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00003",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00004",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00005",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00006",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00007",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00008",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00009",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00010",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00011",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00012",
+    "deviceType": "TABLET",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00013",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00014",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00015",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00016",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00017",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00018",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00019",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00020",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00021",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00022",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00023",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00024",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00025",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00026",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00027",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00028",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00029",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00030",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00031",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00032",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00033",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00034",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00035",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00036",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00037",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00038",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00039",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00040",
+    "deviceType": "TABLET",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00041",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00042",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00043",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00044",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00045",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00046",
+    "deviceType": "TABLET",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00047",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00048",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00049",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00050",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00051",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00052",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00053",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00054",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00055",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00056",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00057",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00058",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00059",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00060",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00061",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00062",
+    "deviceType": "TABLET",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00063",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00064",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00065",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00066",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00067",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00068",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00069",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00070",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00071",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00072",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00073",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00074",
+    "deviceType": "TABLET",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00075",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00076",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00077",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00078",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00079",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00080",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00081",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00082",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00083",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00084",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00085",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00086",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00087",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00088",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00089",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": false
+  },
+  {
+    "deviceId": "DEV-00090",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00091",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00092",
+    "deviceType": "MOBILE",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00093",
+    "deviceType": "TABLET",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00094",
+    "deviceType": "MOBILE",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00095",
+    "deviceType": "TABLET",
+    "operatingSystem": "IOS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00096",
+    "deviceType": "TABLET",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00097",
+    "deviceType": "TABLET",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00098",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00099",
+    "deviceType": "MOBILE",
+    "operatingSystem": "WINDOWS",
+    "trusted": true
+  },
+  {
+    "deviceId": "DEV-00100",
+    "deviceType": "DESKTOP",
+    "operatingSystem": "ANDROID",
+    "trusted": false
+  }
+]
