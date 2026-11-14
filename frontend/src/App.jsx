@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import Customers from "./pages/Customers";
 import "./styles/global.css";
 import Accounts from "./pages/Accounts";
+import Transactions from "./pages/Transactions";
 
 function AppLayout() {
   return (
@@ -27,6 +28,8 @@ function AppLayout() {
             <Route path="/customers" element={<Customers />} />
             <Route path="*" element={<Dashboard />} />
             <Route path="/accounts" element={<Accounts />} />
+            <Route path="/transactions" element={<Transactions />} />
+            
           </Routes>
         </div>
       </main>
