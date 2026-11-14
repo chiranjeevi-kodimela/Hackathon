@@ -1,17 +1,25 @@
 {
   "project": "RiskLens",
   "seed": 20261022,
-  "scale": "starter",
+  "scale": "full",
   "source": "Internally generated synthetic data",
+  "sourceManifestFile": "source_manifest.json",
   "counts": {
-    "customers": 100,
-    "accounts": 140,
-    "merchants": 50,
-    "devices": 100,
-    "transactions": 1000,
-    "transfers": 90,
-    "alerts": 10,
+    "customers": 5000,
+    "accounts": 7000,
+    "accountStatusEvents": 52,
+    "merchants": 500,
+    "devices": 3000,
+    "transactions": 100000,
+    "transfers": 9862,
+    "riskRules": 8,
+    "alerts": 1000,
+    "alertRules": 1840,
+    "cases": 869,
+    "caseAlerts": 1000,
+    "analystActions": 614,
+    "auditEvents": 614,
     "exceptions": 5,
-    "falsePositives": 2
+    "falsePositives": 200
   }
 }

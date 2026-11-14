@@ -49,56 +49,72 @@ function fileChecksums(directory) {
   return checksums;
 }
 
-test("starter exports are deterministic and validate against ground truth", (t) => {
+test("starter and full exports are deterministic and validate against ground truth", (t) => {
   const temporaryDirectory = fs.mkdtempSync(
     path.join(os.tmpdir(), "risklens-repro-"),
   );
   t.after(() => fs.rmSync(temporaryDirectory, { recursive: true, force: true }));
 
-  const firstOutput = path.join(temporaryDirectory, "first");
-  const secondOutput = path.join(temporaryDirectory, "second");
-  runNode(generator, firstOutput, ["--scale=starter", "--seed=20261022"]);
-  runNode(generator, secondOutput, ["--scale=starter", "--seed=20261022"]);
-
-  assert.deepEqual(
-    fileChecksums(firstOutput),
-    fileChecksums(secondOutput),
-    "same seed and scale must produce identical exports",
-  );
-
-  const manifest = JSON.parse(
-    fs.readFileSync(
-      path.join(firstOutput, "generated", "manifest.json"),
-      "utf8",
-    ),
-  );
-  assert.deepEqual(
-    {
-      customers: manifest.counts.customers,
-      accounts: manifest.counts.accounts,
-      transactions: manifest.counts.transactions,
-      alerts: manifest.counts.alerts,
+  const expectedCounts = {
+    starter: { customers: 100, accounts: 140, transactions: 1000, alerts: 10 },
+    full: {
+      customers: 5000,
+      accounts: 7000,
+      transactions: 100000,
+      alerts: 1000,
     },
-    { customers: 100, accounts: 140, transactions: 1000, alerts: 10 },
-  );
-  assert.ok(
-    fs.existsSync(path.join(firstOutput, "generated", "seed.sql")),
-    "SQL seed export should be generated",
-  );
-  assert.ok(
-    fs.existsSync(path.join(firstOutput, "generated", "transactions.csv")),
-    "CSV exports should be generated",
-  );
+  };
 
-  runNode(validator, firstOutput);
-  const report = JSON.parse(
-    fs.readFileSync(
-      path.join(firstOutput, "validation", "validation_report.json"),
-      "utf8",
-    ),
-  );
-  assert.equal(report.status, "PASSED");
-  assert.equal(report.counts.transactions, 1000);
-  assert.equal(report.evaluation.falsePositive, 0);
-  assert.equal(report.evaluation.falseNegative, 0);
+  for (const [scale, counts] of Object.entries(expectedCounts)) {
+    const firstOutput = path.join(temporaryDirectory, `${scale}-first`);
+    const secondOutput = path.join(temporaryDirectory, `${scale}-second`);
+    runNode(generator, firstOutput, [`--scale=${scale}`, "--seed=20261022"]);
+    runNode(generator, secondOutput, [`--scale=${scale}`, "--seed=20261022"]);
+
+    assert.deepEqual(
+      fileChecksums(firstOutput),
+      fileChecksums(secondOutput),
+      `${scale} exports must have identical checksums for the same seed`,
+    );
+
+    const manifest = JSON.parse(
+      fs.readFileSync(
+        path.join(firstOutput, "generated", "manifest.json"),
+        "utf8",
+      ),
+    );
+    assert.deepEqual(
+      {
+        customers: manifest.counts.customers,
+        accounts: manifest.counts.accounts,
+        transactions: manifest.counts.transactions,
+        alerts: manifest.counts.alerts,
+      },
+      counts,
+    );
+    assert.ok(
+      fs.existsSync(path.join(firstOutput, "generated", "seed.sql")),
+      "SQL seed export should be generated",
+    );
+    assert.ok(
+      fs.existsSync(path.join(firstOutput, "generated", "transactions.csv")),
+      "CSV exports should be generated",
+    );
+    assert.ok(
+      fs.existsSync(path.join(firstOutput, "ground_truth", "ground_truth.csv")),
+      "ground-truth CSV should be generated separately",
+    );
+
+    runNode(validator, firstOutput);
+    const report = JSON.parse(
+      fs.readFileSync(
+        path.join(firstOutput, "validation", "validation_report.json"),
+        "utf8",
+      ),
+    );
+    assert.equal(report.status, "PASSED");
+    assert.equal(report.counts.transactions, counts.transactions);
+    assert.equal(report.evaluation.falsePositive, 0);
+    assert.equal(report.evaluation.falseNegative, 0);
+  }
 });

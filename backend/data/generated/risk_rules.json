@@ -1,0 +1,74 @@
+[
+  {
+    "ruleId": "R001",
+    "name": "High Transaction Amount",
+    "points": 20,
+    "description": "Transaction amount exceeds ₹1,00,000",
+    "enabled": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "ruleId": "R002",
+    "name": "High Transaction Velocity",
+    "points": 25,
+    "description": "Five or more transactions within 10 minutes",
+    "enabled": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "ruleId": "R003",
+    "name": "New Device Activity",
+    "points": 20,
+    "description": "Transaction initiated from a new device",
+    "enabled": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "ruleId": "R004",
+    "name": "Dormant Account Reactivation",
+    "points": 25,
+    "description": "Previously dormant account became active",
+    "enabled": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "ruleId": "R005",
+    "name": "Circular Fund Transfer",
+    "points": 35,
+    "description": "Circular fund transfer pattern detected",
+    "enabled": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "ruleId": "R006",
+    "name": "Closed Account Transaction",
+    "points": 100,
+    "description": "Transaction references a closed account",
+    "enabled": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "ruleId": "R007",
+    "name": "Negative Balance Violation",
+    "points": 100,
+    "description": "Balance exceeds permitted overdraft limit",
+    "enabled": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "ruleId": "R008",
+    "name": "Transfer Reconciliation Failure",
+    "points": 60,
+    "description": "Source and destination transfer legs do not reconcile",
+    "enabled": true,
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,4002 @@
+[
+  {
+    "caseId": "CASE-2026-000001",
+    "alertId": "ALT-2026-000001"
+  },
+  {
+    "caseId": "CASE-2026-000002",
+    "alertId": "ALT-2026-000002"
+  },
+  {
+    "caseId": "CASE-2026-000003",
+    "alertId": "ALT-2026-000003"
+  },
+  {
+    "caseId": "CASE-2026-000004",
+    "alertId": "ALT-2026-000004"
+  },
+  {
+    "caseId": "CASE-2026-000005",
+    "alertId": "ALT-2026-000005"
+  },
+  {
+    "caseId": "CASE-2026-000005",
+    "alertId": "ALT-2026-000006"
+  },
+  {
+    "caseId": "CASE-2026-000006",
+    "alertId": "ALT-2026-000007"
+  },
+  {
+    "caseId": "CASE-2026-000007",
+    "alertId": "ALT-2026-000008"
+  },
+  {
+    "caseId": "CASE-2026-000008",
+    "alertId": "ALT-2026-000009"
+  },
+  {
+    "caseId": "CASE-2026-000009",
+    "alertId": "ALT-2026-000010"
+  },
+  {
+    "caseId": "CASE-2026-000009",
+    "alertId": "ALT-2026-000011"
+  },
+  {
+    "caseId": "CASE-2026-000010",
+    "alertId": "ALT-2026-000012"
+  },
+  {
+    "caseId": "CASE-2026-000011",
+    "alertId": "ALT-2026-000013"
+  },
+  {
+    "caseId": "CASE-2026-000012",
+    "alertId": "ALT-2026-000014"
+  },
+  {
+    "caseId": "CASE-2026-000013",
+    "alertId": "ALT-2026-000015"
+  },
+  {
+    "caseId": "CASE-2026-000013",
+    "alertId": "ALT-2026-000016"
+  },
+  {
+    "caseId": "CASE-2026-000014",
+    "alertId": "ALT-2026-000017"
+  },
+  {
+    "caseId": "CASE-2026-000015",
+    "alertId": "ALT-2026-000018"
+  },
+  {
+    "caseId": "CASE-2026-000016",
+    "alertId": "ALT-2026-000019"
+  },
+  {
+    "caseId": "CASE-2026-000017",
+    "alertId": "ALT-2026-000020"
+  },
+  {
+    "caseId": "CASE-2026-000017",
+    "alertId": "ALT-2026-000021"
+  },
+  {
+    "caseId": "CASE-2026-000018",
+    "alertId": "ALT-2026-000022"
+  },
+  {
+    "caseId": "CASE-2026-000019",
+    "alertId": "ALT-2026-000023"
+  },
+  {
+    "caseId": "CASE-2026-000020",
+    "alertId": "ALT-2026-000024"
+  },
+  {
+    "caseId": "CASE-2026-000021",
+    "alertId": "ALT-2026-000025"
+  },
+  {
+    "caseId": "CASE-2026-000021",
+    "alertId": "ALT-2026-000026"
+  },
+  {
+    "caseId": "CASE-2026-000022",
+    "alertId": "ALT-2026-000027"
+  },
+  {
+    "caseId": "CASE-2026-000023",
+    "alertId": "ALT-2026-000028"
+  },
+  {
+    "caseId": "CASE-2026-000024",
+    "alertId": "ALT-2026-000029"
+  },
+  {
+    "caseId": "CASE-2026-000025",
+    "alertId": "ALT-2026-000030"
+  },
+  {
+    "caseId": "CASE-2026-000025",
+    "alertId": "ALT-2026-000031"
+  },
+  {
+    "caseId": "CASE-2026-000026",
+    "alertId": "ALT-2026-000032"
+  },
+  {
+    "caseId": "CASE-2026-000027",
+    "alertId": "ALT-2026-000033"
+  },
+  {
+    "caseId": "CASE-2026-000028",
+    "alertId": "ALT-2026-000034"
+  },
+  {
+    "caseId": "CASE-2026-000029",
+    "alertId": "ALT-2026-000036"
+  },
+  {
+    "caseId": "CASE-2026-000030",
+    "alertId": "ALT-2026-000035"
+  },
+  {
+    "caseId": "CASE-2026-000030",
+    "alertId": "ALT-2026-000037"
+  },
+  {
+    "caseId": "CASE-2026-000031",
+    "alertId": "ALT-2026-000038"
+  },
+  {
+    "caseId": "CASE-2026-000032",
+    "alertId": "ALT-2026-000039"
+  },
+  {
+    "caseId": "CASE-2026-000033",
+    "alertId": "ALT-2026-000041"
+  },
+  {
+    "caseId": "CASE-2026-000034",
+    "alertId": "ALT-2026-000040"
+  },
+  {
+    "caseId": "CASE-2026-000034",
+    "alertId": "ALT-2026-000042"
+  },
+  {
+    "caseId": "CASE-2026-000035",
+    "alertId": "ALT-2026-000043"
+  },
+  {
+    "caseId": "CASE-2026-000036",
+    "alertId": "ALT-2026-000044"
+  },
+  {
+    "caseId": "CASE-2026-000037",
+    "alertId": "ALT-2026-000046"
+  },
+  {
+    "caseId": "CASE-2026-000038",
+    "alertId": "ALT-2026-000047"
+  },
+  {
+    "caseId": "CASE-2026-000039",
+    "alertId": "ALT-2026-000045"
+  },
+  {
+    "caseId": "CASE-2026-000039",
+    "alertId": "ALT-2026-000048"
+  },
+  {
+    "caseId": "CASE-2026-000040",
+    "alertId": "ALT-2026-000049"
+  },
+  {
+    "caseId": "CASE-2026-000041",
+    "alertId": "ALT-2026-000051"
+  },
+  {
+    "caseId": "CASE-2026-000042",
+    "alertId": "ALT-2026-000052"
+  },
+  {
+    "caseId": "CASE-2026-000043",
+    "alertId": "ALT-2026-000050"
+  },
+  {
+    "caseId": "CASE-2026-000043",
+    "alertId": "ALT-2026-000053"
+  },
+  {
+    "caseId": "CASE-2026-000044",
+    "alertId": "ALT-2026-000054"
+  },
+  {
+    "caseId": "CASE-2026-000045",
+    "alertId": "ALT-2026-000056"
+  },
+  {
+    "caseId": "CASE-2026-000046",
+    "alertId": "ALT-2026-000057"
+  },
+  {
+    "caseId": "CASE-2026-000047",
+    "alertId": "ALT-2026-000055"
+  },
+  {
+    "caseId": "CASE-2026-000047",
+    "alertId": "ALT-2026-000058"
+  },
+  {
+    "caseId": "CASE-2026-000048",
+    "alertId": "ALT-2026-000059"
+  },
+  {
+    "caseId": "CASE-2026-000049",
+    "alertId": "ALT-2026-000061"
+  },
+  {
+    "caseId": "CASE-2026-000050",
+    "alertId": "ALT-2026-000062"
+  },
+  {
+    "caseId": "CASE-2026-000051",
+    "alertId": "ALT-2026-000060"
+  },
+  {
+    "caseId": "CASE-2026-000051",
+    "alertId": "ALT-2026-000063"
+  },
+  {
+    "caseId": "CASE-2026-000052",
+    "alertId": "ALT-2026-000064"
+  },
+  {
+    "caseId": "CASE-2026-000053",
+    "alertId": "ALT-2026-000066"
+  },
+  {
+    "caseId": "CASE-2026-000054",
+    "alertId": "ALT-2026-000067"
+  },
+  {
+    "caseId": "CASE-2026-000055",
+    "alertId": "ALT-2026-000065"
+  },
+  {
+    "caseId": "CASE-2026-000055",
+    "alertId": "ALT-2026-000068"
+  },
+  {
+    "caseId": "CASE-2026-000056",
+    "alertId": "ALT-2026-000069"
+  },
+  {
+    "caseId": "CASE-2026-000057",
+    "alertId": "ALT-2026-000071"
+  },
+  {
+    "caseId": "CASE-2026-000058",
+    "alertId": "ALT-2026-000072"
+  },
+  {
+    "caseId": "CASE-2026-000059",
+    "alertId": "ALT-2026-000070"
+  },
+  {
+    "caseId": "CASE-2026-000059",
+    "alertId": "ALT-2026-000073"
+  },
+  {
+    "caseId": "CASE-2026-000060",
+    "alertId": "ALT-2026-000074"
+  },
+  {
+    "caseId": "CASE-2026-000061",
+    "alertId": "ALT-2026-000076"
+  },
+  {
+    "caseId": "CASE-2026-000062",
+    "alertId": "ALT-2026-000077"
+  },
+  {
+    "caseId": "CASE-2026-000063",
+    "alertId": "ALT-2026-000075"
+  },
+  {
+    "caseId": "CASE-2026-000063",
+    "alertId": "ALT-2026-000078"
+  },
+  {
+    "caseId": "CASE-2026-000064",
+    "alertId": "ALT-2026-000079"
+  },
+  {
+    "caseId": "CASE-2026-000065",
+    "alertId": "ALT-2026-000081"
+  },
+  {
+    "caseId": "CASE-2026-000066",
+    "alertId": "ALT-2026-000082"
+  },
+  {
+    "caseId": "CASE-2026-000067",
+    "alertId": "ALT-2026-000080"
+  },
+  {
+    "caseId": "CASE-2026-000067",
+    "alertId": "ALT-2026-000083"
+  },
+  {
+    "caseId": "CASE-2026-000068",
+    "alertId": "ALT-2026-000084"
+  },
+  {
+    "caseId": "CASE-2026-000069",
+    "alertId": "ALT-2026-000086"
+  },
+  {
+    "caseId": "CASE-2026-000070",
+    "alertId": "ALT-2026-000087"
+  },
+  {
+    "caseId": "CASE-2026-000071",
+    "alertId": "ALT-2026-000088"
+  },
+  {
+    "caseId": "CASE-2026-000072",
+    "alertId": "ALT-2026-000085"
+  },
+  {
+    "caseId": "CASE-2026-000072",
+    "alertId": "ALT-2026-000089"
+  },
+  {
+    "caseId": "CASE-2026-000073",
+    "alertId": "ALT-2026-000091"
+  },
+  {
+    "caseId": "CASE-2026-000074",
+    "alertId": "ALT-2026-000092"
+  },
+  {
+    "caseId": "CASE-2026-000075",
+    "alertId": "ALT-2026-000093"
+  },
+  {
+    "caseId": "CASE-2026-000076",
+    "alertId": "ALT-2026-000090"
+  },
+  {
+    "caseId": "CASE-2026-000076",
+    "alertId": "ALT-2026-000094"
+  },
+  {
+    "caseId": "CASE-2026-000077",
+    "alertId": "ALT-2026-000096"
+  },
+  {
+    "caseId": "CASE-2026-000078",
+    "alertId": "ALT-2026-000097"
+  },
+  {
+    "caseId": "CASE-2026-000079",
+    "alertId": "ALT-2026-000098"
+  },
+  {
+    "caseId": "CASE-2026-000080",
+    "alertId": "ALT-2026-000099"
+  },
+  {
+    "caseId": "CASE-2026-000081",
+    "alertId": "ALT-2026-000095"
+  },
+  {
+    "caseId": "CASE-2026-000082",
+    "alertId": "ALT-2026-000101"
+  },
+  {
+    "caseId": "CASE-2026-000083",
+    "alertId": "ALT-2026-000102"
+  },
+  {
+    "caseId": "CASE-2026-000084",
+    "alertId": "ALT-2026-000103"
+  },
+  {
+    "caseId": "CASE-2026-000085",
+    "alertId": "ALT-2026-000104"
+  },
+  {
+    "caseId": "CASE-2026-000086",
+    "alertId": "ALT-2026-000100"
+  },
+  {
+    "caseId": "CASE-2026-000087",
+    "alertId": "ALT-2026-000106"
+  },
+  {
+    "caseId": "CASE-2026-000088",
+    "alertId": "ALT-2026-000107"
+  },
+  {
+    "caseId": "CASE-2026-000089",
+    "alertId": "ALT-2026-000108"
+  },
+  {
+    "caseId": "CASE-2026-000090",
+    "alertId": "ALT-2026-000109"
+  },
+  {
+    "caseId": "CASE-2026-000091",
+    "alertId": "ALT-2026-000105"
+  },
+  {
+    "caseId": "CASE-2026-000092",
+    "alertId": "ALT-2026-000111"
+  },
+  {
+    "caseId": "CASE-2026-000093",
+    "alertId": "ALT-2026-000112"
+  },
+  {
+    "caseId": "CASE-2026-000094",
+    "alertId": "ALT-2026-000113"
+  },
+  {
+    "caseId": "CASE-2026-000095",
+    "alertId": "ALT-2026-000114"
+  },
+  {
+    "caseId": "CASE-2026-000096",
+    "alertId": "ALT-2026-000110"
+  },
+  {
+    "caseId": "CASE-2026-000097",
+    "alertId": "ALT-2026-000116"
+  },
+  {
+    "caseId": "CASE-2026-000098",
+    "alertId": "ALT-2026-000117"
+  },
+  {
+    "caseId": "CASE-2026-000099",
+    "alertId": "ALT-2026-000118"
+  },
+  {
+    "caseId": "CASE-2026-000100",
+    "alertId": "ALT-2026-000119"
+  },
+  {
+    "caseId": "CASE-2026-000101",
+    "alertId": "ALT-2026-000115"
+  },
+  {
+    "caseId": "CASE-2026-000101",
+    "alertId": "ALT-2026-000121"
+  },
+  {
+    "caseId": "CASE-2026-000102",
+    "alertId": "ALT-2026-000122"
+  },
+  {
+    "caseId": "CASE-2026-000103",
+    "alertId": "ALT-2026-000123"
+  },
+  {
+    "caseId": "CASE-2026-000104",
+    "alertId": "ALT-2026-000124"
+  },
+  {
+    "caseId": "CASE-2026-000105",
+    "alertId": "ALT-2026-000120"
+  },
+  {
+    "caseId": "CASE-2026-000105",
+    "alertId": "ALT-2026-000126"
+  },
+  {
+    "caseId": "CASE-2026-000106",
+    "alertId": "ALT-2026-000127"
+  },
+  {
+    "caseId": "CASE-2026-000107",
+    "alertId": "ALT-2026-000128"
+  },
+  {
+    "caseId": "CASE-2026-000108",
+    "alertId": "ALT-2026-000129"
+  },
+  {
+    "caseId": "CASE-2026-000109",
+    "alertId": "ALT-2026-000125"
+  },
+  {
+    "caseId": "CASE-2026-000109",
+    "alertId": "ALT-2026-000131"
+  },
+  {
+    "caseId": "CASE-2026-000110",
+    "alertId": "ALT-2026-000132"
+  },
+  {
+    "caseId": "CASE-2026-000111",
+    "alertId": "ALT-2026-000133"
+  },
+  {
+    "caseId": "CASE-2026-000112",
+    "alertId": "ALT-2026-000134"
+  },
+  {
+    "caseId": "CASE-2026-000113",
+    "alertId": "ALT-2026-000130"
+  },
+  {
+    "caseId": "CASE-2026-000113",
+    "alertId": "ALT-2026-000136"
+  },
+  {
+    "caseId": "CASE-2026-000114",
+    "alertId": "ALT-2026-000137"
+  },
+  {
+    "caseId": "CASE-2026-000115",
+    "alertId": "ALT-2026-000138"
+  },
+  {
+    "caseId": "CASE-2026-000116",
+    "alertId": "ALT-2026-000139"
+  },
+  {
+    "caseId": "CASE-2026-000117",
+    "alertId": "ALT-2026-000141"
+  },
+  {
+    "caseId": "CASE-2026-000118",
+    "alertId": "ALT-2026-000135"
+  },
+  {
+    "caseId": "CASE-2026-000118",
+    "alertId": "ALT-2026-000142"
+  },
+  {
+    "caseId": "CASE-2026-000119",
+    "alertId": "ALT-2026-000143"
+  },
+  {
+    "caseId": "CASE-2026-000120",
+    "alertId": "ALT-2026-000144"
+  },
+  {
+    "caseId": "CASE-2026-000121",
+    "alertId": "ALT-2026-000146"
+  },
+  {
+    "caseId": "CASE-2026-000122",
+    "alertId": "ALT-2026-000147"
+  },
+  {
+    "caseId": "CASE-2026-000123",
+    "alertId": "ALT-2026-000140"
+  },
+  {
+    "caseId": "CASE-2026-000123",
+    "alertId": "ALT-2026-000148"
+  },
+  {
+    "caseId": "CASE-2026-000124",
+    "alertId": "ALT-2026-000149"
+  },
+  {
+    "caseId": "CASE-2026-000125",
+    "alertId": "ALT-2026-000151"
+  },
+  {
+    "caseId": "CASE-2026-000126",
+    "alertId": "ALT-2026-000152"
+  },
+  {
+    "caseId": "CASE-2026-000127",
+    "alertId": "ALT-2026-000145"
+  },
+  {
+    "caseId": "CASE-2026-000127",
+    "alertId": "ALT-2026-000153"
+  },
+  {
+    "caseId": "CASE-2026-000128",
+    "alertId": "ALT-2026-000154"
+  },
+  {
+    "caseId": "CASE-2026-000129",
+    "alertId": "ALT-2026-000156"
+  },
+  {
+    "caseId": "CASE-2026-000130",
+    "alertId": "ALT-2026-000157"
+  },
+  {
+    "caseId": "CASE-2026-000131",
+    "alertId": "ALT-2026-000158"
+  },
+  {
+    "caseId": "CASE-2026-000132",
+    "alertId": "ALT-2026-000150"
+  },
+  {
+    "caseId": "CASE-2026-000132",
+    "alertId": "ALT-2026-000159"
+  },
+  {
+    "caseId": "CASE-2026-000133",
+    "alertId": "ALT-2026-000161"
+  },
+  {
+    "caseId": "CASE-2026-000134",
+    "alertId": "ALT-2026-000162"
+  },
+  {
+    "caseId": "CASE-2026-000135",
+    "alertId": "ALT-2026-000163"
+  },
+  {
+    "caseId": "CASE-2026-000136",
+    "alertId": "ALT-2026-000155"
+  },
+  {
+    "caseId": "CASE-2026-000136",
+    "alertId": "ALT-2026-000164"
+  },
+  {
+    "caseId": "CASE-2026-000137",
+    "alertId": "ALT-2026-000166"
+  },
+  {
+    "caseId": "CASE-2026-000138",
+    "alertId": "ALT-2026-000167"
+  },
+  {
+    "caseId": "CASE-2026-000139",
+    "alertId": "ALT-2026-000168"
+  },
+  {
+    "caseId": "CASE-2026-000140",
+    "alertId": "ALT-2026-000160"
+  },
+  {
+    "caseId": "CASE-2026-000140",
+    "alertId": "ALT-2026-000169"
+  },
+  {
+    "caseId": "CASE-2026-000141",
+    "alertId": "ALT-2026-000171"
+  },
+  {
+    "caseId": "CASE-2026-000142",
+    "alertId": "ALT-2026-000172"
+  },
+  {
+    "caseId": "CASE-2026-000143",
+    "alertId": "ALT-2026-000173"
+  },
+  {
+    "caseId": "CASE-2026-000144",
+    "alertId": "ALT-2026-000165"
+  },
+  {
+    "caseId": "CASE-2026-000144",
+    "alertId": "ALT-2026-000174"
+  },
+  {
+    "caseId": "CASE-2026-000145",
+    "alertId": "ALT-2026-000176"
+  },
+  {
+    "caseId": "CASE-2026-000146",
+    "alertId": "ALT-2026-000177"
+  },
+  {
+    "caseId": "CASE-2026-000147",
+    "alertId": "ALT-2026-000178"
+  },
+  {
+    "caseId": "CASE-2026-000148",
+    "alertId": "ALT-2026-000179"
+  },
+  {
+    "caseId": "CASE-2026-000149",
+    "alertId": "ALT-2026-000170"
+  },
+  {
+    "caseId": "CASE-2026-000150",
+    "alertId": "ALT-2026-000181"
+  },
+  {
+    "caseId": "CASE-2026-000151",
+    "alertId": "ALT-2026-000182"
+  },
+  {
+    "caseId": "CASE-2026-000152",
+    "alertId": "ALT-2026-000183"
+  },
+  {
+    "caseId": "CASE-2026-000153",
+    "alertId": "ALT-2026-000184"
+  },
+  {
+    "caseId": "CASE-2026-000154",
+    "alertId": "ALT-2026-000175"
+  },
+  {
+    "caseId": "CASE-2026-000154",
+    "alertId": "ALT-2026-000186"
+  },
+  {
+    "caseId": "CASE-2026-000155",
+    "alertId": "ALT-2026-000187"
+  },
+  {
+    "caseId": "CASE-2026-000156",
+    "alertId": "ALT-2026-000188"
+  },
+  {
+    "caseId": "CASE-2026-000157",
+    "alertId": "ALT-2026-000189"
+  },
+  {
+    "caseId": "CASE-2026-000158",
+    "alertId": "ALT-2026-000191"
+  },
+  {
+    "caseId": "CASE-2026-000159",
+    "alertId": "ALT-2026-000192"
+  },
+  {
+    "caseId": "CASE-2026-000160",
+    "alertId": "ALT-2026-000180"
+  },
+  {
+    "caseId": "CASE-2026-000160",
+    "alertId": "ALT-2026-000193"
+  },
+  {
+    "caseId": "CASE-2026-000161",
+    "alertId": "ALT-2026-000194"
+  },
+  {
+    "caseId": "CASE-2026-000162",
+    "alertId": "ALT-2026-000196"
+  },
+  {
+    "caseId": "CASE-2026-000163",
+    "alertId": "ALT-2026-000197"
+  },
+  {
+    "caseId": "CASE-2026-000164",
+    "alertId": "ALT-2026-000198"
+  },
+  {
+    "caseId": "CASE-2026-000165",
+    "alertId": "ALT-2026-000185"
+  },
+  {
+    "caseId": "CASE-2026-000165",
+    "alertId": "ALT-2026-000199"
+  },
+  {
+    "caseId": "CASE-2026-000166",
+    "alertId": "ALT-2026-000201"
+  },
+  {
+    "caseId": "CASE-2026-000167",
+    "alertId": "ALT-2026-000202"
+  },
+  {
+    "caseId": "CASE-2026-000168",
+    "alertId": "ALT-2026-000203"
+  },
+  {
+    "caseId": "CASE-2026-000169",
+    "alertId": "ALT-2026-000190"
+  },
+  {
+    "caseId": "CASE-2026-000169",
+    "alertId": "ALT-2026-000204"
+  },
+  {
+    "caseId": "CASE-2026-000170",
+    "alertId": "ALT-2026-000206"
+  },
+  {
+    "caseId": "CASE-2026-000171",
+    "alertId": "ALT-2026-000207"
+  },
+  {
+    "caseId": "CASE-2026-000172",
+    "alertId": "ALT-2026-000208"
+  },
+  {
+    "caseId": "CASE-2026-000173",
+    "alertId": "ALT-2026-000195"
+  },
+  {
+    "caseId": "CASE-2026-000173",
+    "alertId": "ALT-2026-000209"
+  },
+  {
+    "caseId": "CASE-2026-000174",
+    "alertId": "ALT-2026-000211"
+  },
+  {
+    "caseId": "CASE-2026-000175",
+    "alertId": "ALT-2026-000212"
+  },
+  {
+    "caseId": "CASE-2026-000176",
+    "alertId": "ALT-2026-000213"
+  },
+  {
+    "caseId": "CASE-2026-000177",
+    "alertId": "ALT-2026-000214"
+  },
+  {
+    "caseId": "CASE-2026-000178",
+    "alertId": "ALT-2026-000200"
+  },
+  {
+    "caseId": "CASE-2026-000179",
+    "alertId": "ALT-2026-000216"
+  },
+  {
+    "caseId": "CASE-2026-000180",
+    "alertId": "ALT-2026-000217"
+  },
+  {
+    "caseId": "CASE-2026-000181",
+    "alertId": "ALT-2026-000218"
+  },
+  {
+    "caseId": "CASE-2026-000182",
+    "alertId": "ALT-2026-000219"
+  },
+  {
+    "caseId": "CASE-2026-000183",
+    "alertId": "ALT-2026-000205"
+  },
+  {
+    "caseId": "CASE-2026-000184",
+    "alertId": "ALT-2026-000221"
+  },
+  {
+    "caseId": "CASE-2026-000185",
+    "alertId": "ALT-2026-000222"
+  },
+  {
+    "caseId": "CASE-2026-000186",
+    "alertId": "ALT-2026-000223"
+  },
+  {
+    "caseId": "CASE-2026-000187",
+    "alertId": "ALT-2026-000224"
+  },
+  {
+    "caseId": "CASE-2026-000188",
+    "alertId": "ALT-2026-000210"
+  },
+  {
+    "caseId": "CASE-2026-000188",
+    "alertId": "ALT-2026-000226"
+  },
+  {
+    "caseId": "CASE-2026-000189",
+    "alertId": "ALT-2026-000227"
+  },
+  {
+    "caseId": "CASE-2026-000190",
+    "alertId": "ALT-2026-000228"
+  },
+  {
+    "caseId": "CASE-2026-000191",
+    "alertId": "ALT-2026-000229"
+  },
+  {
+    "caseId": "CASE-2026-000192",
+    "alertId": "ALT-2026-000231"
+  },
+  {
+    "caseId": "CASE-2026-000193",
+    "alertId": "ALT-2026-000232"
+  },
+  {
+    "caseId": "CASE-2026-000194",
+    "alertId": "ALT-2026-000233"
+  },
+  {
+    "caseId": "CASE-2026-000195",
+    "alertId": "ALT-2026-000234"
+  },
+  {
+    "caseId": "CASE-2026-000196",
+    "alertId": "ALT-2026-000215"
+  },
+  {
+    "caseId": "CASE-2026-000197",
+    "alertId": "ALT-2026-000236"
+  },
+  {
+    "caseId": "CASE-2026-000198",
+    "alertId": "ALT-2026-000237"
+  },
+  {
+    "caseId": "CASE-2026-000199",
+    "alertId": "ALT-2026-000238"
+  },
+  {
+    "caseId": "CASE-2026-000200",
+    "alertId": "ALT-2026-000239"
+  },
+  {
+    "caseId": "CASE-2026-000201",
+    "alertId": "ALT-2026-000220"
+  },
+  {
+    "caseId": "CASE-2026-000202",
+    "alertId": "ALT-2026-000241"
+  },
+  {
+    "caseId": "CASE-2026-000203",
+    "alertId": "ALT-2026-000242"
+  },
+  {
+    "caseId": "CASE-2026-000204",
+    "alertId": "ALT-2026-000243"
+  },
+  {
+    "caseId": "CASE-2026-000205",
+    "alertId": "ALT-2026-000244"
+  },
+  {
+    "caseId": "CASE-2026-000206",
+    "alertId": "ALT-2026-000225"
+  },
+  {
+    "caseId": "CASE-2026-000207",
+    "alertId": "ALT-2026-000246"
+  },
+  {
+    "caseId": "CASE-2026-000208",
+    "alertId": "ALT-2026-000247"
+  },
+  {
+    "caseId": "CASE-2026-000209",
+    "alertId": "ALT-2026-000248"
+  },
+  {
+    "caseId": "CASE-2026-000210",
+    "alertId": "ALT-2026-000249"
+  },
+  {
+    "caseId": "CASE-2026-000211",
+    "alertId": "ALT-2026-000230"
+  },
+  {
+    "caseId": "CASE-2026-000212",
+    "alertId": "ALT-2026-000251"
+  },
+  {
+    "caseId": "CASE-2026-000213",
+    "alertId": "ALT-2026-000252"
+  },
+  {
+    "caseId": "CASE-2026-000214",
+    "alertId": "ALT-2026-000253"
+  },
+  {
+    "caseId": "CASE-2026-000215",
+    "alertId": "ALT-2026-000254"
+  },
+  {
+    "caseId": "CASE-2026-000216",
+    "alertId": "ALT-2026-000235"
+  },
+  {
+    "caseId": "CASE-2026-000217",
+    "alertId": "ALT-2026-000256"
+  },
+  {
+    "caseId": "CASE-2026-000218",
+    "alertId": "ALT-2026-000257"
+  },
+  {
+    "caseId": "CASE-2026-000219",
+    "alertId": "ALT-2026-000258"
+  },
+  {
+    "caseId": "CASE-2026-000220",
+    "alertId": "ALT-2026-000259"
+  },
+  {
+    "caseId": "CASE-2026-000221",
+    "alertId": "ALT-2026-000240"
+  },
+  {
+    "caseId": "CASE-2026-000222",
+    "alertId": "ALT-2026-000261"
+  },
+  {
+    "caseId": "CASE-2026-000223",
+    "alertId": "ALT-2026-000262"
+  },
+  {
+    "caseId": "CASE-2026-000224",
+    "alertId": "ALT-2026-000263"
+  },
+  {
+    "caseId": "CASE-2026-000225",
+    "alertId": "ALT-2026-000264"
+  },
+  {
+    "caseId": "CASE-2026-000226",
+    "alertId": "ALT-2026-000245"
+  },
+  {
+    "caseId": "CASE-2026-000227",
+    "alertId": "ALT-2026-000266"
+  },
+  {
+    "caseId": "CASE-2026-000228",
+    "alertId": "ALT-2026-000267"
+  },
+  {
+    "caseId": "CASE-2026-000229",
+    "alertId": "ALT-2026-000268"
+  },
+  {
+    "caseId": "CASE-2026-000230",
+    "alertId": "ALT-2026-000269"
+  },
+  {
+    "caseId": "CASE-2026-000231",
+    "alertId": "ALT-2026-000250"
+  },
+  {
+    "caseId": "CASE-2026-000232",
+    "alertId": "ALT-2026-000271"
+  },
+  {
+    "caseId": "CASE-2026-000233",
+    "alertId": "ALT-2026-000272"
+  },
+  {
+    "caseId": "CASE-2026-000234",
+    "alertId": "ALT-2026-000273"
+  },
+  {
+    "caseId": "CASE-2026-000235",
+    "alertId": "ALT-2026-000274"
+  },
+  {
+    "caseId": "CASE-2026-000236",
+    "alertId": "ALT-2026-000255"
+  },
+  {
+    "caseId": "CASE-2026-000237",
+    "alertId": "ALT-2026-000276"
+  },
+  {
+    "caseId": "CASE-2026-000238",
+    "alertId": "ALT-2026-000277"
+  },
+  {
+    "caseId": "CASE-2026-000239",
+    "alertId": "ALT-2026-000278"
+  },
+  {
+    "caseId": "CASE-2026-000240",
+    "alertId": "ALT-2026-000279"
+  },
+  {
+    "caseId": "CASE-2026-000241",
+    "alertId": "ALT-2026-000260"
+  },
+  {
+    "caseId": "CASE-2026-000242",
+    "alertId": "ALT-2026-000281"
+  },
+  {
+    "caseId": "CASE-2026-000243",
+    "alertId": "ALT-2026-000282"
+  },
+  {
+    "caseId": "CASE-2026-000244",
+    "alertId": "ALT-2026-000283"
+  },
+  {
+    "caseId": "CASE-2026-000245",
+    "alertId": "ALT-2026-000284"
+  },
+  {
+    "caseId": "CASE-2026-000246",
+    "alertId": "ALT-2026-000265"
+  },
+  {
+    "caseId": "CASE-2026-000246",
+    "alertId": "ALT-2026-000286"
+  },
+  {
+    "caseId": "CASE-2026-000247",
+    "alertId": "ALT-2026-000287"
+  },
+  {
+    "caseId": "CASE-2026-000248",
+    "alertId": "ALT-2026-000288"
+  },
+  {
+    "caseId": "CASE-2026-000249",
+    "alertId": "ALT-2026-000289"
+  },
+  {
+    "caseId": "CASE-2026-000250",
+    "alertId": "ALT-2026-000270"
+  },
+  {
+    "caseId": "CASE-2026-000250",
+    "alertId": "ALT-2026-000291"
+  },
+  {
+    "caseId": "CASE-2026-000251",
+    "alertId": "ALT-2026-000292"
+  },
+  {
+    "caseId": "CASE-2026-000252",
+    "alertId": "ALT-2026-000293"
+  },
+  {
+    "caseId": "CASE-2026-000253",
+    "alertId": "ALT-2026-000294"
+  },
+  {
+    "caseId": "CASE-2026-000254",
+    "alertId": "ALT-2026-000296"
+  },
+  {
+    "caseId": "CASE-2026-000255",
+    "alertId": "ALT-2026-000275"
+  },
+  {
+    "caseId": "CASE-2026-000255",
+    "alertId": "ALT-2026-000297"
+  },
+  {
+    "caseId": "CASE-2026-000256",
+    "alertId": "ALT-2026-000298"
+  },
+  {
+    "caseId": "CASE-2026-000257",
+    "alertId": "ALT-2026-000299"
+  },
+  {
+    "caseId": "CASE-2026-000258",
+    "alertId": "ALT-2026-000301"
+  },
+  {
+    "caseId": "CASE-2026-000259",
+    "alertId": "ALT-2026-000280"
+  },
+  {
+    "caseId": "CASE-2026-000259",
+    "alertId": "ALT-2026-000302"
+  },
+  {
+    "caseId": "CASE-2026-000260",
+    "alertId": "ALT-2026-000303"
+  },
+  {
+    "caseId": "CASE-2026-000261",
+    "alertId": "ALT-2026-000304"
+  },
+  {
+    "caseId": "CASE-2026-000262",
+    "alertId": "ALT-2026-000306"
+  },
+  {
+    "caseId": "CASE-2026-000263",
+    "alertId": "ALT-2026-000285"
+  },
+  {
+    "caseId": "CASE-2026-000263",
+    "alertId": "ALT-2026-000307"
+  },
+  {
+    "caseId": "CASE-2026-000264",
+    "alertId": "ALT-2026-000308"
+  },
+  {
+    "caseId": "CASE-2026-000265",
+    "alertId": "ALT-2026-000309"
+  },
+  {
+    "caseId": "CASE-2026-000266",
+    "alertId": "ALT-2026-000311"
+  },
+  {
+    "caseId": "CASE-2026-000267",
+    "alertId": "ALT-2026-000290"
+  },
+  {
+    "caseId": "CASE-2026-000267",
+    "alertId": "ALT-2026-000312"
+  },
+  {
+    "caseId": "CASE-2026-000268",
+    "alertId": "ALT-2026-000313"
+  },
+  {
+    "caseId": "CASE-2026-000269",
+    "alertId": "ALT-2026-000314"
+  },
+  {
+    "caseId": "CASE-2026-000270",
+    "alertId": "ALT-2026-000316"
+  },
+  {
+    "caseId": "CASE-2026-000271",
+    "alertId": "ALT-2026-000295"
+  },
+  {
+    "caseId": "CASE-2026-000271",
+    "alertId": "ALT-2026-000317"
+  },
+  {
+    "caseId": "CASE-2026-000272",
+    "alertId": "ALT-2026-000318"
+  },
+  {
+    "caseId": "CASE-2026-000273",
+    "alertId": "ALT-2026-000319"
+  },
+  {
+    "caseId": "CASE-2026-000274",
+    "alertId": "ALT-2026-000321"
+  },
+  {
+    "caseId": "CASE-2026-000275",
+    "alertId": "ALT-2026-000300"
+  },
+  {
+    "caseId": "CASE-2026-000275",
+    "alertId": "ALT-2026-000322"
+  },
+  {
+    "caseId": "CASE-2026-000276",
+    "alertId": "ALT-2026-000323"
+  },
+  {
+    "caseId": "CASE-2026-000277",
+    "alertId": "ALT-2026-000324"
+  },
+  {
+    "caseId": "CASE-2026-000278",
+    "alertId": "ALT-2026-000326"
+  },
+  {
+    "caseId": "CASE-2026-000279",
+    "alertId": "ALT-2026-000305"
+  },
+  {
+    "caseId": "CASE-2026-000279",
+    "alertId": "ALT-2026-000327"
+  },
+  {
+    "caseId": "CASE-2026-000280",
+    "alertId": "ALT-2026-000328"
+  },
+  {
+    "caseId": "CASE-2026-000281",
+    "alertId": "ALT-2026-000329"
+  },
+  {
+    "caseId": "CASE-2026-000282",
+    "alertId": "ALT-2026-000331"
+  },
+  {
+    "caseId": "CASE-2026-000283",
+    "alertId": "ALT-2026-000310"
+  },
+  {
+    "caseId": "CASE-2026-000283",
+    "alertId": "ALT-2026-000332"
+  },
+  {
+    "caseId": "CASE-2026-000284",
+    "alertId": "ALT-2026-000333"
+  },
+  {
+    "caseId": "CASE-2026-000285",
+    "alertId": "ALT-2026-000334"
+  },
+  {
+    "caseId": "CASE-2026-000286",
+    "alertId": "ALT-2026-000336"
+  },
+  {
+    "caseId": "CASE-2026-000287",
+    "alertId": "ALT-2026-000315"
+  },
+  {
+    "caseId": "CASE-2026-000287",
+    "alertId": "ALT-2026-000337"
+  },
+  {
+    "caseId": "CASE-2026-000288",
+    "alertId": "ALT-2026-000338"
+  },
+  {
+    "caseId": "CASE-2026-000289",
+    "alertId": "ALT-2026-000339"
+  },
+  {
+    "caseId": "CASE-2026-000290",
+    "alertId": "ALT-2026-000341"
+  },
+  {
+    "caseId": "CASE-2026-000291",
+    "alertId": "ALT-2026-000320"
+  },
+  {
+    "caseId": "CASE-2026-000291",
+    "alertId": "ALT-2026-000342"
+  },
+  {
+    "caseId": "CASE-2026-000292",
+    "alertId": "ALT-2026-000343"
+  },
+  {
+    "caseId": "CASE-2026-000293",
+    "alertId": "ALT-2026-000344"
+  },
+  {
+    "caseId": "CASE-2026-000294",
+    "alertId": "ALT-2026-000346"
+  },
+  {
+    "caseId": "CASE-2026-000295",
+    "alertId": "ALT-2026-000325"
+  },
+  {
+    "caseId": "CASE-2026-000295",
+    "alertId": "ALT-2026-000347"
+  },
+  {
+    "caseId": "CASE-2026-000296",
+    "alertId": "ALT-2026-000348"
+  },
+  {
+    "caseId": "CASE-2026-000297",
+    "alertId": "ALT-2026-000349"
+  },
+  {
+    "caseId": "CASE-2026-000298",
+    "alertId": "ALT-2026-000351"
+  },
+  {
+    "caseId": "CASE-2026-000299",
+    "alertId": "ALT-2026-000330"
+  },
+  {
+    "caseId": "CASE-2026-000299",
+    "alertId": "ALT-2026-000352"
+  },
+  {
+    "caseId": "CASE-2026-000300",
+    "alertId": "ALT-2026-000353"
+  },
+  {
+    "caseId": "CASE-2026-000301",
+    "alertId": "ALT-2026-000354"
+  },
+  {
+    "caseId": "CASE-2026-000302",
+    "alertId": "ALT-2026-000356"
+  },
+  {
+    "caseId": "CASE-2026-000303",
+    "alertId": "ALT-2026-000335"
+  },
+  {
+    "caseId": "CASE-2026-000303",
+    "alertId": "ALT-2026-000357"
+  },
+  {
+    "caseId": "CASE-2026-000304",
+    "alertId": "ALT-2026-000358"
+  },
+  {
+    "caseId": "CASE-2026-000305",
+    "alertId": "ALT-2026-000359"
+  },
+  {
+    "caseId": "CASE-2026-000306",
+    "alertId": "ALT-2026-000361"
+  },
+  {
+    "caseId": "CASE-2026-000307",
+    "alertId": "ALT-2026-000362"
+  },
+  {
+    "caseId": "CASE-2026-000308",
+    "alertId": "ALT-2026-000363"
+  },
+  {
+    "caseId": "CASE-2026-000309",
+    "alertId": "ALT-2026-000340"
+  },
+  {
+    "caseId": "CASE-2026-000309",
+    "alertId": "ALT-2026-000364"
+  },
+  {
+    "caseId": "CASE-2026-000310",
+    "alertId": "ALT-2026-000366"
+  },
+  {
+    "caseId": "CASE-2026-000311",
+    "alertId": "ALT-2026-000367"
+  },
+  {
+    "caseId": "CASE-2026-000312",
+    "alertId": "ALT-2026-000368"
+  },
+  {
+    "caseId": "CASE-2026-000313",
+    "alertId": "ALT-2026-000345"
+  },
+  {
+    "caseId": "CASE-2026-000313",
+    "alertId": "ALT-2026-000369"
+  },
+  {
+    "caseId": "CASE-2026-000314",
+    "alertId": "ALT-2026-000371"
+  },
+  {
+    "caseId": "CASE-2026-000315",
+    "alertId": "ALT-2026-000372"
+  },
+  {
+    "caseId": "CASE-2026-000316",
+    "alertId": "ALT-2026-000373"
+  },
+  {
+    "caseId": "CASE-2026-000317",
+    "alertId": "ALT-2026-000350"
+  },
+  {
+    "caseId": "CASE-2026-000317",
+    "alertId": "ALT-2026-000374"
+  },
+  {
+    "caseId": "CASE-2026-000318",
+    "alertId": "ALT-2026-000376"
+  },
+  {
+    "caseId": "CASE-2026-000319",
+    "alertId": "ALT-2026-000377"
+  },
+  {
+    "caseId": "CASE-2026-000320",
+    "alertId": "ALT-2026-000378"
+  },
+  {
+    "caseId": "CASE-2026-000321",
+    "alertId": "ALT-2026-000379"
+  },
+  {
+    "caseId": "CASE-2026-000322",
+    "alertId": "ALT-2026-000355"
+  },
+  {
+    "caseId": "CASE-2026-000323",
+    "alertId": "ALT-2026-000381"
+  },
+  {
+    "caseId": "CASE-2026-000324",
+    "alertId": "ALT-2026-000382"
+  },
+  {
+    "caseId": "CASE-2026-000325",
+    "alertId": "ALT-2026-000383"
+  },
+  {
+    "caseId": "CASE-2026-000326",
+    "alertId": "ALT-2026-000384"
+  },
+  {
+    "caseId": "CASE-2026-000327",
+    "alertId": "ALT-2026-000360"
+  },
+  {
+    "caseId": "CASE-2026-000327",
+    "alertId": "ALT-2026-000386"
+  },
+  {
+    "caseId": "CASE-2026-000328",
+    "alertId": "ALT-2026-000387"
+  },
+  {
+    "caseId": "CASE-2026-000329",
+    "alertId": "ALT-2026-000388"
+  },
+  {
+    "caseId": "CASE-2026-000330",
+    "alertId": "ALT-2026-000389"
+  },
+  {
+    "caseId": "CASE-2026-000331",
+    "alertId": "ALT-2026-000365"
+  },
+  {
+    "caseId": "CASE-2026-000331",
+    "alertId": "ALT-2026-000391"
+  },
+  {
+    "caseId": "CASE-2026-000332",
+    "alertId": "ALT-2026-000392"
+  },
+  {
+    "caseId": "CASE-2026-000333",
+    "alertId": "ALT-2026-000393"
+  },
+  {
+    "caseId": "CASE-2026-000334",
+    "alertId": "ALT-2026-000394"
+  },
+  {
+    "caseId": "CASE-2026-000335",
+    "alertId": "ALT-2026-000370"
+  },
+  {
+    "caseId": "CASE-2026-000335",
+    "alertId": "ALT-2026-000396"
+  },
+  {
+    "caseId": "CASE-2026-000336",
+    "alertId": "ALT-2026-000397"
+  },
+  {
+    "caseId": "CASE-2026-000337",
+    "alertId": "ALT-2026-000398"
+  },
+  {
+    "caseId": "CASE-2026-000338",
+    "alertId": "ALT-2026-000399"
+  },
+  {
+    "caseId": "CASE-2026-000339",
+    "alertId": "ALT-2026-000401"
+  },
+  {
+    "caseId": "CASE-2026-000340",
+    "alertId": "ALT-2026-000402"
+  },
+  {
+    "caseId": "CASE-2026-000341",
+    "alertId": "ALT-2026-000375"
+  },
+  {
+    "caseId": "CASE-2026-000341",
+    "alertId": "ALT-2026-000403"
+  },
+  {
+    "caseId": "CASE-2026-000342",
+    "alertId": "ALT-2026-000404"
+  },
+  {
+    "caseId": "CASE-2026-000343",
+    "alertId": "ALT-2026-000406"
+  },
+  {
+    "caseId": "CASE-2026-000344",
+    "alertId": "ALT-2026-000407"
+  },
+  {
+    "caseId": "CASE-2026-000345",
+    "alertId": "ALT-2026-000380"
+  },
+  {
+    "caseId": "CASE-2026-000345",
+    "alertId": "ALT-2026-000408"
+  },
+  {
+    "caseId": "CASE-2026-000346",
+    "alertId": "ALT-2026-000409"
+  },
+  {
+    "caseId": "CASE-2026-000347",
+    "alertId": "ALT-2026-000411"
+  },
+  {
+    "caseId": "CASE-2026-000348",
+    "alertId": "ALT-2026-000412"
+  },
+  {
+    "caseId": "CASE-2026-000349",
+    "alertId": "ALT-2026-000413"
+  },
+  {
+    "caseId": "CASE-2026-000350",
+    "alertId": "ALT-2026-000414"
+  },
+  {
+    "caseId": "CASE-2026-000351",
+    "alertId": "ALT-2026-000385"
+  },
+  {
+    "caseId": "CASE-2026-000352",
+    "alertId": "ALT-2026-000416"
+  },
+  {
+    "caseId": "CASE-2026-000353",
+    "alertId": "ALT-2026-000417"
+  },
+  {
+    "caseId": "CASE-2026-000354",
+    "alertId": "ALT-2026-000418"
+  },
+  {
+    "caseId": "CASE-2026-000355",
+    "alertId": "ALT-2026-000419"
+  },
+  {
+    "caseId": "CASE-2026-000356",
+    "alertId": "ALT-2026-000390"
+  },
+  {
+    "caseId": "CASE-2026-000357",
+    "alertId": "ALT-2026-000421"
+  },
+  {
+    "caseId": "CASE-2026-000358",
+    "alertId": "ALT-2026-000422"
+  },
+  {
+    "caseId": "CASE-2026-000359",
+    "alertId": "ALT-2026-000423"
+  },
+  {
+    "caseId": "CASE-2026-000360",
+    "alertId": "ALT-2026-000424"
+  },
+  {
+    "caseId": "CASE-2026-000361",
+    "alertId": "ALT-2026-000395"
+  },
+  {
+    "caseId": "CASE-2026-000362",
+    "alertId": "ALT-2026-000426"
+  },
+  {
+    "caseId": "CASE-2026-000363",
+    "alertId": "ALT-2026-000427"
+  },
+  {
+    "caseId": "CASE-2026-000364",
+    "alertId": "ALT-2026-000428"
+  },
+  {
+    "caseId": "CASE-2026-000365",
+    "alertId": "ALT-2026-000429"
+  },
+  {
+    "caseId": "CASE-2026-000366",
+    "alertId": "ALT-2026-000400"
+  },
+  {
+    "caseId": "CASE-2026-000367",
+    "alertId": "ALT-2026-000431"
+  },
+  {
+    "caseId": "CASE-2026-000368",
+    "alertId": "ALT-2026-000432"
+  },
+  {
+    "caseId": "CASE-2026-000369",
+    "alertId": "ALT-2026-000433"
+  },
+  {
+    "caseId": "CASE-2026-000370",
+    "alertId": "ALT-2026-000434"
+  },
+  {
+    "caseId": "CASE-2026-000371",
+    "alertId": "ALT-2026-000405"
+  },
+  {
+    "caseId": "CASE-2026-000371",
+    "alertId": "ALT-2026-000436"
+  },
+  {
+    "caseId": "CASE-2026-000372",
+    "alertId": "ALT-2026-000437"
+  },
+  {
+    "caseId": "CASE-2026-000373",
+    "alertId": "ALT-2026-000438"
+  },
+  {
+    "caseId": "CASE-2026-000374",
+    "alertId": "ALT-2026-000439"
+  },
+  {
+    "caseId": "CASE-2026-000375",
+    "alertId": "ALT-2026-000410"
+  },
+  {
+    "caseId": "CASE-2026-000375",
+    "alertId": "ALT-2026-000441"
+  },
+  {
+    "caseId": "CASE-2026-000376",
+    "alertId": "ALT-2026-000442"
+  },
+  {
+    "caseId": "CASE-2026-000377",
+    "alertId": "ALT-2026-000443"
+  },
+  {
+    "caseId": "CASE-2026-000378",
+    "alertId": "ALT-2026-000444"
+  },
+  {
+    "caseId": "CASE-2026-000379",
+    "alertId": "ALT-2026-000415"
+  },
+  {
+    "caseId": "CASE-2026-000379",
+    "alertId": "ALT-2026-000446"
+  },
+  {
+    "caseId": "CASE-2026-000380",
+    "alertId": "ALT-2026-000447"
+  },
+  {
+    "caseId": "CASE-2026-000381",
+    "alertId": "ALT-2026-000448"
+  },
+  {
+    "caseId": "CASE-2026-000382",
+    "alertId": "ALT-2026-000449"
+  },
+  {
+    "caseId": "CASE-2026-000383",
+    "alertId": "ALT-2026-000420"
+  },
+  {
+    "caseId": "CASE-2026-000383",
+    "alertId": "ALT-2026-000451"
+  },
+  {
+    "caseId": "CASE-2026-000384",
+    "alertId": "ALT-2026-000452"
+  },
+  {
+    "caseId": "CASE-2026-000385",
+    "alertId": "ALT-2026-000453"
+  },
+  {
+    "caseId": "CASE-2026-000386",
+    "alertId": "ALT-2026-000454"
+  },
+  {
+    "caseId": "CASE-2026-000387",
+    "alertId": "ALT-2026-000425"
+  },
+  {
+    "caseId": "CASE-2026-000387",
+    "alertId": "ALT-2026-000456"
+  },
+  {
+    "caseId": "CASE-2026-000388",
+    "alertId": "ALT-2026-000457"
+  },
+  {
+    "caseId": "CASE-2026-000389",
+    "alertId": "ALT-2026-000458"
+  },
+  {
+    "caseId": "CASE-2026-000390",
+    "alertId": "ALT-2026-000459"
+  },
+  {
+    "caseId": "CASE-2026-000391",
+    "alertId": "ALT-2026-000430"
+  },
+  {
+    "caseId": "CASE-2026-000391",
+    "alertId": "ALT-2026-000461"
+  },
+  {
+    "caseId": "CASE-2026-000392",
+    "alertId": "ALT-2026-000462"
+  },
+  {
+    "caseId": "CASE-2026-000393",
+    "alertId": "ALT-2026-000463"
+  },
+  {
+    "caseId": "CASE-2026-000394",
+    "alertId": "ALT-2026-000464"
+  },
+  {
+    "caseId": "CASE-2026-000395",
+    "alertId": "ALT-2026-000435"
+  },
+  {
+    "caseId": "CASE-2026-000395",
+    "alertId": "ALT-2026-000466"
+  },
+  {
+    "caseId": "CASE-2026-000396",
+    "alertId": "ALT-2026-000467"
+  },
+  {
+    "caseId": "CASE-2026-000397",
+    "alertId": "ALT-2026-000468"
+  },
+  {
+    "caseId": "CASE-2026-000398",
+    "alertId": "ALT-2026-000469"
+  },
+  {
+    "caseId": "CASE-2026-000399",
+    "alertId": "ALT-2026-000440"
+  },
+  {
+    "caseId": "CASE-2026-000399",
+    "alertId": "ALT-2026-000471"
+  },
+  {
+    "caseId": "CASE-2026-000400",
+    "alertId": "ALT-2026-000472"
+  },
+  {
+    "caseId": "CASE-2026-000401",
+    "alertId": "ALT-2026-000473"
+  },
+  {
+    "caseId": "CASE-2026-000402",
+    "alertId": "ALT-2026-000474"
+  },
+  {
+    "caseId": "CASE-2026-000403",
+    "alertId": "ALT-2026-000445"
+  },
+  {
+    "caseId": "CASE-2026-000403",
+    "alertId": "ALT-2026-000476"
+  },
+  {
+    "caseId": "CASE-2026-000404",
+    "alertId": "ALT-2026-000477"
+  },
+  {
+    "caseId": "CASE-2026-000405",
+    "alertId": "ALT-2026-000478"
+  },
+  {
+    "caseId": "CASE-2026-000406",
+    "alertId": "ALT-2026-000479"
+  },
+  {
+    "caseId": "CASE-2026-000407",
+    "alertId": "ALT-2026-000450"
+  },
+  {
+    "caseId": "CASE-2026-000407",
+    "alertId": "ALT-2026-000481"
+  },
+  {
+    "caseId": "CASE-2026-000408",
+    "alertId": "ALT-2026-000482"
+  },
+  {
+    "caseId": "CASE-2026-000409",
+    "alertId": "ALT-2026-000483"
+  },
+  {
+    "caseId": "CASE-2026-000410",
+    "alertId": "ALT-2026-000484"
+  },
+  {
+    "caseId": "CASE-2026-000411",
+    "alertId": "ALT-2026-000455"
+  },
+  {
+    "caseId": "CASE-2026-000411",
+    "alertId": "ALT-2026-000486"
+  },
+  {
+    "caseId": "CASE-2026-000412",
+    "alertId": "ALT-2026-000487"
+  },
+  {
+    "caseId": "CASE-2026-000413",
+    "alertId": "ALT-2026-000488"
+  },
+  {
+    "caseId": "CASE-2026-000414",
+    "alertId": "ALT-2026-000489"
+  },
+  {
+    "caseId": "CASE-2026-000415",
+    "alertId": "ALT-2026-000491"
+  },
+  {
+    "caseId": "CASE-2026-000416",
+    "alertId": "ALT-2026-000460"
+  },
+  {
+    "caseId": "CASE-2026-000416",
+    "alertId": "ALT-2026-000492"
+  },
+  {
+    "caseId": "CASE-2026-000417",
+    "alertId": "ALT-2026-000493"
+  },
+  {
+    "caseId": "CASE-2026-000418",
+    "alertId": "ALT-2026-000494"
+  },
+  {
+    "caseId": "CASE-2026-000419",
+    "alertId": "ALT-2026-000496"
+  },
+  {
+    "caseId": "CASE-2026-000420",
+    "alertId": "ALT-2026-000465"
+  },
+  {
+    "caseId": "CASE-2026-000420",
+    "alertId": "ALT-2026-000497"
+  },
+  {
+    "caseId": "CASE-2026-000421",
+    "alertId": "ALT-2026-000498"
+  },
+  {
+    "caseId": "CASE-2026-000422",
+    "alertId": "ALT-2026-000499"
+  },
+  {
+    "caseId": "CASE-2026-000423",
+    "alertId": "ALT-2026-000501"
+  },
+  {
+    "caseId": "CASE-2026-000424",
+    "alertId": "ALT-2026-000502"
+  },
+  {
+    "caseId": "CASE-2026-000425",
+    "alertId": "ALT-2026-000470"
+  },
+  {
+    "caseId": "CASE-2026-000425",
+    "alertId": "ALT-2026-000503"
+  },
+  {
+    "caseId": "CASE-2026-000426",
+    "alertId": "ALT-2026-000504"
+  },
+  {
+    "caseId": "CASE-2026-000427",
+    "alertId": "ALT-2026-000506"
+  },
+  {
+    "caseId": "CASE-2026-000428",
+    "alertId": "ALT-2026-000507"
+  },
+  {
+    "caseId": "CASE-2026-000429",
+    "alertId": "ALT-2026-000508"
+  },
+  {
+    "caseId": "CASE-2026-000430",
+    "alertId": "ALT-2026-000475"
+  },
+  {
+    "caseId": "CASE-2026-000430",
+    "alertId": "ALT-2026-000509"
+  },
+  {
+    "caseId": "CASE-2026-000431",
+    "alertId": "ALT-2026-000511"
+  },
+  {
+    "caseId": "CASE-2026-000432",
+    "alertId": "ALT-2026-000512"
+  },
+  {
+    "caseId": "CASE-2026-000433",
+    "alertId": "ALT-2026-000513"
+  },
+  {
+    "caseId": "CASE-2026-000434",
+    "alertId": "ALT-2026-000480"
+  },
+  {
+    "caseId": "CASE-2026-000434",
+    "alertId": "ALT-2026-000514"
+  },
+  {
+    "caseId": "CASE-2026-000435",
+    "alertId": "ALT-2026-000516"
+  },
+  {
+    "caseId": "CASE-2026-000436",
+    "alertId": "ALT-2026-000517"
+  },
+  {
+    "caseId": "CASE-2026-000437",
+    "alertId": "ALT-2026-000518"
+  },
+  {
+    "caseId": "CASE-2026-000438",
+    "alertId": "ALT-2026-000485"
+  },
+  {
+    "caseId": "CASE-2026-000438",
+    "alertId": "ALT-2026-000519"
+  },
+  {
+    "caseId": "CASE-2026-000439",
+    "alertId": "ALT-2026-000521"
+  },
+  {
+    "caseId": "CASE-2026-000440",
+    "alertId": "ALT-2026-000522"
+  },
+  {
+    "caseId": "CASE-2026-000441",
+    "alertId": "ALT-2026-000523"
+  },
+  {
+    "caseId": "CASE-2026-000442",
+    "alertId": "ALT-2026-000490"
+  },
+  {
+    "caseId": "CASE-2026-000442",
+    "alertId": "ALT-2026-000524"
+  },
+  {
+    "caseId": "CASE-2026-000443",
+    "alertId": "ALT-2026-000526"
+  },
+  {
+    "caseId": "CASE-2026-000444",
+    "alertId": "ALT-2026-000527"
+  },
+  {
+    "caseId": "CASE-2026-000445",
+    "alertId": "ALT-2026-000528"
+  },
+  {
+    "caseId": "CASE-2026-000446",
+    "alertId": "ALT-2026-000529"
+  },
+  {
+    "caseId": "CASE-2026-000447",
+    "alertId": "ALT-2026-000495"
+  },
+  {
+    "caseId": "CASE-2026-000447",
+    "alertId": "ALT-2026-000531"
+  },
+  {
+    "caseId": "CASE-2026-000448",
+    "alertId": "ALT-2026-000532"
+  },
+  {
+    "caseId": "CASE-2026-000449",
+    "alertId": "ALT-2026-000533"
+  },
+  {
+    "caseId": "CASE-2026-000450",
+    "alertId": "ALT-2026-000534"
+  },
+  {
+    "caseId": "CASE-2026-000451",
+    "alertId": "ALT-2026-000536"
+  },
+  {
+    "caseId": "CASE-2026-000452",
+    "alertId": "ALT-2026-000500"
+  },
+  {
+    "caseId": "CASE-2026-000452",
+    "alertId": "ALT-2026-000537"
+  },
+  {
+    "caseId": "CASE-2026-000453",
+    "alertId": "ALT-2026-000538"
+  },
+  {
+    "caseId": "CASE-2026-000454",
+    "alertId": "ALT-2026-000539"
+  },
+  {
+    "caseId": "CASE-2026-000455",
+    "alertId": "ALT-2026-000541"
+  },
+  {
+    "caseId": "CASE-2026-000456",
+    "alertId": "ALT-2026-000505"
+  },
+  {
+    "caseId": "CASE-2026-000456",
+    "alertId": "ALT-2026-000542"
+  },
+  {
+    "caseId": "CASE-2026-000457",
+    "alertId": "ALT-2026-000543"
+  },
+  {
+    "caseId": "CASE-2026-000458",
+    "alertId": "ALT-2026-000544"
+  },
+  {
+    "caseId": "CASE-2026-000459",
+    "alertId": "ALT-2026-000546"
+  },
+  {
+    "caseId": "CASE-2026-000460",
+    "alertId": "ALT-2026-000510"
+  },
+  {
+    "caseId": "CASE-2026-000460",
+    "alertId": "ALT-2026-000547"
+  },
+  {
+    "caseId": "CASE-2026-000461",
+    "alertId": "ALT-2026-000548"
+  },
+  {
+    "caseId": "CASE-2026-000462",
+    "alertId": "ALT-2026-000549"
+  },
+  {
+    "caseId": "CASE-2026-000463",
+    "alertId": "ALT-2026-000551"
+  },
+  {
+    "caseId": "CASE-2026-000464",
+    "alertId": "ALT-2026-000552"
+  },
+  {
+    "caseId": "CASE-2026-000465",
+    "alertId": "ALT-2026-000515"
+  },
+  {
+    "caseId": "CASE-2026-000465",
+    "alertId": "ALT-2026-000553"
+  },
+  {
+    "caseId": "CASE-2026-000466",
+    "alertId": "ALT-2026-000554"
+  },
+  {
+    "caseId": "CASE-2026-000467",
+    "alertId": "ALT-2026-000556"
+  },
+  {
+    "caseId": "CASE-2026-000468",
+    "alertId": "ALT-2026-000557"
+  },
+  {
+    "caseId": "CASE-2026-000469",
+    "alertId": "ALT-2026-000520"
+  },
+  {
+    "caseId": "CASE-2026-000469",
+    "alertId": "ALT-2026-000558"
+  },
+  {
+    "caseId": "CASE-2026-000470",
+    "alertId": "ALT-2026-000559"
+  },
+  {
+    "caseId": "CASE-2026-000471",
+    "alertId": "ALT-2026-000561"
+  },
+  {
+    "caseId": "CASE-2026-000472",
+    "alertId": "ALT-2026-000562"
+  },
+  {
+    "caseId": "CASE-2026-000473",
+    "alertId": "ALT-2026-000525"
+  },
+  {
+    "caseId": "CASE-2026-000473",
+    "alertId": "ALT-2026-000563"
+  },
+  {
+    "caseId": "CASE-2026-000474",
+    "alertId": "ALT-2026-000564"
+  },
+  {
+    "caseId": "CASE-2026-000475",
+    "alertId": "ALT-2026-000566"
+  },
+  {
+    "caseId": "CASE-2026-000476",
+    "alertId": "ALT-2026-000567"
+  },
+  {
+    "caseId": "CASE-2026-000477",
+    "alertId": "ALT-2026-000568"
+  },
+  {
+    "caseId": "CASE-2026-000478",
+    "alertId": "ALT-2026-000569"
+  },
+  {
+    "caseId": "CASE-2026-000479",
+    "alertId": "ALT-2026-000530"
+  },
+  {
+    "caseId": "CASE-2026-000480",
+    "alertId": "ALT-2026-000571"
+  },
+  {
+    "caseId": "CASE-2026-000481",
+    "alertId": "ALT-2026-000572"
+  },
+  {
+    "caseId": "CASE-2026-000482",
+    "alertId": "ALT-2026-000573"
+  },
+  {
+    "caseId": "CASE-2026-000483",
+    "alertId": "ALT-2026-000574"
+  },
+  {
+    "caseId": "CASE-2026-000484",
+    "alertId": "ALT-2026-000535"
+  },
+  {
+    "caseId": "CASE-2026-000485",
+    "alertId": "ALT-2026-000576"
+  },
+  {
+    "caseId": "CASE-2026-000486",
+    "alertId": "ALT-2026-000577"
+  },
+  {
+    "caseId": "CASE-2026-000487",
+    "alertId": "ALT-2026-000578"
+  },
+  {
+    "caseId": "CASE-2026-000488",
+    "alertId": "ALT-2026-000579"
+  },
+  {
+    "caseId": "CASE-2026-000489",
+    "alertId": "ALT-2026-000540"
+  },
+  {
+    "caseId": "CASE-2026-000490",
+    "alertId": "ALT-2026-000581"
+  },
+  {
+    "caseId": "CASE-2026-000491",
+    "alertId": "ALT-2026-000582"
+  },
+  {
+    "caseId": "CASE-2026-000492",
+    "alertId": "ALT-2026-000583"
+  },
+  {
+    "caseId": "CASE-2026-000493",
+    "alertId": "ALT-2026-000584"
+  },
+  {
+    "caseId": "CASE-2026-000494",
+    "alertId": "ALT-2026-000545"
+  },
+  {
+    "caseId": "CASE-2026-000495",
+    "alertId": "ALT-2026-000586"
+  },
+  {
+    "caseId": "CASE-2026-000496",
+    "alertId": "ALT-2026-000587"
+  },
+  {
+    "caseId": "CASE-2026-000497",
+    "alertId": "ALT-2026-000588"
+  },
+  {
+    "caseId": "CASE-2026-000498",
+    "alertId": "ALT-2026-000589"
+  },
+  {
+    "caseId": "CASE-2026-000499",
+    "alertId": "ALT-2026-000550"
+  },
+  {
+    "caseId": "CASE-2026-000500",
+    "alertId": "ALT-2026-000591"
+  },
+  {
+    "caseId": "CASE-2026-000501",
+    "alertId": "ALT-2026-000592"
+  },
+  {
+    "caseId": "CASE-2026-000502",
+    "alertId": "ALT-2026-000593"
+  },
+  {
+    "caseId": "CASE-2026-000503",
+    "alertId": "ALT-2026-000594"
+  },
+  {
+    "caseId": "CASE-2026-000504",
+    "alertId": "ALT-2026-000555"
+  },
+  {
+    "caseId": "CASE-2026-000504",
+    "alertId": "ALT-2026-000596"
+  },
+  {
+    "caseId": "CASE-2026-000505",
+    "alertId": "ALT-2026-000597"
+  },
+  {
+    "caseId": "CASE-2026-000506",
+    "alertId": "ALT-2026-000598"
+  },
+  {
+    "caseId": "CASE-2026-000507",
+    "alertId": "ALT-2026-000599"
+  },
+  {
+    "caseId": "CASE-2026-000508",
+    "alertId": "ALT-2026-000601"
+  },
+  {
+    "caseId": "CASE-2026-000509",
+    "alertId": "ALT-2026-000560"
+  },
+  {
+    "caseId": "CASE-2026-000509",
+    "alertId": "ALT-2026-000602"
+  },
+  {
+    "caseId": "CASE-2026-000510",
+    "alertId": "ALT-2026-000603"
+  },
+  {
+    "caseId": "CASE-2026-000511",
+    "alertId": "ALT-2026-000604"
+  },
+  {
+    "caseId": "CASE-2026-000512",
+    "alertId": "ALT-2026-000606"
+  },
+  {
+    "caseId": "CASE-2026-000513",
+    "alertId": "ALT-2026-000607"
+  },
+  {
+    "caseId": "CASE-2026-000514",
+    "alertId": "ALT-2026-000565"
+  },
+  {
+    "caseId": "CASE-2026-000514",
+    "alertId": "ALT-2026-000608"
+  },
+  {
+    "caseId": "CASE-2026-000515",
+    "alertId": "ALT-2026-000609"
+  },
+  {
+    "caseId": "CASE-2026-000516",
+    "alertId": "ALT-2026-000611"
+  },
+  {
+    "caseId": "CASE-2026-000517",
+    "alertId": "ALT-2026-000612"
+  },
+  {
+    "caseId": "CASE-2026-000518",
+    "alertId": "ALT-2026-000570"
+  },
+  {
+    "caseId": "CASE-2026-000518",
+    "alertId": "ALT-2026-000613"
+  },
+  {
+    "caseId": "CASE-2026-000519",
+    "alertId": "ALT-2026-000614"
+  },
+  {
+    "caseId": "CASE-2026-000520",
+    "alertId": "ALT-2026-000616"
+  },
+  {
+    "caseId": "CASE-2026-000521",
+    "alertId": "ALT-2026-000617"
+  },
+  {
+    "caseId": "CASE-2026-000522",
+    "alertId": "ALT-2026-000575"
+  },
+  {
+    "caseId": "CASE-2026-000522",
+    "alertId": "ALT-2026-000618"
+  },
+  {
+    "caseId": "CASE-2026-000523",
+    "alertId": "ALT-2026-000619"
+  },
+  {
+    "caseId": "CASE-2026-000524",
+    "alertId": "ALT-2026-000621"
+  },
+  {
+    "caseId": "CASE-2026-000525",
+    "alertId": "ALT-2026-000622"
+  },
+  {
+    "caseId": "CASE-2026-000526",
+    "alertId": "ALT-2026-000580"
+  },
+  {
+    "caseId": "CASE-2026-000526",
+    "alertId": "ALT-2026-000623"
+  },
+  {
+    "caseId": "CASE-2026-000527",
+    "alertId": "ALT-2026-000624"
+  },
+  {
+    "caseId": "CASE-2026-000528",
+    "alertId": "ALT-2026-000626"
+  },
+  {
+    "caseId": "CASE-2026-000529",
+    "alertId": "ALT-2026-000627"
+  },
+  {
+    "caseId": "CASE-2026-000530",
+    "alertId": "ALT-2026-000628"
+  },
+  {
+    "caseId": "CASE-2026-000531",
+    "alertId": "ALT-2026-000585"
+  },
+  {
+    "caseId": "CASE-2026-000531",
+    "alertId": "ALT-2026-000629"
+  },
+  {
+    "caseId": "CASE-2026-000532",
+    "alertId": "ALT-2026-000631"
+  },
+  {
+    "caseId": "CASE-2026-000533",
+    "alertId": "ALT-2026-000632"
+  },
+  {
+    "caseId": "CASE-2026-000534",
+    "alertId": "ALT-2026-000633"
+  },
+  {
+    "caseId": "CASE-2026-000535",
+    "alertId": "ALT-2026-000590"
+  },
+  {
+    "caseId": "CASE-2026-000535",
+    "alertId": "ALT-2026-000634"
+  },
+  {
+    "caseId": "CASE-2026-000536",
+    "alertId": "ALT-2026-000636"
+  },
+  {
+    "caseId": "CASE-2026-000537",
+    "alertId": "ALT-2026-000637"
+  },
+  {
+    "caseId": "CASE-2026-000538",
+    "alertId": "ALT-2026-000638"
+  },
+  {
+    "caseId": "CASE-2026-000539",
+    "alertId": "ALT-2026-000595"
+  },
+  {
+    "caseId": "CASE-2026-000539",
+    "alertId": "ALT-2026-000639"
+  },
+  {
+    "caseId": "CASE-2026-000540",
+    "alertId": "ALT-2026-000641"
+  },
+  {
+    "caseId": "CASE-2026-000541",
+    "alertId": "ALT-2026-000642"
+  },
+  {
+    "caseId": "CASE-2026-000542",
+    "alertId": "ALT-2026-000643"
+  },
+  {
+    "caseId": "CASE-2026-000543",
+    "alertId": "ALT-2026-000600"
+  },
+  {
+    "caseId": "CASE-2026-000543",
+    "alertId": "ALT-2026-000644"
+  },
+  {
+    "caseId": "CASE-2026-000544",
+    "alertId": "ALT-2026-000646"
+  },
+  {
+    "caseId": "CASE-2026-000545",
+    "alertId": "ALT-2026-000647"
+  },
+  {
+    "caseId": "CASE-2026-000546",
+    "alertId": "ALT-2026-000648"
+  },
+  {
+    "caseId": "CASE-2026-000547",
+    "alertId": "ALT-2026-000605"
+  },
+  {
+    "caseId": "CASE-2026-000547",
+    "alertId": "ALT-2026-000649"
+  },
+  {
+    "caseId": "CASE-2026-000548",
+    "alertId": "ALT-2026-000651"
+  },
+  {
+    "caseId": "CASE-2026-000549",
+    "alertId": "ALT-2026-000652"
+  },
+  {
+    "caseId": "CASE-2026-000550",
+    "alertId": "ALT-2026-000653"
+  },
+  {
+    "caseId": "CASE-2026-000551",
+    "alertId": "ALT-2026-000610"
+  },
+  {
+    "caseId": "CASE-2026-000551",
+    "alertId": "ALT-2026-000654"
+  },
+  {
+    "caseId": "CASE-2026-000552",
+    "alertId": "ALT-2026-000656"
+  },
+  {
+    "caseId": "CASE-2026-000553",
+    "alertId": "ALT-2026-000657"
+  },
+  {
+    "caseId": "CASE-2026-000554",
+    "alertId": "ALT-2026-000658"
+  },
+  {
+    "caseId": "CASE-2026-000555",
+    "alertId": "ALT-2026-000659"
+  },
+  {
+    "caseId": "CASE-2026-000556",
+    "alertId": "ALT-2026-000615"
+  },
+  {
+    "caseId": "CASE-2026-000557",
+    "alertId": "ALT-2026-000661"
+  },
+  {
+    "caseId": "CASE-2026-000558",
+    "alertId": "ALT-2026-000662"
+  },
+  {
+    "caseId": "CASE-2026-000559",
+    "alertId": "ALT-2026-000663"
+  },
+  {
+    "caseId": "CASE-2026-000560",
+    "alertId": "ALT-2026-000664"
+  },
+  {
+    "caseId": "CASE-2026-000561",
+    "alertId": "ALT-2026-000620"
+  },
+  {
+    "caseId": "CASE-2026-000562",
+    "alertId": "ALT-2026-000666"
+  },
+  {
+    "caseId": "CASE-2026-000563",
+    "alertId": "ALT-2026-000667"
+  },
+  {
+    "caseId": "CASE-2026-000564",
+    "alertId": "ALT-2026-000668"
+  },
+  {
+    "caseId": "CASE-2026-000565",
+    "alertId": "ALT-2026-000669"
+  },
+  {
+    "caseId": "CASE-2026-000566",
+    "alertId": "ALT-2026-000625"
+  },
+  {
+    "caseId": "CASE-2026-000567",
+    "alertId": "ALT-2026-000671"
+  },
+  {
+    "caseId": "CASE-2026-000568",
+    "alertId": "ALT-2026-000672"
+  },
+  {
+    "caseId": "CASE-2026-000569",
+    "alertId": "ALT-2026-000673"
+  },
+  {
+    "caseId": "CASE-2026-000570",
+    "alertId": "ALT-2026-000674"
+  },
+  {
+    "caseId": "CASE-2026-000571",
+    "alertId": "ALT-2026-000630"
+  },
+  {
+    "caseId": "CASE-2026-000572",
+    "alertId": "ALT-2026-000676"
+  },
+  {
+    "caseId": "CASE-2026-000573",
+    "alertId": "ALT-2026-000677"
+  },
+  {
+    "caseId": "CASE-2026-000574",
+    "alertId": "ALT-2026-000678"
+  },
+  {
+    "caseId": "CASE-2026-000575",
+    "alertId": "ALT-2026-000679"
+  },
+  {
+    "caseId": "CASE-2026-000576",
+    "alertId": "ALT-2026-000681"
+  },
+  {
+    "caseId": "CASE-2026-000577",
+    "alertId": "ALT-2026-000635"
+  },
+  {
+    "caseId": "CASE-2026-000577",
+    "alertId": "ALT-2026-000682"
+  },
+  {
+    "caseId": "CASE-2026-000578",
+    "alertId": "ALT-2026-000683"
+  },
+  {
+    "caseId": "CASE-2026-000579",
+    "alertId": "ALT-2026-000684"
+  },
+  {
+    "caseId": "CASE-2026-000580",
+    "alertId": "ALT-2026-000686"
+  },
+  {
+    "caseId": "CASE-2026-000581",
+    "alertId": "ALT-2026-000640"
+  },
+  {
+    "caseId": "CASE-2026-000581",
+    "alertId": "ALT-2026-000687"
+  },
+  {
+    "caseId": "CASE-2026-000582",
+    "alertId": "ALT-2026-000688"
+  },
+  {
+    "caseId": "CASE-2026-000583",
+    "alertId": "ALT-2026-000689"
+  },
+  {
+    "caseId": "CASE-2026-000584",
+    "alertId": "ALT-2026-000691"
+  },
+  {
+    "caseId": "CASE-2026-000585",
+    "alertId": "ALT-2026-000645"
+  },
+  {
+    "caseId": "CASE-2026-000585",
+    "alertId": "ALT-2026-000692"
+  },
+  {
+    "caseId": "CASE-2026-000586",
+    "alertId": "ALT-2026-000693"
+  },
+  {
+    "caseId": "CASE-2026-000587",
+    "alertId": "ALT-2026-000694"
+  },
+  {
+    "caseId": "CASE-2026-000588",
+    "alertId": "ALT-2026-000696"
+  },
+  {
+    "caseId": "CASE-2026-000589",
+    "alertId": "ALT-2026-000650"
+  },
+  {
+    "caseId": "CASE-2026-000589",
+    "alertId": "ALT-2026-000697"
+  },
+  {
+    "caseId": "CASE-2026-000590",
+    "alertId": "ALT-2026-000698"
+  },
+  {
+    "caseId": "CASE-2026-000591",
+    "alertId": "ALT-2026-000699"
+  },
+  {
+    "caseId": "CASE-2026-000592",
+    "alertId": "ALT-2026-000701"
+  },
+  {
+    "caseId": "CASE-2026-000593",
+    "alertId": "ALT-2026-000702"
+  },
+  {
+    "caseId": "CASE-2026-000594",
+    "alertId": "ALT-2026-000655"
+  },
+  {
+    "caseId": "CASE-2026-000594",
+    "alertId": "ALT-2026-000703"
+  },
+  {
+    "caseId": "CASE-2026-000595",
+    "alertId": "ALT-2026-000704"
+  },
+  {
+    "caseId": "CASE-2026-000596",
+    "alertId": "ALT-2026-000706"
+  },
+  {
+    "caseId": "CASE-2026-000597",
+    "alertId": "ALT-2026-000707"
+  },
+  {
+    "caseId": "CASE-2026-000598",
+    "alertId": "ALT-2026-000660"
+  },
+  {
+    "caseId": "CASE-2026-000598",
+    "alertId": "ALT-2026-000708"
+  },
+  {
+    "caseId": "CASE-2026-000599",
+    "alertId": "ALT-2026-000709"
+  },
+  {
+    "caseId": "CASE-2026-000600",
+    "alertId": "ALT-2026-000711"
+  },
+  {
+    "caseId": "CASE-2026-000601",
+    "alertId": "ALT-2026-000712"
+  },
+  {
+    "caseId": "CASE-2026-000602",
+    "alertId": "ALT-2026-000713"
+  },
+  {
+    "caseId": "CASE-2026-000603",
+    "alertId": "ALT-2026-000665"
+  },
+  {
+    "caseId": "CASE-2026-000603",
+    "alertId": "ALT-2026-000714"
+  },
+  {
+    "caseId": "CASE-2026-000604",
+    "alertId": "ALT-2026-000716"
+  },
+  {
+    "caseId": "CASE-2026-000605",
+    "alertId": "ALT-2026-000717"
+  },
+  {
+    "caseId": "CASE-2026-000606",
+    "alertId": "ALT-2026-000718"
+  },
+  {
+    "caseId": "CASE-2026-000607",
+    "alertId": "ALT-2026-000670"
+  },
+  {
+    "caseId": "CASE-2026-000607",
+    "alertId": "ALT-2026-000719"
+  },
+  {
+    "caseId": "CASE-2026-000608",
+    "alertId": "ALT-2026-000721"
+  },
+  {
+    "caseId": "CASE-2026-000609",
+    "alertId": "ALT-2026-000722"
+  },
+  {
+    "caseId": "CASE-2026-000610",
+    "alertId": "ALT-2026-000723"
+  },
+  {
+    "caseId": "CASE-2026-000611",
+    "alertId": "ALT-2026-000675"
+  },
+  {
+    "caseId": "CASE-2026-000611",
+    "alertId": "ALT-2026-000724"
+  },
+  {
+    "caseId": "CASE-2026-000612",
+    "alertId": "ALT-2026-000726"
+  },
+  {
+    "caseId": "CASE-2026-000613",
+    "alertId": "ALT-2026-000727"
+  },
+  {
+    "caseId": "CASE-2026-000614",
+    "alertId": "ALT-2026-000728"
+  },
+  {
+    "caseId": "CASE-2026-000615",
+    "alertId": "ALT-2026-000680"
+  },
+  {
+    "caseId": "CASE-2026-000615",
+    "alertId": "ALT-2026-000729"
+  },
+  {
+    "caseId": "CASE-2026-000616",
+    "alertId": "ALT-2026-000731"
+  },
+  {
+    "caseId": "CASE-2026-000617",
+    "alertId": "ALT-2026-000732"
+  },
+  {
+    "caseId": "CASE-2026-000618",
+    "alertId": "ALT-2026-000733"
+  },
+  {
+    "caseId": "CASE-2026-000619",
+    "alertId": "ALT-2026-000685"
+  },
+  {
+    "caseId": "CASE-2026-000619",
+    "alertId": "ALT-2026-000734"
+  },
+  {
+    "caseId": "CASE-2026-000620",
+    "alertId": "ALT-2026-000736"
+  },
+  {
+    "caseId": "CASE-2026-000621",
+    "alertId": "ALT-2026-000737"
+  },
+  {
+    "caseId": "CASE-2026-000622",
+    "alertId": "ALT-2026-000738"
+  },
+  {
+    "caseId": "CASE-2026-000623",
+    "alertId": "ALT-2026-000690"
+  },
+  {
+    "caseId": "CASE-2026-000623",
+    "alertId": "ALT-2026-000739"
+  },
+  {
+    "caseId": "CASE-2026-000624",
+    "alertId": "ALT-2026-000741"
+  },
+  {
+    "caseId": "CASE-2026-000625",
+    "alertId": "ALT-2026-000742"
+  },
+  {
+    "caseId": "CASE-2026-000626",
+    "alertId": "ALT-2026-000743"
+  },
+  {
+    "caseId": "CASE-2026-000627",
+    "alertId": "ALT-2026-000744"
+  },
+  {
+    "caseId": "CASE-2026-000628",
+    "alertId": "ALT-2026-000695"
+  },
+  {
+    "caseId": "CASE-2026-000629",
+    "alertId": "ALT-2026-000746"
+  },
+  {
+    "caseId": "CASE-2026-000630",
+    "alertId": "ALT-2026-000747"
+  },
+  {
+    "caseId": "CASE-2026-000631",
+    "alertId": "ALT-2026-000748"
+  },
+  {
+    "caseId": "CASE-2026-000632",
+    "alertId": "ALT-2026-000749"
+  },
+  {
+    "caseId": "CASE-2026-000633",
+    "alertId": "ALT-2026-000700"
+  },
+  {
+    "caseId": "CASE-2026-000634",
+    "alertId": "ALT-2026-000751"
+  },
+  {
+    "caseId": "CASE-2026-000635",
+    "alertId": "ALT-2026-000752"
+  },
+  {
+    "caseId": "CASE-2026-000636",
+    "alertId": "ALT-2026-000753"
+  },
+  {
+    "caseId": "CASE-2026-000637",
+    "alertId": "ALT-2026-000754"
+  },
+  {
+    "caseId": "CASE-2026-000638",
+    "alertId": "ALT-2026-000705"
+  },
+  {
+    "caseId": "CASE-2026-000639",
+    "alertId": "ALT-2026-000756"
+  },
+  {
+    "caseId": "CASE-2026-000640",
+    "alertId": "ALT-2026-000757"
+  },
+  {
+    "caseId": "CASE-2026-000641",
+    "alertId": "ALT-2026-000758"
+  },
+  {
+    "caseId": "CASE-2026-000642",
+    "alertId": "ALT-2026-000759"
+  },
+  {
+    "caseId": "CASE-2026-000643",
+    "alertId": "ALT-2026-000710"
+  },
+  {
+    "caseId": "CASE-2026-000644",
+    "alertId": "ALT-2026-000761"
+  },
+  {
+    "caseId": "CASE-2026-000645",
+    "alertId": "ALT-2026-000762"
+  },
+  {
+    "caseId": "CASE-2026-000646",
+    "alertId": "ALT-2026-000763"
+  },
+  {
+    "caseId": "CASE-2026-000647",
+    "alertId": "ALT-2026-000764"
+  },
+  {
+    "caseId": "CASE-2026-000648",
+    "alertId": "ALT-2026-000715"
+  },
+  {
+    "caseId": "CASE-2026-000649",
+    "alertId": "ALT-2026-000766"
+  },
+  {
+    "caseId": "CASE-2026-000650",
+    "alertId": "ALT-2026-000767"
+  },
+  {
+    "caseId": "CASE-2026-000651",
+    "alertId": "ALT-2026-000768"
+  },
+  {
+    "caseId": "CASE-2026-000652",
+    "alertId": "ALT-2026-000769"
+  },
+  {
+    "caseId": "CASE-2026-000653",
+    "alertId": "ALT-2026-000720"
+  },
+  {
+    "caseId": "CASE-2026-000654",
+    "alertId": "ALT-2026-000771"
+  },
+  {
+    "caseId": "CASE-2026-000655",
+    "alertId": "ALT-2026-000772"
+  },
+  {
+    "caseId": "CASE-2026-000656",
+    "alertId": "ALT-2026-000773"
+  },
+  {
+    "caseId": "CASE-2026-000657",
+    "alertId": "ALT-2026-000774"
+  },
+  {
+    "caseId": "CASE-2026-000658",
+    "alertId": "ALT-2026-000725"
+  },
+  {
+    "caseId": "CASE-2026-000658",
+    "alertId": "ALT-2026-000776"
+  },
+  {
+    "caseId": "CASE-2026-000659",
+    "alertId": "ALT-2026-000777"
+  },
+  {
+    "caseId": "CASE-2026-000660",
+    "alertId": "ALT-2026-000778"
+  },
+  {
+    "caseId": "CASE-2026-000661",
+    "alertId": "ALT-2026-000779"
+  },
+  {
+    "caseId": "CASE-2026-000662",
+    "alertId": "ALT-2026-000781"
+  },
+  {
+    "caseId": "CASE-2026-000663",
+    "alertId": "ALT-2026-000730"
+  },
+  {
+    "caseId": "CASE-2026-000663",
+    "alertId": "ALT-2026-000782"
+  },
+  {
+    "caseId": "CASE-2026-000664",
+    "alertId": "ALT-2026-000783"
+  },
+  {
+    "caseId": "CASE-2026-000665",
+    "alertId": "ALT-2026-000784"
+  },
+  {
+    "caseId": "CASE-2026-000666",
+    "alertId": "ALT-2026-000786"
+  },
+  {
+    "caseId": "CASE-2026-000667",
+    "alertId": "ALT-2026-000735"
+  },
+  {
+    "caseId": "CASE-2026-000667",
+    "alertId": "ALT-2026-000787"
+  },
+  {
+    "caseId": "CASE-2026-000668",
+    "alertId": "ALT-2026-000788"
+  },
+  {
+    "caseId": "CASE-2026-000669",
+    "alertId": "ALT-2026-000789"
+  },
+  {
+    "caseId": "CASE-2026-000670",
+    "alertId": "ALT-2026-000791"
+  },
+  {
+    "caseId": "CASE-2026-000671",
+    "alertId": "ALT-2026-000740"
+  },
+  {
+    "caseId": "CASE-2026-000671",
+    "alertId": "ALT-2026-000792"
+  },
+  {
+    "caseId": "CASE-2026-000672",
+    "alertId": "ALT-2026-000793"
+  },
+  {
+    "caseId": "CASE-2026-000673",
+    "alertId": "ALT-2026-000794"
+  },
+  {
+    "caseId": "CASE-2026-000674",
+    "alertId": "ALT-2026-000796"
+  },
+  {
+    "caseId": "CASE-2026-000675",
+    "alertId": "ALT-2026-000797"
+  },
+  {
+    "caseId": "CASE-2026-000676",
+    "alertId": "ALT-2026-000798"
+  },
+  {
+    "caseId": "CASE-2026-000677",
+    "alertId": "ALT-2026-000745"
+  },
+  {
+    "caseId": "CASE-2026-000677",
+    "alertId": "ALT-2026-000799"
+  },
+  {
+    "caseId": "CASE-2026-000678",
+    "alertId": "ALT-2026-000801"
+  },
+  {
+    "caseId": "CASE-2026-000679",
+    "alertId": "ALT-2026-000802"
+  },
+  {
+    "caseId": "CASE-2026-000680",
+    "alertId": "ALT-2026-000803"
+  },
+  {
+    "caseId": "CASE-2026-000681",
+    "alertId": "ALT-2026-000804"
+  },
+  {
+    "caseId": "CASE-2026-000682",
+    "alertId": "ALT-2026-000750"
+  },
+  {
+    "caseId": "CASE-2026-000683",
+    "alertId": "ALT-2026-000806"
+  },
+  {
+    "caseId": "CASE-2026-000684",
+    "alertId": "ALT-2026-000807"
+  },
+  {
+    "caseId": "CASE-2026-000685",
+    "alertId": "ALT-2026-000808"
+  },
+  {
+    "caseId": "CASE-2026-000686",
+    "alertId": "ALT-2026-000809"
+  },
+  {
+    "caseId": "CASE-2026-000687",
+    "alertId": "ALT-2026-000755"
+  },
+  {
+    "caseId": "CASE-2026-000688",
+    "alertId": "ALT-2026-000811"
+  },
+  {
+    "caseId": "CASE-2026-000689",
+    "alertId": "ALT-2026-000812"
+  },
+  {
+    "caseId": "CASE-2026-000690",
+    "alertId": "ALT-2026-000813"
+  },
+  {
+    "caseId": "CASE-2026-000691",
+    "alertId": "ALT-2026-000814"
+  },
+  {
+    "caseId": "CASE-2026-000692",
+    "alertId": "ALT-2026-000760"
+  },
+  {
+    "caseId": "CASE-2026-000693",
+    "alertId": "ALT-2026-000816"
+  },
+  {
+    "caseId": "CASE-2026-000694",
+    "alertId": "ALT-2026-000817"
+  },
+  {
+    "caseId": "CASE-2026-000695",
+    "alertId": "ALT-2026-000818"
+  },
+  {
+    "caseId": "CASE-2026-000696",
+    "alertId": "ALT-2026-000819"
+  },
+  {
+    "caseId": "CASE-2026-000697",
+    "alertId": "ALT-2026-000765"
+  },
+  {
+    "caseId": "CASE-2026-000698",
+    "alertId": "ALT-2026-000821"
+  },
+  {
+    "caseId": "CASE-2026-000699",
+    "alertId": "ALT-2026-000822"
+  },
+  {
+    "caseId": "CASE-2026-000700",
+    "alertId": "ALT-2026-000823"
+  },
+  {
+    "caseId": "CASE-2026-000701",
+    "alertId": "ALT-2026-000824"
+  },
+  {
+    "caseId": "CASE-2026-000702",
+    "alertId": "ALT-2026-000770"
+  },
+  {
+    "caseId": "CASE-2026-000703",
+    "alertId": "ALT-2026-000826"
+  },
+  {
+    "caseId": "CASE-2026-000704",
+    "alertId": "ALT-2026-000827"
+  },
+  {
+    "caseId": "CASE-2026-000705",
+    "alertId": "ALT-2026-000828"
+  },
+  {
+    "caseId": "CASE-2026-000706",
+    "alertId": "ALT-2026-000829"
+  },
+  {
+    "caseId": "CASE-2026-000707",
+    "alertId": "ALT-2026-000775"
+  },
+  {
+    "caseId": "CASE-2026-000708",
+    "alertId": "ALT-2026-000831"
+  },
+  {
+    "caseId": "CASE-2026-000709",
+    "alertId": "ALT-2026-000832"
+  },
+  {
+    "caseId": "CASE-2026-000710",
+    "alertId": "ALT-2026-000833"
+  },
+  {
+    "caseId": "CASE-2026-000711",
+    "alertId": "ALT-2026-000834"
+  },
+  {
+    "caseId": "CASE-2026-000712",
+    "alertId": "ALT-2026-000780"
+  },
+  {
+    "caseId": "CASE-2026-000713",
+    "alertId": "ALT-2026-000836"
+  },
+  {
+    "caseId": "CASE-2026-000714",
+    "alertId": "ALT-2026-000837"
+  },
+  {
+    "caseId": "CASE-2026-000715",
+    "alertId": "ALT-2026-000838"
+  },
+  {
+    "caseId": "CASE-2026-000716",
+    "alertId": "ALT-2026-000839"
+  },
+  {
+    "caseId": "CASE-2026-000717",
+    "alertId": "ALT-2026-000785"
+  },
+  {
+    "caseId": "CASE-2026-000717",
+    "alertId": "ALT-2026-000841"
+  },
+  {
+    "caseId": "CASE-2026-000718",
+    "alertId": "ALT-2026-000842"
+  },
+  {
+    "caseId": "CASE-2026-000719",
+    "alertId": "ALT-2026-000843"
+  },
+  {
+    "caseId": "CASE-2026-000720",
+    "alertId": "ALT-2026-000844"
+  },
+  {
+    "caseId": "CASE-2026-000721",
+    "alertId": "ALT-2026-000790"
+  },
+  {
+    "caseId": "CASE-2026-000721",
+    "alertId": "ALT-2026-000846"
+  },
+  {
+    "caseId": "CASE-2026-000722",
+    "alertId": "ALT-2026-000847"
+  },
+  {
+    "caseId": "CASE-2026-000723",
+    "alertId": "ALT-2026-000848"
+  },
+  {
+    "caseId": "CASE-2026-000724",
+    "alertId": "ALT-2026-000849"
+  },
+  {
+    "caseId": "CASE-2026-000725",
+    "alertId": "ALT-2026-000795"
+  },
+  {
+    "caseId": "CASE-2026-000725",
+    "alertId": "ALT-2026-000851"
+  },
+  {
+    "caseId": "CASE-2026-000726",
+    "alertId": "ALT-2026-000852"
+  },
+  {
+    "caseId": "CASE-2026-000727",
+    "alertId": "ALT-2026-000853"
+  },
+  {
+    "caseId": "CASE-2026-000728",
+    "alertId": "ALT-2026-000854"
+  },
+  {
+    "caseId": "CASE-2026-000729",
+    "alertId": "ALT-2026-000800"
+  },
+  {
+    "caseId": "CASE-2026-000729",
+    "alertId": "ALT-2026-000856"
+  },
+  {
+    "caseId": "CASE-2026-000730",
+    "alertId": "ALT-2026-000857"
+  },
+  {
+    "caseId": "CASE-2026-000731",
+    "alertId": "ALT-2026-000858"
+  },
+  {
+    "caseId": "CASE-2026-000732",
+    "alertId": "ALT-2026-000859"
+  },
+  {
+    "caseId": "CASE-2026-000733",
+    "alertId": "ALT-2026-000861"
+  },
+  {
+    "caseId": "CASE-2026-000734",
+    "alertId": "ALT-2026-000862"
+  },
+  {
+    "caseId": "CASE-2026-000735",
+    "alertId": "ALT-2026-000805"
+  },
+  {
+    "caseId": "CASE-2026-000735",
+    "alertId": "ALT-2026-000863"
+  },
+  {
+    "caseId": "CASE-2026-000736",
+    "alertId": "ALT-2026-000864"
+  },
+  {
+    "caseId": "CASE-2026-000737",
+    "alertId": "ALT-2026-000866"
+  },
+  {
+    "caseId": "CASE-2026-000738",
+    "alertId": "ALT-2026-000867"
+  },
+  {
+    "caseId": "CASE-2026-000739",
+    "alertId": "ALT-2026-000868"
+  },
+  {
+    "caseId": "CASE-2026-000740",
+    "alertId": "ALT-2026-000869"
+  },
+  {
+    "caseId": "CASE-2026-000741",
+    "alertId": "ALT-2026-000810"
+  },
+  {
+    "caseId": "CASE-2026-000742",
+    "alertId": "ALT-2026-000871"
+  },
+  {
+    "caseId": "CASE-2026-000743",
+    "alertId": "ALT-2026-000872"
+  },
+  {
+    "caseId": "CASE-2026-000744",
+    "alertId": "ALT-2026-000873"
+  },
+  {
+    "caseId": "CASE-2026-000745",
+    "alertId": "ALT-2026-000874"
+  },
+  {
+    "caseId": "CASE-2026-000746",
+    "alertId": "ALT-2026-000876"
+  },
+  {
+    "caseId": "CASE-2026-000747",
+    "alertId": "ALT-2026-000877"
+  },
+  {
+    "caseId": "CASE-2026-000748",
+    "alertId": "ALT-2026-000815"
+  },
+  {
+    "caseId": "CASE-2026-000748",
+    "alertId": "ALT-2026-000878"
+  },
+  {
+    "caseId": "CASE-2026-000749",
+    "alertId": "ALT-2026-000879"
+  },
+  {
+    "caseId": "CASE-2026-000750",
+    "alertId": "ALT-2026-000881"
+  },
+  {
+    "caseId": "CASE-2026-000751",
+    "alertId": "ALT-2026-000882"
+  },
+  {
+    "caseId": "CASE-2026-000752",
+    "alertId": "ALT-2026-000820"
+  },
+  {
+    "caseId": "CASE-2026-000752",
+    "alertId": "ALT-2026-000883"
+  },
+  {
+    "caseId": "CASE-2026-000753",
+    "alertId": "ALT-2026-000884"
+  },
+  {
+    "caseId": "CASE-2026-000754",
+    "alertId": "ALT-2026-000886"
+  },
+  {
+    "caseId": "CASE-2026-000755",
+    "alertId": "ALT-2026-000887"
+  },
+  {
+    "caseId": "CASE-2026-000756",
+    "alertId": "ALT-2026-000825"
+  },
+  {
+    "caseId": "CASE-2026-000756",
+    "alertId": "ALT-2026-000888"
+  },
+  {
+    "caseId": "CASE-2026-000757",
+    "alertId": "ALT-2026-000889"
+  },
+  {
+    "caseId": "CASE-2026-000758",
+    "alertId": "ALT-2026-000891"
+  },
+  {
+    "caseId": "CASE-2026-000759",
+    "alertId": "ALT-2026-000892"
+  },
+  {
+    "caseId": "CASE-2026-000760",
+    "alertId": "ALT-2026-000830"
+  },
+  {
+    "caseId": "CASE-2026-000760",
+    "alertId": "ALT-2026-000893"
+  },
+  {
+    "caseId": "CASE-2026-000761",
+    "alertId": "ALT-2026-000894"
+  },
+  {
+    "caseId": "CASE-2026-000762",
+    "alertId": "ALT-2026-000896"
+  },
+  {
+    "caseId": "CASE-2026-000763",
+    "alertId": "ALT-2026-000897"
+  },
+  {
+    "caseId": "CASE-2026-000764",
+    "alertId": "ALT-2026-000835"
+  },
+  {
+    "caseId": "CASE-2026-000764",
+    "alertId": "ALT-2026-000898"
+  },
+  {
+    "caseId": "CASE-2026-000765",
+    "alertId": "ALT-2026-000899"
+  },
+  {
+    "caseId": "CASE-2026-000766",
+    "alertId": "ALT-2026-000901"
+  },
+  {
+    "caseId": "CASE-2026-000767",
+    "alertId": "ALT-2026-000902"
+  },
+  {
+    "caseId": "CASE-2026-000768",
+    "alertId": "ALT-2026-000840"
+  },
+  {
+    "caseId": "CASE-2026-000768",
+    "alertId": "ALT-2026-000903"
+  },
+  {
+    "caseId": "CASE-2026-000769",
+    "alertId": "ALT-2026-000904"
+  },
+  {
+    "caseId": "CASE-2026-000770",
+    "alertId": "ALT-2026-000906"
+  },
+  {
+    "caseId": "CASE-2026-000771",
+    "alertId": "ALT-2026-000907"
+  },
+  {
+    "caseId": "CASE-2026-000772",
+    "alertId": "ALT-2026-000908"
+  },
+  {
+    "caseId": "CASE-2026-000773",
+    "alertId": "ALT-2026-000909"
+  },
+  {
+    "caseId": "CASE-2026-000774",
+    "alertId": "ALT-2026-000845"
+  },
+  {
+    "caseId": "CASE-2026-000775",
+    "alertId": "ALT-2026-000911"
+  },
+  {
+    "caseId": "CASE-2026-000776",
+    "alertId": "ALT-2026-000912"
+  },
+  {
+    "caseId": "CASE-2026-000777",
+    "alertId": "ALT-2026-000913"
+  },
+  {
+    "caseId": "CASE-2026-000778",
+    "alertId": "ALT-2026-000914"
+  },
+  {
+    "caseId": "CASE-2026-000779",
+    "alertId": "ALT-2026-000850"
+  },
+  {
+    "caseId": "CASE-2026-000780",
+    "alertId": "ALT-2026-000916"
+  },
+  {
+    "caseId": "CASE-2026-000781",
+    "alertId": "ALT-2026-000917"
+  },
+  {
+    "caseId": "CASE-2026-000782",
+    "alertId": "ALT-2026-000918"
+  },
+  {
+    "caseId": "CASE-2026-000783",
+    "alertId": "ALT-2026-000919"
+  },
+  {
+    "caseId": "CASE-2026-000784",
+    "alertId": "ALT-2026-000855"
+  },
+  {
+    "caseId": "CASE-2026-000785",
+    "alertId": "ALT-2026-000921"
+  },
+  {
+    "caseId": "CASE-2026-000786",
+    "alertId": "ALT-2026-000922"
+  },
+  {
+    "caseId": "CASE-2026-000787",
+    "alertId": "ALT-2026-000923"
+  },
+  {
+    "caseId": "CASE-2026-000788",
+    "alertId": "ALT-2026-000924"
+  },
+  {
+    "caseId": "CASE-2026-000789",
+    "alertId": "ALT-2026-000860"
+  },
+  {
+    "caseId": "CASE-2026-000790",
+    "alertId": "ALT-2026-000926"
+  },
+  {
+    "caseId": "CASE-2026-000791",
+    "alertId": "ALT-2026-000927"
+  },
+  {
+    "caseId": "CASE-2026-000792",
+    "alertId": "ALT-2026-000928"
+  },
+  {
+    "caseId": "CASE-2026-000793",
+    "alertId": "ALT-2026-000929"
+  },
+  {
+    "caseId": "CASE-2026-000794",
+    "alertId": "ALT-2026-000865"
+  },
+  {
+    "caseId": "CASE-2026-000795",
+    "alertId": "ALT-2026-000931"
+  },
+  {
+    "caseId": "CASE-2026-000796",
+    "alertId": "ALT-2026-000932"
+  },
+  {
+    "caseId": "CASE-2026-000797",
+    "alertId": "ALT-2026-000933"
+  },
+  {
+    "caseId": "CASE-2026-000798",
+    "alertId": "ALT-2026-000934"
+  },
+  {
+    "caseId": "CASE-2026-000799",
+    "alertId": "ALT-2026-000870"
+  },
+  {
+    "caseId": "CASE-2026-000800",
+    "alertId": "ALT-2026-000936"
+  },
+  {
+    "caseId": "CASE-2026-000801",
+    "alertId": "ALT-2026-000937"
+  },
+  {
+    "caseId": "CASE-2026-000802",
+    "alertId": "ALT-2026-000938"
+  },
+  {
+    "caseId": "CASE-2026-000803",
+    "alertId": "ALT-2026-000939"
+  },
+  {
+    "caseId": "CASE-2026-000804",
+    "alertId": "ALT-2026-000875"
+  },
+  {
+    "caseId": "CASE-2026-000805",
+    "alertId": "ALT-2026-000941"
+  },
+  {
+    "caseId": "CASE-2026-000806",
+    "alertId": "ALT-2026-000942"
+  },
+  {
+    "caseId": "CASE-2026-000807",
+    "alertId": "ALT-2026-000943"
+  },
+  {
+    "caseId": "CASE-2026-000808",
+    "alertId": "ALT-2026-000944"
+  },
+  {
+    "caseId": "CASE-2026-000809",
+    "alertId": "ALT-2026-000880"
+  },
+  {
+    "caseId": "CASE-2026-000810",
+    "alertId": "ALT-2026-000946"
+  },
+  {
+    "caseId": "CASE-2026-000811",
+    "alertId": "ALT-2026-000947"
+  },
+  {
+    "caseId": "CASE-2026-000812",
+    "alertId": "ALT-2026-000948"
+  },
+  {
+    "caseId": "CASE-2026-000813",
+    "alertId": "ALT-2026-000949"
+  },
+  {
+    "caseId": "CASE-2026-000814",
+    "alertId": "ALT-2026-000885"
+  },
+  {
+    "caseId": "CASE-2026-000815",
+    "alertId": "ALT-2026-000951"
+  },
+  {
+    "caseId": "CASE-2026-000816",
+    "alertId": "ALT-2026-000952"
+  },
+  {
+    "caseId": "CASE-2026-000817",
+    "alertId": "ALT-2026-000953"
+  },
+  {
+    "caseId": "CASE-2026-000818",
+    "alertId": "ALT-2026-000954"
+  },
+  {
+    "caseId": "CASE-2026-000819",
+    "alertId": "ALT-2026-000890"
+  },
+  {
+    "caseId": "CASE-2026-000819",
+    "alertId": "ALT-2026-000956"
+  },
+  {
+    "caseId": "CASE-2026-000820",
+    "alertId": "ALT-2026-000957"
+  },
+  {
+    "caseId": "CASE-2026-000821",
+    "alertId": "ALT-2026-000958"
+  },
+  {
+    "caseId": "CASE-2026-000822",
+    "alertId": "ALT-2026-000959"
+  },
+  {
+    "caseId": "CASE-2026-000823",
+    "alertId": "ALT-2026-000895"
+  },
+  {
+    "caseId": "CASE-2026-000823",
+    "alertId": "ALT-2026-000961"
+  },
+  {
+    "caseId": "CASE-2026-000824",
+    "alertId": "ALT-2026-000962"
+  },
+  {
+    "caseId": "CASE-2026-000825",
+    "alertId": "ALT-2026-000963"
+  },
+  {
+    "caseId": "CASE-2026-000826",
+    "alertId": "ALT-2026-000964"
+  },
+  {
+    "caseId": "CASE-2026-000827",
+    "alertId": "ALT-2026-000966"
+  },
+  {
+    "caseId": "CASE-2026-000828",
+    "alertId": "ALT-2026-000967"
+  },
+  {
+    "caseId": "CASE-2026-000829",
+    "alertId": "ALT-2026-000900"
+  },
+  {
+    "caseId": "CASE-2026-000829",
+    "alertId": "ALT-2026-000968"
+  },
+  {
+    "caseId": "CASE-2026-000830",
+    "alertId": "ALT-2026-000969"
+  },
+  {
+    "caseId": "CASE-2026-000831",
+    "alertId": "ALT-2026-000971"
+  },
+  {
+    "caseId": "CASE-2026-000832",
+    "alertId": "ALT-2026-000972"
+  },
+  {
+    "caseId": "CASE-2026-000833",
+    "alertId": "ALT-2026-000973"
+  },
+  {
+    "caseId": "CASE-2026-000834",
+    "alertId": "ALT-2026-000905"
+  },
+  {
+    "caseId": "CASE-2026-000834",
+    "alertId": "ALT-2026-000974"
+  },
+  {
+    "caseId": "CASE-2026-000835",
+    "alertId": "ALT-2026-000976"
+  },
+  {
+    "caseId": "CASE-2026-000836",
+    "alertId": "ALT-2026-000977"
+  },
+  {
+    "caseId": "CASE-2026-000837",
+    "alertId": "ALT-2026-000978"
+  },
+  {
+    "caseId": "CASE-2026-000838",
+    "alertId": "ALT-2026-000910"
+  },
+  {
+    "caseId": "CASE-2026-000838",
+    "alertId": "ALT-2026-000979"
+  },
+  {
+    "caseId": "CASE-2026-000839",
+    "alertId": "ALT-2026-000981"
+  },
+  {
+    "caseId": "CASE-2026-000840",
+    "alertId": "ALT-2026-000982"
+  },
+  {
+    "caseId": "CASE-2026-000841",
+    "alertId": "ALT-2026-000983"
+  },
+  {
+    "caseId": "CASE-2026-000842",
+    "alertId": "ALT-2026-000915"
+  },
+  {
+    "caseId": "CASE-2026-000842",
+    "alertId": "ALT-2026-000984"
+  },
+  {
+    "caseId": "CASE-2026-000843",
+    "alertId": "ALT-2026-000986"
+  },
+  {
+    "caseId": "CASE-2026-000844",
+    "alertId": "ALT-2026-000987"
+  },
+  {
+    "caseId": "CASE-2026-000845",
+    "alertId": "ALT-2026-000988"
+  },
+  {
+    "caseId": "CASE-2026-000846",
+    "alertId": "ALT-2026-000920"
+  },
+  {
+    "caseId": "CASE-2026-000846",
+    "alertId": "ALT-2026-000989"
+  },
+  {
+    "caseId": "CASE-2026-000847",
+    "alertId": "ALT-2026-000991"
+  },
+  {
+    "caseId": "CASE-2026-000848",
+    "alertId": "ALT-2026-000992"
+  },
+  {
+    "caseId": "CASE-2026-000849",
+    "alertId": "ALT-2026-000993"
+  },
+  {
+    "caseId": "CASE-2026-000850",
+    "alertId": "ALT-2026-000925"
+  },
+  {
+    "caseId": "CASE-2026-000850",
+    "alertId": "ALT-2026-000994"
+  },
+  {
+    "caseId": "CASE-2026-000851",
+    "alertId": "ALT-2026-000996"
+  },
+  {
+    "caseId": "CASE-2026-000852",
+    "alertId": "ALT-2026-000997"
+  },
+  {
+    "caseId": "CASE-2026-000853",
+    "alertId": "ALT-2026-000998"
+  },
+  {
+    "caseId": "CASE-2026-000854",
+    "alertId": "ALT-2026-000999"
+  },
+  {
+    "caseId": "CASE-2026-000855",
+    "alertId": "ALT-2026-000930"
+  },
+  {
+    "caseId": "CASE-2026-000856",
+    "alertId": "ALT-2026-000935"
+  },
+  {
+    "caseId": "CASE-2026-000857",
+    "alertId": "ALT-2026-000940"
+  },
+  {
+    "caseId": "CASE-2026-000858",
+    "alertId": "ALT-2026-000945"
+  },
+  {
+    "caseId": "CASE-2026-000859",
+    "alertId": "ALT-2026-000950"
+  },
+  {
+    "caseId": "CASE-2026-000860",
+    "alertId": "ALT-2026-000955"
+  },
+  {
+    "caseId": "CASE-2026-000861",
+    "alertId": "ALT-2026-000960"
+  },
+  {
+    "caseId": "CASE-2026-000862",
+    "alertId": "ALT-2026-000965"
+  },
+  {
+    "caseId": "CASE-2026-000863",
+    "alertId": "ALT-2026-000970"
+  },
+  {
+    "caseId": "CASE-2026-000864",
+    "alertId": "ALT-2026-000975"
+  },
+  {
+    "caseId": "CASE-2026-000865",
+    "alertId": "ALT-2026-000980"
+  },
+  {
+    "caseId": "CASE-2026-000866",
+    "alertId": "ALT-2026-000985"
+  },
+  {
+    "caseId": "CASE-2026-000867",
+    "alertId": "ALT-2026-000990"
+  },
+  {
+    "caseId": "CASE-2026-000868",
+    "alertId": "ALT-2026-000995"
+  },
+  {
+    "caseId": "CASE-2026-000869",
+    "alertId": "ALT-2026-001000"
+  }
+]

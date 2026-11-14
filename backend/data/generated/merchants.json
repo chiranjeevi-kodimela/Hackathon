@@ -2,70 +2,70 @@
   {
     "merchantId": "MER-00001",
     "name": "Merchant 1",
-    "category": "TRAVEL",
+    "category": "FOOD",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00002",
     "name": "Merchant 2",
-    "category": "HEALTH",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00003",
     "name": "Merchant 3",
-    "category": "GROCERY",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00004",
     "name": "Merchant 4",
-    "category": "HEALTH",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00005",
     "name": "Merchant 5",
-    "category": "RETAIL",
+    "category": "GROCERY",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00006",
     "name": "Merchant 6",
-    "category": "ELECTRONICS",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00007",
     "name": "Merchant 7",
-    "category": "FOOD",
+    "category": "RETAIL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00008",
     "name": "Merchant 8",
-    "category": "RETAIL",
+    "category": "FOOD",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00009",
     "name": "Merchant 9",
-    "category": "FOOD",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00010",
     "name": "Merchant 10",
-    "category": "TRAVEL",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
@@ -79,28 +79,28 @@
   {
     "merchantId": "MER-00012",
     "name": "Merchant 12",
-    "category": "ELECTRONICS",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00013",
     "name": "Merchant 13",
-    "category": "FOOD",
+    "category": "TRAVEL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00014",
     "name": "Merchant 14",
-    "category": "HEALTH",
+    "category": "FOOD",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00015",
     "name": "Merchant 15",
-    "category": "GROCERY",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
@@ -114,28 +114,28 @@
   {
     "merchantId": "MER-00017",
     "name": "Merchant 17",
-    "category": "TRAVEL",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00018",
     "name": "Merchant 18",
-    "category": "TRAVEL",
+    "category": "FOOD",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00019",
     "name": "Merchant 19",
-    "category": "TRAVEL",
+    "category": "RETAIL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00020",
     "name": "Merchant 20",
-    "category": "RETAIL",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
@@ -156,7 +156,7 @@
   {
     "merchantId": "MER-00023",
     "name": "Merchant 23",
-    "category": "RETAIL",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
@@ -170,105 +170,105 @@
   {
     "merchantId": "MER-00025",
     "name": "Merchant 25",
-    "category": "GROCERY",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00026",
     "name": "Merchant 26",
-    "category": "FOOD",
+    "category": "RETAIL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00027",
     "name": "Merchant 27",
-    "category": "ELECTRONICS",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00028",
     "name": "Merchant 28",
-    "category": "GROCERY",
+    "category": "RETAIL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00029",
     "name": "Merchant 29",
-    "category": "FOOD",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00030",
     "name": "Merchant 30",
-    "category": "HEALTH",
+    "category": "GROCERY",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00031",
     "name": "Merchant 31",
-    "category": "RETAIL",
+    "category": "TRAVEL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00032",
     "name": "Merchant 32",
-    "category": "GROCERY",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00033",
     "name": "Merchant 33",
-    "category": "FOOD",
+    "category": "TRAVEL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00034",
     "name": "Merchant 34",
-    "category": "GROCERY",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00035",
     "name": "Merchant 35",
-    "category": "HEALTH",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00036",
     "name": "Merchant 36",
-    "category": "ELECTRONICS",
+    "category": "FOOD",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00037",
     "name": "Merchant 37",
-    "category": "GROCERY",
+    "category": "TRAVEL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00038",
     "name": "Merchant 38",
-    "category": "HEALTH",
+    "category": "TRAVEL",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00039",
     "name": "Merchant 39",
-    "category": "ELECTRONICS",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
@@ -289,28 +289,28 @@
   {
     "merchantId": "MER-00042",
     "name": "Merchant 42",
-    "category": "HEALTH",
+    "category": "ELECTRONICS",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00043",
     "name": "Merchant 43",
-    "category": "RETAIL",
+    "category": "GROCERY",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00044",
     "name": "Merchant 44",
-    "category": "HEALTH",
+    "category": "GROCERY",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00045",
     "name": "Merchant 45",
-    "category": "FOOD",
+    "category": "TRAVEL",
     "country": "IN",
     "status": "ACTIVE"
   },
@@ -324,28 +324,3178 @@
   {
     "merchantId": "MER-00047",
     "name": "Merchant 47",
-    "category": "RETAIL",
+    "category": "GROCERY",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00048",
     "name": "Merchant 48",
-    "category": "RETAIL",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00049",
     "name": "Merchant 49",
-    "category": "TRAVEL",
+    "category": "GROCERY",
     "country": "IN",
     "status": "ACTIVE"
   },
   {
     "merchantId": "MER-00050",
     "name": "Merchant 50",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00051",
+    "name": "Merchant 51",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00052",
+    "name": "Merchant 52",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00053",
+    "name": "Merchant 53",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00054",
+    "name": "Merchant 54",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00055",
+    "name": "Merchant 55",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00056",
+    "name": "Merchant 56",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00057",
+    "name": "Merchant 57",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00058",
+    "name": "Merchant 58",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00059",
+    "name": "Merchant 59",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00060",
+    "name": "Merchant 60",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00061",
+    "name": "Merchant 61",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00062",
+    "name": "Merchant 62",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00063",
+    "name": "Merchant 63",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00064",
+    "name": "Merchant 64",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00065",
+    "name": "Merchant 65",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00066",
+    "name": "Merchant 66",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00067",
+    "name": "Merchant 67",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00068",
+    "name": "Merchant 68",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00069",
+    "name": "Merchant 69",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00070",
+    "name": "Merchant 70",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00071",
+    "name": "Merchant 71",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00072",
+    "name": "Merchant 72",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00073",
+    "name": "Merchant 73",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00074",
+    "name": "Merchant 74",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00075",
+    "name": "Merchant 75",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00076",
+    "name": "Merchant 76",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00077",
+    "name": "Merchant 77",
     "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00078",
+    "name": "Merchant 78",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00079",
+    "name": "Merchant 79",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00080",
+    "name": "Merchant 80",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00081",
+    "name": "Merchant 81",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00082",
+    "name": "Merchant 82",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00083",
+    "name": "Merchant 83",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00084",
+    "name": "Merchant 84",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00085",
+    "name": "Merchant 85",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00086",
+    "name": "Merchant 86",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00087",
+    "name": "Merchant 87",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00088",
+    "name": "Merchant 88",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00089",
+    "name": "Merchant 89",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00090",
+    "name": "Merchant 90",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00091",
+    "name": "Merchant 91",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00092",
+    "name": "Merchant 92",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00093",
+    "name": "Merchant 93",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00094",
+    "name": "Merchant 94",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00095",
+    "name": "Merchant 95",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00096",
+    "name": "Merchant 96",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00097",
+    "name": "Merchant 97",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00098",
+    "name": "Merchant 98",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00099",
+    "name": "Merchant 99",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00100",
+    "name": "Merchant 100",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00101",
+    "name": "Merchant 101",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00102",
+    "name": "Merchant 102",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00103",
+    "name": "Merchant 103",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00104",
+    "name": "Merchant 104",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00105",
+    "name": "Merchant 105",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00106",
+    "name": "Merchant 106",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00107",
+    "name": "Merchant 107",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00108",
+    "name": "Merchant 108",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00109",
+    "name": "Merchant 109",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00110",
+    "name": "Merchant 110",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00111",
+    "name": "Merchant 111",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00112",
+    "name": "Merchant 112",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00113",
+    "name": "Merchant 113",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00114",
+    "name": "Merchant 114",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00115",
+    "name": "Merchant 115",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00116",
+    "name": "Merchant 116",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00117",
+    "name": "Merchant 117",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00118",
+    "name": "Merchant 118",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00119",
+    "name": "Merchant 119",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00120",
+    "name": "Merchant 120",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00121",
+    "name": "Merchant 121",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00122",
+    "name": "Merchant 122",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00123",
+    "name": "Merchant 123",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00124",
+    "name": "Merchant 124",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00125",
+    "name": "Merchant 125",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00126",
+    "name": "Merchant 126",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00127",
+    "name": "Merchant 127",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00128",
+    "name": "Merchant 128",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00129",
+    "name": "Merchant 129",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00130",
+    "name": "Merchant 130",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00131",
+    "name": "Merchant 131",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00132",
+    "name": "Merchant 132",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00133",
+    "name": "Merchant 133",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00134",
+    "name": "Merchant 134",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00135",
+    "name": "Merchant 135",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00136",
+    "name": "Merchant 136",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00137",
+    "name": "Merchant 137",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00138",
+    "name": "Merchant 138",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00139",
+    "name": "Merchant 139",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00140",
+    "name": "Merchant 140",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00141",
+    "name": "Merchant 141",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00142",
+    "name": "Merchant 142",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00143",
+    "name": "Merchant 143",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00144",
+    "name": "Merchant 144",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00145",
+    "name": "Merchant 145",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00146",
+    "name": "Merchant 146",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00147",
+    "name": "Merchant 147",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00148",
+    "name": "Merchant 148",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00149",
+    "name": "Merchant 149",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00150",
+    "name": "Merchant 150",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00151",
+    "name": "Merchant 151",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00152",
+    "name": "Merchant 152",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00153",
+    "name": "Merchant 153",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00154",
+    "name": "Merchant 154",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00155",
+    "name": "Merchant 155",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00156",
+    "name": "Merchant 156",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00157",
+    "name": "Merchant 157",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00158",
+    "name": "Merchant 158",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00159",
+    "name": "Merchant 159",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00160",
+    "name": "Merchant 160",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00161",
+    "name": "Merchant 161",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00162",
+    "name": "Merchant 162",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00163",
+    "name": "Merchant 163",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00164",
+    "name": "Merchant 164",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00165",
+    "name": "Merchant 165",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00166",
+    "name": "Merchant 166",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00167",
+    "name": "Merchant 167",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00168",
+    "name": "Merchant 168",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00169",
+    "name": "Merchant 169",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00170",
+    "name": "Merchant 170",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00171",
+    "name": "Merchant 171",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00172",
+    "name": "Merchant 172",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00173",
+    "name": "Merchant 173",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00174",
+    "name": "Merchant 174",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00175",
+    "name": "Merchant 175",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00176",
+    "name": "Merchant 176",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00177",
+    "name": "Merchant 177",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00178",
+    "name": "Merchant 178",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00179",
+    "name": "Merchant 179",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00180",
+    "name": "Merchant 180",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00181",
+    "name": "Merchant 181",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00182",
+    "name": "Merchant 182",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00183",
+    "name": "Merchant 183",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00184",
+    "name": "Merchant 184",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00185",
+    "name": "Merchant 185",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00186",
+    "name": "Merchant 186",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00187",
+    "name": "Merchant 187",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00188",
+    "name": "Merchant 188",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00189",
+    "name": "Merchant 189",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00190",
+    "name": "Merchant 190",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00191",
+    "name": "Merchant 191",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00192",
+    "name": "Merchant 192",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00193",
+    "name": "Merchant 193",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00194",
+    "name": "Merchant 194",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00195",
+    "name": "Merchant 195",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00196",
+    "name": "Merchant 196",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00197",
+    "name": "Merchant 197",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00198",
+    "name": "Merchant 198",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00199",
+    "name": "Merchant 199",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00200",
+    "name": "Merchant 200",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00201",
+    "name": "Merchant 201",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00202",
+    "name": "Merchant 202",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00203",
+    "name": "Merchant 203",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00204",
+    "name": "Merchant 204",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00205",
+    "name": "Merchant 205",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00206",
+    "name": "Merchant 206",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00207",
+    "name": "Merchant 207",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00208",
+    "name": "Merchant 208",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00209",
+    "name": "Merchant 209",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00210",
+    "name": "Merchant 210",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00211",
+    "name": "Merchant 211",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00212",
+    "name": "Merchant 212",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00213",
+    "name": "Merchant 213",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00214",
+    "name": "Merchant 214",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00215",
+    "name": "Merchant 215",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00216",
+    "name": "Merchant 216",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00217",
+    "name": "Merchant 217",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00218",
+    "name": "Merchant 218",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00219",
+    "name": "Merchant 219",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00220",
+    "name": "Merchant 220",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00221",
+    "name": "Merchant 221",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00222",
+    "name": "Merchant 222",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00223",
+    "name": "Merchant 223",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00224",
+    "name": "Merchant 224",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00225",
+    "name": "Merchant 225",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00226",
+    "name": "Merchant 226",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00227",
+    "name": "Merchant 227",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00228",
+    "name": "Merchant 228",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00229",
+    "name": "Merchant 229",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00230",
+    "name": "Merchant 230",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00231",
+    "name": "Merchant 231",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00232",
+    "name": "Merchant 232",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00233",
+    "name": "Merchant 233",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00234",
+    "name": "Merchant 234",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00235",
+    "name": "Merchant 235",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00236",
+    "name": "Merchant 236",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00237",
+    "name": "Merchant 237",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00238",
+    "name": "Merchant 238",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00239",
+    "name": "Merchant 239",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00240",
+    "name": "Merchant 240",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00241",
+    "name": "Merchant 241",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00242",
+    "name": "Merchant 242",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00243",
+    "name": "Merchant 243",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00244",
+    "name": "Merchant 244",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00245",
+    "name": "Merchant 245",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00246",
+    "name": "Merchant 246",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00247",
+    "name": "Merchant 247",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00248",
+    "name": "Merchant 248",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00249",
+    "name": "Merchant 249",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00250",
+    "name": "Merchant 250",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00251",
+    "name": "Merchant 251",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00252",
+    "name": "Merchant 252",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00253",
+    "name": "Merchant 253",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00254",
+    "name": "Merchant 254",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00255",
+    "name": "Merchant 255",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00256",
+    "name": "Merchant 256",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00257",
+    "name": "Merchant 257",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00258",
+    "name": "Merchant 258",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00259",
+    "name": "Merchant 259",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00260",
+    "name": "Merchant 260",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00261",
+    "name": "Merchant 261",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00262",
+    "name": "Merchant 262",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00263",
+    "name": "Merchant 263",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00264",
+    "name": "Merchant 264",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00265",
+    "name": "Merchant 265",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00266",
+    "name": "Merchant 266",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00267",
+    "name": "Merchant 267",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00268",
+    "name": "Merchant 268",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00269",
+    "name": "Merchant 269",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00270",
+    "name": "Merchant 270",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00271",
+    "name": "Merchant 271",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00272",
+    "name": "Merchant 272",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00273",
+    "name": "Merchant 273",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00274",
+    "name": "Merchant 274",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00275",
+    "name": "Merchant 275",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00276",
+    "name": "Merchant 276",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00277",
+    "name": "Merchant 277",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00278",
+    "name": "Merchant 278",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00279",
+    "name": "Merchant 279",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00280",
+    "name": "Merchant 280",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00281",
+    "name": "Merchant 281",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00282",
+    "name": "Merchant 282",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00283",
+    "name": "Merchant 283",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00284",
+    "name": "Merchant 284",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00285",
+    "name": "Merchant 285",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00286",
+    "name": "Merchant 286",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00287",
+    "name": "Merchant 287",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00288",
+    "name": "Merchant 288",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00289",
+    "name": "Merchant 289",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00290",
+    "name": "Merchant 290",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00291",
+    "name": "Merchant 291",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00292",
+    "name": "Merchant 292",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00293",
+    "name": "Merchant 293",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00294",
+    "name": "Merchant 294",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00295",
+    "name": "Merchant 295",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00296",
+    "name": "Merchant 296",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00297",
+    "name": "Merchant 297",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00298",
+    "name": "Merchant 298",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00299",
+    "name": "Merchant 299",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00300",
+    "name": "Merchant 300",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00301",
+    "name": "Merchant 301",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00302",
+    "name": "Merchant 302",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00303",
+    "name": "Merchant 303",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00304",
+    "name": "Merchant 304",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00305",
+    "name": "Merchant 305",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00306",
+    "name": "Merchant 306",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00307",
+    "name": "Merchant 307",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00308",
+    "name": "Merchant 308",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00309",
+    "name": "Merchant 309",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00310",
+    "name": "Merchant 310",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00311",
+    "name": "Merchant 311",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00312",
+    "name": "Merchant 312",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00313",
+    "name": "Merchant 313",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00314",
+    "name": "Merchant 314",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00315",
+    "name": "Merchant 315",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00316",
+    "name": "Merchant 316",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00317",
+    "name": "Merchant 317",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00318",
+    "name": "Merchant 318",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00319",
+    "name": "Merchant 319",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00320",
+    "name": "Merchant 320",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00321",
+    "name": "Merchant 321",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00322",
+    "name": "Merchant 322",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00323",
+    "name": "Merchant 323",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00324",
+    "name": "Merchant 324",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00325",
+    "name": "Merchant 325",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00326",
+    "name": "Merchant 326",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00327",
+    "name": "Merchant 327",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00328",
+    "name": "Merchant 328",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00329",
+    "name": "Merchant 329",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00330",
+    "name": "Merchant 330",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00331",
+    "name": "Merchant 331",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00332",
+    "name": "Merchant 332",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00333",
+    "name": "Merchant 333",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00334",
+    "name": "Merchant 334",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00335",
+    "name": "Merchant 335",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00336",
+    "name": "Merchant 336",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00337",
+    "name": "Merchant 337",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00338",
+    "name": "Merchant 338",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00339",
+    "name": "Merchant 339",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00340",
+    "name": "Merchant 340",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00341",
+    "name": "Merchant 341",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00342",
+    "name": "Merchant 342",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00343",
+    "name": "Merchant 343",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00344",
+    "name": "Merchant 344",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00345",
+    "name": "Merchant 345",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00346",
+    "name": "Merchant 346",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00347",
+    "name": "Merchant 347",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00348",
+    "name": "Merchant 348",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00349",
+    "name": "Merchant 349",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00350",
+    "name": "Merchant 350",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00351",
+    "name": "Merchant 351",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00352",
+    "name": "Merchant 352",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00353",
+    "name": "Merchant 353",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00354",
+    "name": "Merchant 354",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00355",
+    "name": "Merchant 355",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00356",
+    "name": "Merchant 356",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00357",
+    "name": "Merchant 357",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00358",
+    "name": "Merchant 358",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00359",
+    "name": "Merchant 359",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00360",
+    "name": "Merchant 360",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00361",
+    "name": "Merchant 361",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00362",
+    "name": "Merchant 362",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00363",
+    "name": "Merchant 363",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00364",
+    "name": "Merchant 364",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00365",
+    "name": "Merchant 365",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00366",
+    "name": "Merchant 366",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00367",
+    "name": "Merchant 367",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00368",
+    "name": "Merchant 368",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00369",
+    "name": "Merchant 369",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00370",
+    "name": "Merchant 370",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00371",
+    "name": "Merchant 371",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00372",
+    "name": "Merchant 372",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00373",
+    "name": "Merchant 373",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00374",
+    "name": "Merchant 374",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00375",
+    "name": "Merchant 375",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00376",
+    "name": "Merchant 376",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00377",
+    "name": "Merchant 377",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00378",
+    "name": "Merchant 378",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00379",
+    "name": "Merchant 379",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00380",
+    "name": "Merchant 380",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00381",
+    "name": "Merchant 381",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00382",
+    "name": "Merchant 382",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00383",
+    "name": "Merchant 383",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00384",
+    "name": "Merchant 384",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00385",
+    "name": "Merchant 385",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00386",
+    "name": "Merchant 386",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00387",
+    "name": "Merchant 387",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00388",
+    "name": "Merchant 388",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00389",
+    "name": "Merchant 389",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00390",
+    "name": "Merchant 390",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00391",
+    "name": "Merchant 391",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00392",
+    "name": "Merchant 392",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00393",
+    "name": "Merchant 393",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00394",
+    "name": "Merchant 394",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00395",
+    "name": "Merchant 395",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00396",
+    "name": "Merchant 396",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00397",
+    "name": "Merchant 397",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00398",
+    "name": "Merchant 398",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00399",
+    "name": "Merchant 399",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00400",
+    "name": "Merchant 400",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00401",
+    "name": "Merchant 401",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00402",
+    "name": "Merchant 402",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00403",
+    "name": "Merchant 403",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00404",
+    "name": "Merchant 404",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00405",
+    "name": "Merchant 405",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00406",
+    "name": "Merchant 406",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00407",
+    "name": "Merchant 407",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00408",
+    "name": "Merchant 408",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00409",
+    "name": "Merchant 409",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00410",
+    "name": "Merchant 410",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00411",
+    "name": "Merchant 411",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00412",
+    "name": "Merchant 412",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00413",
+    "name": "Merchant 413",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00414",
+    "name": "Merchant 414",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00415",
+    "name": "Merchant 415",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00416",
+    "name": "Merchant 416",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00417",
+    "name": "Merchant 417",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00418",
+    "name": "Merchant 418",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00419",
+    "name": "Merchant 419",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00420",
+    "name": "Merchant 420",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00421",
+    "name": "Merchant 421",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00422",
+    "name": "Merchant 422",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00423",
+    "name": "Merchant 423",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00424",
+    "name": "Merchant 424",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00425",
+    "name": "Merchant 425",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00426",
+    "name": "Merchant 426",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00427",
+    "name": "Merchant 427",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00428",
+    "name": "Merchant 428",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00429",
+    "name": "Merchant 429",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00430",
+    "name": "Merchant 430",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00431",
+    "name": "Merchant 431",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00432",
+    "name": "Merchant 432",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00433",
+    "name": "Merchant 433",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00434",
+    "name": "Merchant 434",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00435",
+    "name": "Merchant 435",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00436",
+    "name": "Merchant 436",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00437",
+    "name": "Merchant 437",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00438",
+    "name": "Merchant 438",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00439",
+    "name": "Merchant 439",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00440",
+    "name": "Merchant 440",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00441",
+    "name": "Merchant 441",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00442",
+    "name": "Merchant 442",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00443",
+    "name": "Merchant 443",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00444",
+    "name": "Merchant 444",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00445",
+    "name": "Merchant 445",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00446",
+    "name": "Merchant 446",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00447",
+    "name": "Merchant 447",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00448",
+    "name": "Merchant 448",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00449",
+    "name": "Merchant 449",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00450",
+    "name": "Merchant 450",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00451",
+    "name": "Merchant 451",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00452",
+    "name": "Merchant 452",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00453",
+    "name": "Merchant 453",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00454",
+    "name": "Merchant 454",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00455",
+    "name": "Merchant 455",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00456",
+    "name": "Merchant 456",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00457",
+    "name": "Merchant 457",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00458",
+    "name": "Merchant 458",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00459",
+    "name": "Merchant 459",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00460",
+    "name": "Merchant 460",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00461",
+    "name": "Merchant 461",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00462",
+    "name": "Merchant 462",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00463",
+    "name": "Merchant 463",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00464",
+    "name": "Merchant 464",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00465",
+    "name": "Merchant 465",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00466",
+    "name": "Merchant 466",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00467",
+    "name": "Merchant 467",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00468",
+    "name": "Merchant 468",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00469",
+    "name": "Merchant 469",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00470",
+    "name": "Merchant 470",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00471",
+    "name": "Merchant 471",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00472",
+    "name": "Merchant 472",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00473",
+    "name": "Merchant 473",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00474",
+    "name": "Merchant 474",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00475",
+    "name": "Merchant 475",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00476",
+    "name": "Merchant 476",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00477",
+    "name": "Merchant 477",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00478",
+    "name": "Merchant 478",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00479",
+    "name": "Merchant 479",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00480",
+    "name": "Merchant 480",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00481",
+    "name": "Merchant 481",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00482",
+    "name": "Merchant 482",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00483",
+    "name": "Merchant 483",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00484",
+    "name": "Merchant 484",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00485",
+    "name": "Merchant 485",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00486",
+    "name": "Merchant 486",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00487",
+    "name": "Merchant 487",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00488",
+    "name": "Merchant 488",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00489",
+    "name": "Merchant 489",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00490",
+    "name": "Merchant 490",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00491",
+    "name": "Merchant 491",
+    "category": "GROCERY",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00492",
+    "name": "Merchant 492",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00493",
+    "name": "Merchant 493",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00494",
+    "name": "Merchant 494",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00495",
+    "name": "Merchant 495",
+    "category": "ELECTRONICS",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00496",
+    "name": "Merchant 496",
+    "category": "HEALTH",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00497",
+    "name": "Merchant 497",
+    "category": "TRAVEL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00498",
+    "name": "Merchant 498",
+    "category": "RETAIL",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00499",
+    "name": "Merchant 499",
+    "category": "FOOD",
+    "country": "IN",
+    "status": "ACTIVE"
+  },
+  {
+    "merchantId": "MER-00500",
+    "name": "Merchant 500",
+    "category": "HEALTH",
     "country": "IN",
     "status": "ACTIVE"
   }

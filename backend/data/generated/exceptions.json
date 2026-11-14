@@ -2,7 +2,7 @@
   {
     "exceptionId": "EXC-001",
     "issue_type": "TRANSACTION_ON_CLOSED_ACCOUNT",
-    "accountId": "ACC-CUS-000052-01",
+    "accountId": "ACC-CUS-000032-01",
     "expectedOutcome": "REJECT_TRANSACTION"
   },
   {

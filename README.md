@@ -45,8 +45,9 @@ override it. The health endpoint is `http://localhost:5000/api/health`.
 ## Synthetic data
 
 The generator is deterministic and uses seed `20261022` by default. It writes
-JSON, CSV, and MySQL SQL seed files under `backend/data/generated`, a separate
-ground-truth file under `backend/data/ground_truth`, and a provenance manifest.
+JSON, CSV, and MySQL SQL seed files under `backend/data/generated`, separate
+ground-truth CSV/JSON files under `backend/data/ground_truth`, and a provenance
+manifest.
 No external or personal data is used.
 
 ```powershell

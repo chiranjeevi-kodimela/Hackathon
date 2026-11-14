@@ -1,0 +1,9 @@
+{
+  "project": "RiskLens",
+  "seed": 20261022,
+  "scale": "full",
+  "generator": "backend/scripts/generateData.js",
+  "sourceType": "Synthetic only; generated internally",
+  "externalSources": [],
+  "groundTruthPath": "../ground_truth/ground_truth.json"
+}

@@ -685,6 +685,52 @@ saveJSON("generated", "audit_events.json", auditEvents);
 saveJSON("generated", "exceptions.json", exceptionRecords);
 
 saveJSON("ground_truth", "ground_truth.json", groundTruth);
+const groundTruthRows = [
+  ...groundTruth.labels.map((label) => ({
+    record_type: "ALERT_LABEL",
+    issue_type: "",
+    alertId: label.alertId,
+    transactionId: label.transactionId,
+    expectedLabel: label.expectedLabel,
+    expectedDecision: label.expectedDecision,
+    expectedOutcome: "",
+    basis: label.basis,
+  })),
+  ...exceptionRecords.map((exception) => ({
+    record_type: "KNOWN_EXCEPTION",
+    issue_type: exception.issue_type,
+    alertId: "",
+    transactionId:
+      exception.transactionId ??
+      exception.sourceTransactionId ??
+      exception.destinationTransactionId ??
+      "",
+    expectedLabel: "",
+    expectedDecision: "",
+    expectedOutcome: exception.expectedOutcome,
+    basis: "",
+  })),
+];
+const groundTruthFields = [
+  "record_type",
+  "issue_type",
+  "alertId",
+  "transactionId",
+  "expectedLabel",
+  "expectedDecision",
+  "expectedOutcome",
+  "basis",
+];
+const groundTruthCsv = [
+  groundTruthFields.map(csvValue).join(","),
+  ...groundTruthRows.map((row) =>
+    groundTruthFields.map((field) => csvValue(row[field])).join(","),
+  ),
+].join("\n");
+fs.writeFileSync(
+  path.join(DATA_DIR, "ground_truth", "ground_truth.csv"),
+  `${groundTruthCsv}\n`,
+);
 
 // 10. Export CSV and SQL alongside the canonical JSON records.
 const alertRules = alerts.flatMap((alert) =>

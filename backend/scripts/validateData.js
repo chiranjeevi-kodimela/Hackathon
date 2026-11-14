@@ -82,6 +82,7 @@ const sourceManifest = loadJSON(
   path.join(GENERATED_DIR, "source_manifest.json"),
 );
 const groundTruth = loadJSON(path.join(GROUND_TRUTH_DIR, "ground_truth.json"));
+const groundTruthCsvPath = path.join(GROUND_TRUTH_DIR, "ground_truth.csv");
 
 // Build ID lookup sets
 const customerIds = new Set(customers.map((item) => item.customerId));
@@ -105,7 +106,6 @@ const accountStatusEventIds = new Set(
 
 // 1. Primary key uniqueness
 checkUnique(customers, "customerId", "Customers");
-checkUnique(customers, "email", "Customers");
 checkUnique(customers, "email", "Customers");
 checkUnique(accounts, "accountId", "Accounts");
 checkUnique(accountStatusEvents, "eventId", "Account status events");
@@ -517,6 +517,18 @@ check(
     Array.isArray(sourceManifest.externalSources) &&
     sourceManifest.externalSources.length === 0,
   "Source manifest: synthetic provenance and generation settings match",
+);
+const groundTruthCsvExists = fs.existsSync(groundTruthCsvPath);
+const groundTruthCsvLines = groundTruthCsvExists
+  ? fs.readFileSync(groundTruthCsvPath, "utf8").trimEnd().split(/\r?\n/)
+  : [];
+check(
+  groundTruthCsvExists &&
+    groundTruthCsvLines[0] ===
+      '"record_type","issue_type","alertId","transactionId","expectedLabel","expectedDecision","expectedOutcome","basis"' &&
+    groundTruthCsvLines.length ===
+      labels.length + exceptions.length + 1,
+  "Ground truth CSV: header and all alert/exception rows exported",
 );
 
 // 8. Case, disposition and audit lifecycle validation
