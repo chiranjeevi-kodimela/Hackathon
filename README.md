@@ -98,7 +98,8 @@ database connectivity smoke check is separate: `npm --prefix backend run test:db
 - `backend/data/`: synthetic starter data, ground truth, and validation output
 - `frontend/src/`: React analyst dashboard
 - `docs/`: business rules, entity dictionary, relationships, and submission notes
+- [AI prompt history](docs/AI_USAGE.md): reconstructed prompts based on Git commit history
 
 See [business rules](docs/business-rules.md), [data dictionary](docs/data-dictionary.md),
-[entity relationships](docs/er-diagram.md), and
-[submission notes](docs/SUBMISSION_NOTES.md) for implementation details.
+[entity relationships](docs/er-diagram.md), [submission notes](docs/SUBMISSION_NOTES.md),
+and [AI prompt history](docs/AI_USAGE.md) for implementation details.
