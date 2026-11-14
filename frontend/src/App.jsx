@@ -8,6 +8,7 @@ import Accounts from "./pages/Accounts";
 import Transactions from "./pages/Transactions";
 import Alerts from "./pages/Alerts";
 import Cases from "./pages/Cases";
+import AuditLog from "./pages/AuditLog";
 
 function AppLayout() {
   return (
@@ -33,6 +34,7 @@ function AppLayout() {
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/alerts" element={<Alerts />} />
             <Route path="/cases" element={<Cases />} />
+            <Route path="/audit" element={<AuditLog />} />
             
           </Routes>
         </div>
