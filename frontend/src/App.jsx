@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Customers from "./pages/Customers";
 import "./styles/global.css";
+import Accounts from "./pages/Accounts";
 
 function AppLayout() {
   return (
@@ -25,6 +26,7 @@ function AppLayout() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/customers" element={<Customers />} />
             <Route path="*" element={<Dashboard />} />
+            <Route path="/accounts" element={<Accounts />} />
           </Routes>
         </div>
       </main>
