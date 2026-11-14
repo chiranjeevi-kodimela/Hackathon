@@ -2970,3 +2970,52 @@ button {
     max-width: none;
   }
 }
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.rule-card {
+  background: var(--card-bg, #151d2b);
+  border: 1px solid var(--border-color, #273449);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.rule-card-header,
+.rule-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rule-id {
+  color: #8ca3bd;
+  font-size: 12px;
+}
+
+.rule-card h3 {
+  margin: 18px 0 8px;
+}
+
+.rule-card p {
+  color: #9caec2;
+  line-height: 1.6;
+  min-height: 48px;
+}
+
+.rule-card-footer {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-color, #273449);
+}
+
+.status-active {
+  color: #4ade80;
+}
+
+.status-inactive {
+  color: #f87171;
+}
