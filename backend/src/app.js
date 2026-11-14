@@ -10,6 +10,7 @@ import transactionRoutes from "./routes/transactionRoutes.js";
 import alertRoutes from "./routes/alertRoutes.js";
 import ruleRoutes from "./routes/ruleRoutes.js";
 import caseRoutes from "./routes/caseRoutes.js";
+import auditRoutes from "./routes/auditRoutes.js";
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use("/api/transactions", transactionRoutes);
 app.use("/api/alerts", alertRoutes);
 app.use("/api/rules", ruleRoutes);
 app.use("/api/cases", caseRoutes);
+app.use("/api/audit", auditRoutes);
 
 app.use("/api/health", healthRoutes);
 
