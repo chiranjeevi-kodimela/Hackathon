@@ -56,7 +56,14 @@ const RISK_RULES = [
     reason: "Source and destination transfer legs do not reconcile",
   },
 ];
-
+export function getRiskRules() {
+  return RISK_RULES.map((rule) => ({
+    ruleId: rule.id,
+    name: rule.name,
+    points: rule.points,
+    description: rule.reason,
+  }));
+}
 export function evaluateTransaction(transaction, context = {}) {
   if (
     typeof transaction.amount !== "number" ||
@@ -99,4 +106,12 @@ export function evaluateTransaction(transaction, context = {}) {
     triggeredRules,
     evaluatedAt: new Date().toISOString(),
   };
+}
+export function getRiskThresholds() {
+  return [
+    { severity: "LOW", minScore: 0, maxScore: 24 },
+    { severity: "MEDIUM", minScore: 25, maxScore: 49 },
+    { severity: "HIGH", minScore: 50, maxScore: 74 },
+    { severity: "CRITICAL", minScore: 75, maxScore: 100 },
+  ];
 }
