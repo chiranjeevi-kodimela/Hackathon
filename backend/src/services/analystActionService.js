@@ -1,9 +1,4 @@
-import { getDataset } from "./dataService.js";
-import {
-  saveAnalystAction,
-  saveAuditEvent,
-  getAnalystActions,
-} from "./auditService.js";
+import prisma from "../config/prisma.js";
 
 const ALLOWED_ACTIONS = [
   "ESCALATE_ALERT",
@@ -13,7 +8,7 @@ const ALLOWED_ACTIONS = [
   "ADD_NOTE",
 ];
 
-export function createAnalystAction({
+export async function createAnalystAction({
   targetType,
   targetId,
   actionType,
@@ -28,12 +23,15 @@ export function createAnalystAction({
     throw new Error("Invalid analyst action type");
   }
 
-  if (actionType.includes("ALERT") && targetType !== "ALERT") {
+  if (
+    ["ESCALATE_ALERT", "DISMISS_ALERT"].includes(actionType) &&
+    targetType !== "ALERT"
+  ) {
     throw new Error("This action requires an ALERT target");
   }
 
   if (
-    (actionType === "RESOLVE_CASE" || actionType === "REOPEN_CASE") &&
+    ["RESOLVE_CASE", "REOPEN_CASE"].includes(actionType) &&
     targetType !== "CASE"
   ) {
     throw new Error("This action requires a CASE target");
@@ -43,58 +41,91 @@ export function createAnalystAction({
     throw new Error("A note is required for ADD_NOTE");
   }
 
-  const exists =
-    targetType === "ALERT"
-      ? getDataset("alerts").some((item) => item.alertId === targetId)
-      : getDataset("alerts").some(
-          (item) => item.accountId === targetId || item.alertId === targetId,
-        );
+  return prisma.$transaction(async (tx) => {
+    let alertId = null;
+    let caseId = null;
 
-  if (!exists) {
-    throw new Error(`${targetType} target not found`);
-  }
+    if (targetType === "ALERT") {
+      const alert = await tx.alert.findUnique({ where: { alertId: targetId } });
+      if (!alert) throw new Error("ALERT target not found");
 
-  const actionId = `ACT-${Date.now()}-${Math.floor(Math.random() * 10000)}`;
+      alertId = targetId;
 
-  const timestamp = new Date().toISOString();
+      if (actionType === "ESCALATE_ALERT") {
+        await tx.alert.update({
+          where: { alertId },
+          data: { status: "ESCALATED" },
+        });
+      }
 
-  const action = {
-    actionId,
-    targetType,
-    targetId,
-    actionType,
-    analystId,
-    notes,
-    timestamp,
-  };
+      if (actionType === "DISMISS_ALERT") {
+        await tx.alert.update({
+          where: { alertId },
+          data: { status: "DISMISSED" },
+        });
+      }
+    } else {
+      const riskCase = await tx.riskCase.findUnique({
+        where: { caseId: targetId },
+      });
+      if (!riskCase) throw new Error("CASE target not found");
 
-  const auditEvent = {
-    eventId: `AUD-${actionId}`,
-    eventType: "ANALYST_ACTION_RECORDED",
-    actionId,
-    targetType,
-    targetId,
-    analystId,
-    details: {
-      actionType,
-      notes,
-    },
-    timestamp,
-  };
+      caseId = targetId;
 
-  // Preserve both records as append-only history.
-  saveAnalystAction(action);
-  saveAuditEvent(auditEvent);
+      if (actionType === "RESOLVE_CASE") {
+        await tx.riskCase.update({
+          where: { caseId },
+          data: { status: "RESOLVED", resolvedAt: new Date() },
+        });
+      }
 
-  return action;
+      if (actionType === "REOPEN_CASE") {
+        await tx.riskCase.update({
+          where: { caseId },
+          data: { status: "OPEN", resolvedAt: null },
+        });
+      }
+    }
+
+    const actionId = `ACT-${Date.now()}-${Math.floor(Math.random() * 100000)}`;
+    const eventId = `AUD-${Date.now()}-${Math.floor(Math.random() * 100000)}`;
+
+    const action = await tx.analystAction.create({
+      data: {
+        actionId,
+        alertId,
+        caseId,
+        analystId,
+        actionType,
+        notes: notes.trim() || null,
+      },
+    });
+
+    await tx.auditEvent.create({
+      data: {
+        eventId,
+        entityType: targetType,
+        entityId: targetId,
+        eventType: actionType,
+        actorId: analystId,
+        details: {
+          actionId,
+          notes: notes.trim(),
+        },
+      },
+    });
+
+    return action;
+  });
 }
 
-export function listAnalystActions({ targetId = "" } = {}) {
-  let actions = getAnalystActions();
-
-  if (targetId) {
-    actions = actions.filter((action) => action.targetId === targetId);
-  }
-
-  return actions.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+export async function listAnalystActions({ targetId = "" } = {}) {
+  return prisma.analystAction.findMany({
+    where: targetId
+      ? {
+          OR: [{ alertId: targetId }, { caseId: targetId }],
+        }
+      : {},
+    orderBy: { createdAt: "desc" },
+  });
 }

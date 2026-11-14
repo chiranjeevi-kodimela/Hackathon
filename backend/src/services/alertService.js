@@ -1,6 +1,6 @@
-import { getDataset } from "./dataService.js";
+import prisma from "../config/prisma.js";
 
-export function getAlerts({
+export async function getAlerts({
   page = 1,
   limit = 10,
   severity = "",
@@ -11,53 +11,41 @@ export function getAlerts({
   sortBy = "createdAt",
   order = "desc",
 }) {
-  let alerts = getDataset("alerts");
+  const where = {};
 
-  if (severity) {
-    alerts = alerts.filter((alert) => alert.severity === severity);
+  if (severity) where.severity = severity;
+  if (status) where.status = status;
+  if (accountId) where.accountId = accountId;
+
+  if (minScore !== undefined || maxScore !== undefined) {
+    where.riskScore = {};
+    if (minScore !== undefined) where.riskScore.gte = minScore;
+    if (maxScore !== undefined) where.riskScore.lte = maxScore;
   }
 
-  if (status) {
-    alerts = alerts.filter((alert) => alert.status === status);
-  }
-
-  if (accountId) {
-    alerts = alerts.filter((alert) => alert.accountId === accountId);
-  }
-
-  if (minScore !== undefined) {
-    alerts = alerts.filter((alert) => alert.riskScore >= minScore);
-  }
-
-  if (maxScore !== undefined) {
-    alerts = alerts.filter((alert) => alert.riskScore <= maxScore);
-  }
-
-  alerts.sort((a, b) => {
-    const first =
-      sortBy === "riskScore" ? a.riskScore : new Date(a.createdAt).getTime();
-
-    const second =
-      sortBy === "riskScore" ? b.riskScore : new Date(b.createdAt).getTime();
-
-    return order === "asc" ? first - second : second - first;
-  });
-
-  const total = alerts.length;
-  const totalPages = Math.ceil(total / limit);
-  const startIndex = (page - 1) * limit;
+  const [alerts, total] = await Promise.all([
+    prisma.alert.findMany({
+      where,
+      skip: (page - 1) * limit,
+      take: limit,
+      orderBy: { [sortBy]: order },
+    }),
+    prisma.alert.count({ where }),
+  ]);
 
   return {
-    alerts: alerts.slice(startIndex, startIndex + limit),
+    alerts,
     pagination: {
       page,
       limit,
       total,
-      totalPages,
+      totalPages: Math.ceil(total / limit),
     },
   };
 }
 
-export function getAlertById(alertId) {
-  return getDataset("alerts").find((alert) => alert.alertId === alertId);
+export async function getAlertById(alertId) {
+  return prisma.alert.findUnique({
+    where: { alertId },
+  });
 }

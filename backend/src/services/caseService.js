@@ -1,100 +1,132 @@
-import { getDataset } from "./dataService.js";
+import prisma from "../config/prisma.js";
 
-function generateCases() {
-  const alerts = getDataset("alerts");
-  const groupedAlerts = new Map();
+async function ensureCasesExist() {
+  const alerts = await prisma.alert.findMany({
+    orderBy: [{ accountId: "asc" }, { createdAt: "asc" }],
+  });
 
-  // Group alerts belonging to the same account.
+  const grouped = new Map();
+
   for (const alert of alerts) {
-    if (!groupedAlerts.has(alert.accountId)) {
-      groupedAlerts.set(alert.accountId, []);
-    }
-
-    groupedAlerts.get(alert.accountId).push(alert);
+    if (!grouped.has(alert.accountId)) grouped.set(alert.accountId, []);
+    grouped.get(alert.accountId).push(alert);
   }
 
-  const severityPriority = {
-    LOW: 1,
-    MEDIUM: 2,
-    HIGH: 3,
-    CRITICAL: 4,
-  };
+  const severityRank = { LOW: 1, MEDIUM: 2, HIGH: 3, CRITICAL: 4 };
 
-  return Array.from(groupedAlerts.entries()).map(
-    ([accountId, accountAlerts], index) => {
-      const highestRiskAlert = accountAlerts.reduce((highest, current) =>
-        severityPriority[current.severity] > severityPriority[highest.severity]
-          ? current
-          : highest,
-      );
+  const groups = [...grouped.entries()].sort(([a], [b]) => a.localeCompare(b));
 
-      return {
-        caseId: `CASE-2026-${String(index + 1).padStart(6, "0")}`,
-        accountId,
-        alertIds: accountAlerts.map((alert) => alert.alertId),
-        totalAlerts: accountAlerts.length,
-        highestSeverity: highestRiskAlert.severity,
-        highestRiskScore: Math.max(
-          ...accountAlerts.map((alert) => alert.riskScore),
-        ),
-        status: "OPEN",
-        createdAt: accountAlerts.map((alert) => alert.createdAt).sort()[0],
-      };
-    },
+  const cases = groups.map(([accountId, items], index) => {
+    const highest = items.reduce((a, b) =>
+      severityRank[b.severity] > severityRank[a.severity] ? b : a,
+    );
+
+    return {
+      caseId: `CASE-2026-${String(index + 1).padStart(6, "0")}`,
+      title: `Risk investigation - ${accountId}`,
+      description: `${items.length} alert(s) associated with account ${accountId}`,
+      priority: highest.severity,
+      createdAt: items[0].createdAt,
+    };
+  });
+
+  if (cases.length) {
+    await prisma.riskCase.createMany({
+      data: cases,
+      skipDuplicates: true,
+    });
+  }
+
+  const links = groups.flatMap(([accountId, items], index) =>
+    items.map((alert) => ({
+      caseId: `CASE-2026-${String(index + 1).padStart(6, "0")}`,
+      alertId: alert.alertId,
+    })),
   );
+
+  if (links.length) {
+    await prisma.caseAlert.createMany({
+      data: links,
+      skipDuplicates: true,
+    });
+  }
 }
 
-export function getCases({
+function formatCase(item) {
+  const alerts = item.alerts.map((link) => link.alert);
+
+  return {
+    caseId: item.caseId,
+    title: item.title,
+    description: item.description,
+    status: item.status,
+    priority: item.priority,
+    assignedTo: item.assignedTo,
+    alertIds: alerts.map((alert) => alert.alertId),
+    totalAlerts: alerts.length,
+    highestSeverity: item.priority,
+    highestRiskScore: Math.max(0, ...alerts.map((alert) => alert.riskScore)),
+    accountId: alerts[0]?.accountId ?? null,
+    createdAt: item.createdAt,
+    updatedAt: item.updatedAt,
+    resolvedAt: item.resolvedAt,
+  };
+}
+
+export async function getCases({
   page = 1,
   limit = 10,
   status = "",
   severity = "",
   accountId = "",
 }) {
-  let cases = generateCases();
+  await ensureCasesExist();
 
-  if (status) {
-    cases = cases.filter((item) => item.status === status);
-  }
+  const where = {};
 
-  if (severity) {
-    cases = cases.filter((item) => item.highestSeverity === severity);
-  }
+  if (status) where.status = status;
+  if (severity) where.priority = severity;
 
   if (accountId) {
-    cases = cases.filter((item) => item.accountId === accountId);
+    where.alerts = {
+      some: { alert: { accountId } },
+    };
   }
 
-  cases.sort((a, b) => b.highestRiskScore - a.highestRiskScore);
-
-  const total = cases.length;
-  const totalPages = Math.ceil(total / limit);
-  const startIndex = (page - 1) * limit;
+  const [items, total] = await Promise.all([
+    prisma.riskCase.findMany({
+      where,
+      include: { alerts: { include: { alert: true } } },
+      orderBy: [{ priority: "desc" }, { createdAt: "desc" }],
+      skip: (page - 1) * limit,
+      take: limit,
+    }),
+    prisma.riskCase.count({ where }),
+  ]);
 
   return {
-    cases: cases.slice(startIndex, startIndex + limit),
+    cases: items.map(formatCase),
     pagination: {
       page,
       limit,
       total,
-      totalPages,
+      totalPages: Math.ceil(total / limit),
     },
   };
 }
 
-export function getCaseById(caseId) {
-  const caseRecord = generateCases().find((item) => item.caseId === caseId);
+export async function getCaseById(caseId) {
+  await ensureCasesExist();
 
-  if (!caseRecord) {
-    return undefined;
-  }
+  const item = await prisma.riskCase.findUnique({
+    where: { caseId },
+    include: { alerts: { include: { alert: true } } },
+  });
 
-  const alerts = getDataset("alerts").filter((alert) =>
-    caseRecord.alertIds.includes(alert.alertId),
-  );
-
-  return {
-    ...caseRecord,
-    alerts,
-  };
+  return item
+    ? {
+        ...formatCase(item),
+        alerts: item.alerts.map((link) => link.alert),
+      }
+    : null;
 }

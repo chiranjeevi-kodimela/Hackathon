@@ -5,7 +5,7 @@ import {
 
 import { getAuditEvents } from "../services/auditService.js";
 
-export function createAction(req, res, next) {
+export async function createAction(req, res, next) {
   try {
     const {
       targetType,
@@ -22,10 +22,10 @@ export function createAction(req, res, next) {
       });
     }
 
-    const action = createAnalystAction({
-      targetType: String(targetType).toUpperCase(),
+    const action = await createAnalystAction({
+      targetType: String(targetType).trim().toUpperCase(),
       targetId: String(targetId).trim(),
-      actionType: String(actionType).toUpperCase(),
+      actionType: String(actionType).trim().toUpperCase(),
       analystId: String(analystId).trim(),
       notes: String(notes),
     });
@@ -42,37 +42,29 @@ export function createAction(req, res, next) {
       error.message.includes("requires") ||
       error.message.includes("Invalid")
     ) {
-      return res.status(400).json({
-        success: false,
-        message: error.message,
-      });
+      return res.status(400).json({ success: false, message: error.message });
     }
 
     next(error);
   }
 }
 
-export function listActions(req, res, next) {
+export async function listActions(req, res, next) {
   try {
     const targetId = String(req.query.targetId ?? "").trim();
+    const actions = await listAnalystActions({ targetId });
 
-    res.status(200).json({
-      success: true,
-      data: listAnalystActions({ targetId }),
-    });
+    res.status(200).json({ success: true, data: actions });
   } catch (error) {
     next(error);
   }
 }
 
-export function listAuditEvents(req, res, next) {
+export async function listAuditEvents(req, res, next) {
   try {
-    const events = getAuditEvents();
+    const events = await getAuditEvents();
 
-    res.status(200).json({
-      success: true,
-      data: events,
-    });
+    res.status(200).json({ success: true, data: events });
   } catch (error) {
     next(error);
   }
