@@ -3,10 +3,11 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import prisma from "../src/config/prisma.js";
-import { getRiskRules } from "../src/services/riskEngine.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = path.resolve(__dirname, "../data/generated");
+const DATA_DIR = path.resolve(
+  process.env.RISKLENS_DATA_DIR || path.join(__dirname, "../data/generated"),
+);
 
 const BATCH_SIZE = 1000;
 
@@ -50,11 +51,18 @@ async function seedDatabase() {
 
   const customers = loadDataset("customers");
   const accounts = loadDataset("accounts");
+  const accountStatusEvents = loadDataset("account_status_events");
   const merchants = loadDataset("merchants");
   const devices = loadDataset("devices");
   const transactions = loadDataset("transactions");
   const transfers = loadDataset("transfers");
+  const riskRules = loadDataset("risk_rules");
   const alerts = loadDataset("alerts");
+  const alertRules = loadDataset("alert_rules");
+  const cases = loadDataset("cases");
+  const caseAlerts = loadDataset("case_alerts");
+  const analystActions = loadDataset("analyst_actions");
+  const auditEvents = loadDataset("audit_events");
 
   // 1. Customers
   await importDataset(
@@ -75,6 +83,16 @@ async function seedDatabase() {
       initialBalance: String(row.initialBalance),
       overdraftLimit: String(row.overdraftLimit),
       openedAt: new Date(row.openedAt),
+      statusSince: new Date(row.statusSince),
+    })),
+  );
+  await importDataset(
+    "Account status events",
+    "accountStatusEvent",
+    accountStatusEvents.map((row) => ({
+      ...row,
+      previousStatusSince: new Date(row.previousStatusSince),
+      effectiveAt: new Date(row.effectiveAt),
     })),
   );
 
@@ -107,7 +125,18 @@ async function seedDatabase() {
     })),
   );
 
-  // 7. Alerts
+  // 7. Rules must exist before alert-rule bridge rows are inserted.
+  await importDataset(
+    "Risk rules",
+    "riskRule",
+    riskRules.map((row) => ({
+      ...row,
+      createdAt: new Date(row.createdAt),
+      updatedAt: new Date(row.updatedAt),
+    })),
+  );
+
+  // 8. Alerts and triggered-rule bridge rows
   await importDataset(
     "Alerts",
     "alert",
@@ -116,14 +145,38 @@ async function seedDatabase() {
       createdAt: new Date(row.createdAt),
     })),
   );
+  await importDataset("Alert-rule links", "alertRule", alertRules);
 
-  // 8. Risk rules
-  const riskRules = getRiskRules().map((rule) => ({
-    ...rule,
-    enabled: true,
-  }));
+  // 9. Cases and their alert bridge rows
+  await importDataset(
+    "Cases",
+    "riskCase",
+    cases.map((row) => ({
+      ...row,
+      createdAt: new Date(row.createdAt),
+      updatedAt: new Date(row.updatedAt),
+      resolvedAt: row.resolvedAt ? new Date(row.resolvedAt) : null,
+    })),
+  );
+  await importDataset("Case-alert links", "caseAlert", caseAlerts);
 
-  await importDataset("Risk rules", "riskRule", riskRules);
+  // 10. Analyst dispositions and audit history
+  await importDataset(
+    "Analyst actions",
+    "analystAction",
+    analystActions.map((row) => ({
+      ...row,
+      createdAt: new Date(row.createdAt),
+    })),
+  );
+  await importDataset(
+    "Audit events",
+    "auditEvent",
+    auditEvents.map((row) => ({
+      ...row,
+      createdAt: new Date(row.createdAt),
+    })),
+  );
 
   console.log("\nDatabase import completed.\n");
 
@@ -131,12 +184,18 @@ async function seedDatabase() {
   const counts = {
     customers: await prisma.customer.count(),
     accounts: await prisma.account.count(),
+    accountStatusEvents: await prisma.accountStatusEvent.count(),
     merchants: await prisma.merchant.count(),
     devices: await prisma.device.count(),
     transactions: await prisma.transaction.count(),
     transfers: await prisma.transfer.count(),
-    alerts: await prisma.alert.count(),
     riskRules: await prisma.riskRule.count(),
+    alerts: await prisma.alert.count(),
+    alertRules: await prisma.alertRule.count(),
+    cases: await prisma.riskCase.count(),
+    caseAlerts: await prisma.caseAlert.count(),
+    analystActions: await prisma.analystAction.count(),
+    auditEvents: await prisma.auditEvent.count(),
   };
 
   console.log("MySQL record counts:");

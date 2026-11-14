@@ -54,8 +54,10 @@ model Account {
   initialBalance Decimal       @db.Decimal(18, 2)
   overdraftLimit Decimal       @default(0) @db.Decimal(18, 2)
   openedAt       DateTime      @db.DateTime(3)
+  statusSince    DateTime      @db.DateTime(3)
 
   customer          Customer      @relation(fields: [customerId], references: [customerId], onDelete: Restrict)
+  statusHistory     AccountStatusEvent[]
   transactions      Transaction[]
   outgoingTransfers Transfer[]    @relation("SourceAccount")
   incomingTransfers Transfer[]    @relation("DestinationAccount")
@@ -64,6 +66,21 @@ model Account {
   @@index([customerId])
   @@index([status])
   @@map("accounts")
+}
+
+model AccountStatusEvent {
+  eventId      String        @id @db.VarChar(30)
+  accountId    String        @db.VarChar(64)
+  previousStatus AccountStatus
+  newStatus    AccountStatus
+  reason       String        @db.VarChar(80)
+  previousStatusSince DateTime @db.DateTime(3)
+  effectiveAt  DateTime      @db.DateTime(3)
+
+  account Account @relation(fields: [accountId], references: [accountId], onDelete: Restrict)
+
+  @@index([accountId, effectiveAt])
+  @@map("account_status_events")
 }
 
 model Merchant {
@@ -152,6 +169,20 @@ enum AlertStatus {
   RESOLVED
 }
 
+model AlertRule {
+  alertId String @db.VarChar(30)
+  ruleId  String @db.VarChar(10)
+  points  Int
+  reason  String @db.Text
+
+  alert Alert    @relation(fields: [alertId], references: [alertId], onDelete: Restrict)
+  rule  RiskRule @relation(fields: [ruleId], references: [ruleId], onDelete: Restrict)
+
+  @@id([alertId, ruleId])
+  @@index([ruleId])
+  @@map("alert_rules")
+}
+
 enum CaseStatus {
   OPEN
   IN_REVIEW
@@ -176,6 +207,7 @@ model RiskRule {
   enabled     Boolean  @default(true)
   createdAt   DateTime @default(now()) @db.DateTime(3)
   updatedAt   DateTime @updatedAt @db.DateTime(3)
+  alerts      AlertRule[]
 
   @@map("risk_rules")
 }
@@ -194,6 +226,7 @@ model Alert {
   account        Account         @relation(fields: [accountId], references: [accountId], onDelete: Restrict)
   caseLinks      CaseAlert[]
   analystActions AnalystAction[]
+  rules          AlertRule[]
 
   @@index([accountId])
   @@index([severity, status])

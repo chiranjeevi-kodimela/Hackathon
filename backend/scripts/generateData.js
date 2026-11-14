@@ -1,12 +1,27 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { evaluateTransaction } from "../src/services/riskEngine.js";
+import {
+  evaluateTransaction,
+  getRiskRules,
+} from "../src/services/riskEngine.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = path.join(__dirname, "../data");
+const DATA_DIR = path.resolve(
+  process.env.RISKLENS_DATA_DIR || path.join(__dirname, "../data"),
+);
 
-const SEED = 20261022;
+const args = new Map(
+  process.argv.slice(2).map((argument) => {
+    const [key, ...value] = argument.replace(/^--/, "").split("=");
+    return [key, value.join("=")];
+  }),
+);
+const SEED = Number(args.get("seed") ?? process.env.RISKLENS_SEED ?? 20261022);
+
+if (!Number.isInteger(SEED) || SEED < 1 || SEED > 0xffffffff) {
+  throw new Error("Seed must be an integer between 1 and 4294967295");
+}
 
 function createRandom(seed) {
   let state = seed >>> 0;
@@ -28,7 +43,11 @@ const pick = (items) => items[randInt(0, items.length - 1)];
 
 const pad = (number, length) => String(number).padStart(length, "0");
 
-const scale = process.argv.includes("--scale=full") ? "full" : "starter";
+const scale = args.get("scale") ?? process.env.RISKLENS_SCALE ?? "starter";
+
+if (!["starter", "full"].includes(scale)) {
+  throw new Error('Scale must be either "starter" or "full"');
+}
 
 const CONFIG =
   scale === "full"
@@ -55,7 +74,18 @@ const merchants = [];
 const devices = [];
 const transactions = [];
 const transfers = [];
+const accountStatusEvents = [];
 const alerts = [];
+const cases = [];
+const caseAlerts = [];
+const analystActions = [];
+const auditEvents = [];
+const riskRules = getRiskRules().map((rule) => ({
+  ...rule,
+  enabled: true,
+  createdAt: "2026-01-01T00:00:00.000Z",
+  updatedAt: "2026-01-01T00:00:00.000Z",
+}));
 
 const groundTruth = {
   seed: SEED,
@@ -63,6 +93,7 @@ const groundTruth = {
   labels: [],
   knownExceptions: [],
 };
+const severityRank = { LOW: 1, MEDIUM: 2, HIGH: 3, CRITICAL: 4 };
 
 function saveJSON(folder, filename, data) {
   const directory = path.join(DATA_DIR, folder);
@@ -108,6 +139,8 @@ for (let i = 1; i <= CONFIG.accounts; i++) {
 
   const status =
     random() < 0.02 ? "CLOSED" : random() < 0.08 ? "DORMANT" : "ACTIVE";
+  const statusSince =
+    status === "DORMANT" ? "2025-10-01T00:00:00.000Z" : "2024-01-01T00:00:00.000Z";
 
   const initialBalance = randInt(10000, 100000);
 
@@ -120,6 +153,7 @@ for (let i = 1; i <= CONFIG.accounts; i++) {
     initialBalance,
     overdraftLimit: 0,
     openedAt: "2024-01-01T00:00:00.000Z",
+    statusSince,
   });
 
   balances.set(accountId, initialBalance);
@@ -158,8 +192,11 @@ for (let i = 1; i <= CONFIG.devices; i++) {
 // 5. Transaction creation
 let transactionCounter = 0;
 let timeCursor = Date.UTC(2026, 0, 1);
+const transactionsByAccount = new Map();
+const accountDeviceUsage = new Map();
+const transactionById = new Map();
 
-function addTransaction(account, amount, type) {
+function addTransaction(account, amount, type, minuteStep, deviceId) {
   const before = balances.get(account.accountId);
 
   const debit = ["DEBIT", "TRANSFER_OUT"].includes(type);
@@ -173,13 +210,13 @@ function addTransaction(account, amount, type) {
   balances.set(account.accountId, after);
 
   transactionCounter++;
-  timeCursor += randInt(1, 15) * 60000;
+  timeCursor += (minuteStep ?? randInt(1, 15)) * 60000;
 
   const transaction = {
     transactionId: `TXN-2026-${pad(transactionCounter, 8)}`,
     accountId: account.accountId,
     merchantId: pick(merchants).merchantId,
-    deviceId: pick(devices).deviceId,
+    deviceId: deviceId ?? pick(devices).deviceId,
     type,
     amount,
     currency: "INR",
@@ -190,6 +227,15 @@ function addTransaction(account, amount, type) {
   };
 
   transactions.push(transaction);
+  transactionById.set(transaction.transactionId, transaction);
+  if (!transactionsByAccount.has(account.accountId)) {
+    transactionsByAccount.set(account.accountId, []);
+  }
+  transactionsByAccount.get(account.accountId).push(transaction);
+  if (!accountDeviceUsage.has(account.accountId)) {
+    accountDeviceUsage.set(account.accountId, new Set());
+  }
+  accountDeviceUsage.get(account.accountId).add(transaction.deviceId);
 
   return transaction;
 }
@@ -201,6 +247,98 @@ if (activeAccounts.length < 2) {
   throw new Error("At least two active accounts are required");
 }
 
+function addTransfer(source, destination, amount, minuteStep = 1) {
+  const debitTxn = addTransaction(
+    source,
+    amount,
+    "TRANSFER_OUT",
+    minuteStep,
+  );
+  const creditTxn = addTransaction(
+    destination,
+    amount,
+    "TRANSFER_IN",
+    minuteStep,
+  );
+  transfers.push({
+    transferId: `TRF-${pad(transfers.length + 1, 7)}`,
+    sourceAccountId: source.accountId,
+    destinationAccountId: destination.accountId,
+    sourceTransactionId: debitTxn.transactionId,
+    destinationTransactionId: creditTxn.transactionId,
+    amount,
+    status: "RECONCILED",
+  });
+}
+
+function createVelocityBurst(account) {
+  for (let count = 0; count < 5; count++) {
+    addTransaction(account, 100, "CREDIT", 1);
+  }
+}
+
+function createCircularTransfer(account) {
+  const availableAccounts = activeAccounts.filter(
+    (candidate) => candidate.accountId !== account.accountId,
+  );
+  if (availableAccounts.length < 2) return false;
+
+  const accountIndex = activeAccounts.indexOf(account);
+  const first =
+    availableAccounts[
+      (accountIndex < 0 ? 0 : accountIndex) % availableAccounts.length
+    ];
+  const second = availableAccounts.find(
+    (candidate) =>
+      candidate.accountId !== first.accountId &&
+      candidate.accountId !== account.accountId,
+  );
+  if (!second) return false;
+
+  addTransfer(account, first, 500);
+  addTransfer(first, second, 500);
+  addTransfer(second, account, 500);
+  return true;
+}
+
+function hasRecentCircularTransfer(accountId, timestamp) {
+  const end = Date.parse(timestamp);
+  const start = end - 10 * 60_000;
+  const adjacency = new Map();
+
+  for (const transfer of transfers) {
+    const source = transactionById.get(transfer.sourceTransactionId);
+    const destination = transactionById.get(transfer.destinationTransactionId);
+    if (
+      !source ||
+      !destination ||
+      Date.parse(source.timestamp) < start ||
+      Date.parse(destination.timestamp) > end
+    ) {
+      continue;
+    }
+
+    if (!adjacency.has(transfer.sourceAccountId)) {
+      adjacency.set(transfer.sourceAccountId, []);
+    }
+    adjacency.get(transfer.sourceAccountId).push(transfer.destinationAccountId);
+  }
+
+  function closesCycle(current, visited, edgeCount) {
+    for (const destination of adjacency.get(current) || []) {
+      if (destination === accountId && edgeCount >= 2) return true;
+      if (!visited.has(destination)) {
+        const nextVisited = new Set(visited);
+        nextVisited.add(destination);
+        if (closesCycle(destination, nextVisited, edgeCount + 1)) return true;
+      }
+    }
+    return false;
+  }
+
+  return closesCycle(accountId, new Set([accountId]), 0);
+}
+
 // 6. Generate alerts with explicit false-positive scenarios
 for (let i = 1; i <= CONFIG.alerts; i++) {
   const isFalsePositive = i % 5 === 0;
@@ -209,27 +347,53 @@ for (let i = 1; i <= CONFIG.alerts; i++) {
     ? activeAccounts[i % activeAccounts.length]
     : usableAccounts[i % usableAccounts.length];
 
+  const pattern = i % 4;
+  const velocityPattern = !isFalsePositive && pattern === 0;
+  const circularPattern =
+    !isFalsePositive &&
+    (pattern === 2 || (pattern === 3 && account.status !== "DORMANT"));
+  if (velocityPattern) createVelocityBurst(account);
+  if (circularPattern && activeAccounts.length >= 3) {
+    createCircularTransfer(account);
+  }
+
+  const device =
+    !isFalsePositive && pattern === 1
+      ? devices.find(
+          (item) => !accountDeviceUsage.get(account.accountId)?.has(item.deviceId),
+        )
+      : undefined;
+  const isNewDevice =
+    device !== undefined &&
+    !accountDeviceUsage.get(account.accountId)?.has(device.deviceId);
   const transaction = addTransaction(
     account,
     randInt(100000, 200000),
     "CREDIT",
+    velocityPattern || circularPattern ? 1 : undefined,
+    device?.deviceId,
   );
-
-  // FALSE POSITIVE:
-  // Only high transaction amount triggers the rule.
-  // No velocity, new device, dormant account or circular transfer.
-  //
-  // SUSPICIOUS:
-  // Additional risk indicators trigger alongside high amount.
-
+  const accountTransactions = transactionsByAccount.get(account.accountId);
+  const velocityCount10m = accountTransactions.filter(
+    (item) =>
+      Date.parse(item.timestamp) <= Date.parse(transaction.timestamp) &&
+      Date.parse(item.timestamp) >= Date.parse(transaction.timestamp) - 10 * 60_000,
+  ).length;
+  const dormantDays =
+    account.status === "DORMANT"
+      ? Math.floor(
+          (Date.parse(transaction.timestamp) - Date.parse(account.statusSince)) /
+            86_400_000,
+        )
+      : 0;
   const context = {
-    velocityCount10m: !isFalsePositive && i % 4 === 0 ? 7 : 0,
-
-    isNewDevice: !isFalsePositive && i % 4 === 1,
-
-    dormantDays: !isFalsePositive && account.status === "DORMANT" ? 120 : 0,
-
-    circularTransfer: !isFalsePositive && i % 4 === 2,
+    velocityCount10m,
+    isNewDevice,
+    dormantDays,
+    circularTransfer: hasRecentCircularTransfer(
+      account.accountId,
+      transaction.timestamp,
+    ),
   };
 
   const result = evaluateTransaction(
@@ -241,6 +405,23 @@ for (let i = 1; i <= CONFIG.alerts; i++) {
     },
     context,
   );
+
+  if (dormantDays >= 90) {
+    accountStatusEvents.push({
+      eventId: `ASE-2026-${pad(accountStatusEvents.length + 1, 6)}`,
+      accountId: account.accountId,
+      previousStatus: account.status,
+      newStatus: "ACTIVE",
+      reason: "DORMANT_REACTIVATION",
+      previousStatusSince: account.statusSince,
+      effectiveAt: transaction.timestamp,
+    });
+    account.status = "ACTIVE";
+    account.statusSince = transaction.timestamp;
+    if (!activeAccounts.some((item) => item.accountId === account.accountId)) {
+      activeAccounts.push(account);
+    }
+  }
 
   const alertId = `ALT-2026-${pad(i, 6)}`;
 
@@ -255,14 +436,29 @@ for (let i = 1; i <= CONFIG.alerts; i++) {
     createdAt: transaction.timestamp,
   });
 
+  const hasAdditionalIndicator = result.triggeredRules.some(
+    (rule) => rule.ruleId !== "R001",
+  );
+  const expectedLabel = hasAdditionalIndicator ? "SUSPICIOUS" : "FALSE_POSITIVE";
+  const expectedDecision =
+    expectedLabel === "FALSE_POSITIVE"
+      ? "DISMISS_ALERT"
+      : severityRank[result.severity] >= 3
+        ? "ESCALATE_ALERT"
+        : "INVESTIGATE";
+
   groundTruth.labels.push({
     alertId,
     transactionId: transaction.transactionId,
-    expectedLabel: isFalsePositive ? "FALSE_POSITIVE" : "SUSPICIOUS",
-    expectedDecision: isFalsePositive ? "CLOSE_FALSE_POSITIVE" : "INVESTIGATE",
-    basis: isFalsePositive
-      ? "High transaction amount alone is insufficient evidence of fraud"
-      : "Additional risk indicators were triggered",
+    expectedLabel,
+    expectedDecision,
+    basis:
+      expectedLabel === "FALSE_POSITIVE"
+        ? "High transaction amount alone is insufficient evidence of fraud"
+        : `Additional indicators triggered: ${result.triggeredRules
+            .filter((rule) => rule.ruleId !== "R001")
+            .map((rule) => rule.ruleId)
+            .join(", ")}`,
   });
 }
 
@@ -310,6 +506,106 @@ while (transactions.length < CONFIG.transactions) {
   }
 
   normalCounter++;
+}
+
+// Group alerts by account so the cases and bridge rows use the same stable IDs.
+const alertGroups = new Map();
+for (const alert of alerts) {
+  if (!alertGroups.has(alert.accountId)) alertGroups.set(alert.accountId, []);
+  alertGroups.get(alert.accountId).push(alert);
+}
+
+const groups = [...alertGroups.entries()].sort(([left], [right]) =>
+  left.localeCompare(right),
+);
+
+for (const [index, [accountId, items]] of groups.entries()) {
+  const caseId = `CASE-2026-${pad(index + 1, 6)}`;
+  const highestAlert = items.reduce((highest, alert) =>
+    severityRank[alert.severity] > severityRank[highest.severity]
+      ? alert
+      : highest,
+  );
+  const labelByAlertId = new Map(
+    groundTruth.labels.map((label) => [label.alertId, label]),
+  );
+  const actionableAlerts = items.filter((alert) => {
+    const label = labelByAlertId.get(alert.alertId);
+    return (
+      label.expectedLabel === "FALSE_POSITIVE" ||
+      severityRank[alert.severity] >= severityRank.HIGH
+    );
+  });
+  const allDismissed =
+    actionableAlerts.length === items.length &&
+    actionableAlerts.every(
+      (alert) =>
+        labelByAlertId.get(alert.alertId).expectedLabel === "FALSE_POSITIVE",
+    );
+  const latestActionAt =
+    actionableAlerts.length > 0
+    ? new Date(
+        Math.max(...actionableAlerts.map((alert) => Date.parse(alert.createdAt))) +
+          60_000,
+      ).toISOString()
+    : items[0].createdAt;
+  const resolvedAt = allDismissed ? latestActionAt : null;
+
+  cases.push({
+    caseId,
+    title: `Risk investigation - ${accountId}`,
+    description: `${items.length} alert(s) associated with account ${accountId}`,
+    status: allDismissed
+      ? "RESOLVED"
+      : actionableAlerts.length > 0
+        ? "IN_REVIEW"
+        : "OPEN",
+    priority: highestAlert.severity,
+    assignedTo: "ANL-0001",
+    createdAt: items[0].createdAt,
+    updatedAt: latestActionAt,
+    resolvedAt,
+  });
+
+  for (const alert of items) {
+    caseAlerts.push({ caseId, alertId: alert.alertId });
+    const label = labelByAlertId.get(alert.alertId);
+    const actionType =
+      label.expectedLabel === "FALSE_POSITIVE"
+        ? "DISMISS_ALERT"
+        : severityRank[alert.severity] >= severityRank.HIGH
+          ? "ESCALATE_ALERT"
+          : null;
+
+    if (!actionType) continue;
+
+    const actionId = `ACT-2026-${pad(analystActions.length + 1, 6)}`;
+    const timestamp = new Date(Date.parse(alert.createdAt) + 60_000).toISOString();
+    const notes =
+      actionType === "DISMISS_ALERT"
+        ? "Synthetic review: high amount without corroborating indicators"
+        : "Synthetic review: elevated rule-based risk requires escalation";
+
+    alert.status = actionType === "DISMISS_ALERT" ? "DISMISSED" : "ESCALATED";
+    analystActions.push({
+      actionId,
+      alertId: alert.alertId,
+      caseId,
+      analystId: "ANL-0001",
+      actionType,
+      notes,
+      createdAt: timestamp,
+    });
+    auditEvents.push({
+      eventId: `AUD-2026-${pad(auditEvents.length + 1, 6)}`,
+      entityType: "ALERT",
+      entityId: alert.alertId,
+      eventType: actionType,
+      actorId: "ANL-0001",
+      details: { actionId, caseId, notes },
+      createdAt: timestamp,
+    });
+  }
 }
 
 // 8. Negative scenarios kept outside valid baseline data
@@ -376,29 +672,127 @@ const exceptionRecords = [
 // 9. Export
 saveJSON("generated", "customers.json", customers);
 saveJSON("generated", "accounts.json", accounts);
+saveJSON("generated", "account_status_events.json", accountStatusEvents);
 saveJSON("generated", "merchants.json", merchants);
 saveJSON("generated", "devices.json", devices);
 saveJSON("generated", "transactions.json", transactions);
 saveJSON("generated", "transfers.json", transfers);
 saveJSON("generated", "alerts.json", alerts);
+saveJSON("generated", "cases.json", cases);
+saveJSON("generated", "case_alerts.json", caseAlerts);
+saveJSON("generated", "analyst_actions.json", analystActions);
+saveJSON("generated", "audit_events.json", auditEvents);
 saveJSON("generated", "exceptions.json", exceptionRecords);
 
 saveJSON("ground_truth", "ground_truth.json", groundTruth);
 
-// 10. Manifest
+// 10. Export CSV and SQL alongside the canonical JSON records.
+const alertRules = alerts.flatMap((alert) =>
+  alert.triggeredRules.map((rule) => ({
+    alertId: alert.alertId,
+    ruleId: rule.ruleId,
+    points: rule.points,
+    reason: rule.reason,
+  })),
+);
+saveJSON("generated", "risk_rules.json", riskRules);
+saveJSON("generated", "alert_rules.json", alertRules);
+
+const exportTables = {
+  customers: ["customers", customers],
+  accounts: ["accounts", accounts],
+  account_status_events: ["account_status_events", accountStatusEvents],
+  merchants: ["merchants", merchants],
+  devices: ["devices", devices],
+  transactions: ["transactions", transactions],
+  transfers: ["transfers", transfers],
+  risk_rules: ["risk_rules", riskRules],
+  alerts: ["alerts", alerts],
+  alert_rules: ["alert_rules", alertRules],
+  cases: ["risk_cases", cases],
+  case_alerts: ["case_alerts", caseAlerts],
+  analyst_actions: ["analyst_actions", analystActions],
+  audit_events: ["audit_events", auditEvents],
+};
+const sourceManifest = {
+  project: "RiskLens",
+  seed: SEED,
+  scale,
+  generator: "backend/scripts/generateData.js",
+  sourceType: "Synthetic only; generated internally",
+  externalSources: [],
+  groundTruthPath: "../ground_truth/ground_truth.json",
+};
+saveJSON("generated", "source_manifest.json", sourceManifest);
+
+function csvValue(value) {
+  const text =
+    value === null || value === undefined
+      ? ""
+      : typeof value === "object"
+        ? JSON.stringify(value)
+        : String(value);
+  return `"${text.replaceAll('"', '""')}"`;
+}
+
+function sqlValue(value) {
+  if (value === null || value === undefined) return "NULL";
+  if (typeof value === "number") return String(value);
+  if (typeof value === "boolean") return value ? "1" : "0";
+  const text = typeof value === "object" ? JSON.stringify(value) : String(value);
+  return `'${text.replaceAll("\\", "\\\\").replaceAll("'", "''")}'`;
+}
+
+let sql = "SET FOREIGN_KEY_CHECKS = 0;\n";
+for (const [name, [table, records]] of Object.entries(exportTables)) {
+  const fields = [...new Set(records.flatMap((record) => Object.keys(record)))];
+  if (records.length) {
+    const csv = [
+      fields.map(csvValue).join(","),
+      ...records.map((record) =>
+        fields.map((field) => csvValue(record[field])).join(","),
+      ),
+    ].join("\n");
+    fs.writeFileSync(path.join(DATA_DIR, "generated", `${name}.csv`), `${csv}\n`);
+
+    const columns = fields.map((field) => `\`${field}\``).join(", ");
+    for (let offset = 0; offset < records.length; offset += 500) {
+      const values = records
+        .slice(offset, offset + 500)
+        .map(
+          (record) =>
+            `(${fields.map((field) => sqlValue(record[field])).join(", ")})`,
+        )
+        .join(",\n");
+      sql += `INSERT INTO \`${table}\` (${columns}) VALUES\n${values};\n`;
+    }
+  }
+}
+sql += "SET FOREIGN_KEY_CHECKS = 1;\n";
+fs.writeFileSync(path.join(DATA_DIR, "generated", "seed.sql"), sql);
+
+// 11. Manifest
 const manifest = {
   project: "RiskLens",
   seed: SEED,
   scale,
   source: "Internally generated synthetic data",
+  sourceManifestFile: "source_manifest.json",
   counts: {
     customers: customers.length,
     accounts: accounts.length,
+    accountStatusEvents: accountStatusEvents.length,
     merchants: merchants.length,
     devices: devices.length,
     transactions: transactions.length,
     transfers: transfers.length,
+    riskRules: riskRules.length,
     alerts: alerts.length,
+    alertRules: alertRules.length,
+    cases: cases.length,
+    caseAlerts: caseAlerts.length,
+    analystActions: analystActions.length,
+    auditEvents: auditEvents.length,
     exceptions: exceptionRecords.length,
     falsePositives: groundTruth.labels.filter(
       (x) => x.expectedLabel === "FALSE_POSITIVE",

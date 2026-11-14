@@ -1,15 +1,16 @@
 
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard";
-import Customers from "./pages/Customers";
-import "./styles/global.css";
-import Accounts from "./pages/Accounts";
-import Transactions from "./pages/Transactions";
-import Alerts from "./pages/Alerts";
-import Cases from "./pages/Cases";
-import AuditLog from "./pages/AuditLog";
-import RiskRules from "./pages/RiskRules";
+
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const Customers = lazy(() => import("./pages/Customers"));
+const Accounts = lazy(() => import("./pages/Accounts"));
+const Transactions = lazy(() => import("./pages/Transactions"));
+const Alerts = lazy(() => import("./pages/Alerts"));
+const Cases = lazy(() => import("./pages/Cases"));
+const AuditLog = lazy(() => import("./pages/AuditLog"));
+const RiskRules = lazy(() => import("./pages/RiskRules"));
 
 function AppLayout() {
   return (
@@ -27,17 +28,19 @@ function AppLayout() {
         </header>
 
         <div className="page-content">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/customers" element={<Customers />} />
-            <Route path="*" element={<Dashboard />} />
-            <Route path="/accounts" element={<Accounts />} />
-            <Route path="/transactions" element={<Transactions />} />
-            <Route path="/alerts" element={<Alerts />} />
-            <Route path="/cases" element={<Cases />} />
-            <Route path="/audit" element={<AuditLog />} />
-            <Route path="/rules" element={<RiskRules />} />
-          </Routes>
+          <Suspense fallback={<div role="status">Loading page...</div>}>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/customers" element={<Customers />} />
+              <Route path="*" element={<Dashboard />} />
+              <Route path="/accounts" element={<Accounts />} />
+              <Route path="/transactions" element={<Transactions />} />
+              <Route path="/alerts" element={<Alerts />} />
+              <Route path="/cases" element={<Cases />} />
+              <Route path="/audit" element={<AuditLog />} />
+              <Route path="/rules" element={<RiskRules />} />
+            </Routes>
+          </Suspense>
         </div>
       </main>
     </div>

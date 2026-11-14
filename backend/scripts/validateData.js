@@ -1,11 +1,14 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { getRiskRules } from "../src/services/riskEngine.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DATA_DIR = path.join(__dirname, "..", "data");
+const DATA_DIR = path.resolve(
+  process.env.RISKLENS_DATA_DIR || path.join(__dirname, "..", "data"),
+);
 const GENERATED_DIR = path.join(DATA_DIR, "generated");
 const GROUND_TRUTH_DIR = path.join(DATA_DIR, "ground_truth");
 
@@ -56,14 +59,28 @@ function checkReferences(records, field, validIds, label) {
 // Load generated datasets
 const customers = loadJSON(path.join(GENERATED_DIR, "customers.json"));
 const accounts = loadJSON(path.join(GENERATED_DIR, "accounts.json"));
+const accountStatusEvents = loadJSON(
+  path.join(GENERATED_DIR, "account_status_events.json"),
+);
 const merchants = loadJSON(path.join(GENERATED_DIR, "merchants.json"));
 const devices = loadJSON(path.join(GENERATED_DIR, "devices.json"));
 const transactions = loadJSON(path.join(GENERATED_DIR, "transactions.json"));
 const transfers = loadJSON(path.join(GENERATED_DIR, "transfers.json"));
+const riskRules = loadJSON(path.join(GENERATED_DIR, "risk_rules.json"));
 const alerts = loadJSON(path.join(GENERATED_DIR, "alerts.json"));
+const alertRules = loadJSON(path.join(GENERATED_DIR, "alert_rules.json"));
 const exceptions = loadJSON(path.join(GENERATED_DIR, "exceptions.json"));
+const cases = loadJSON(path.join(GENERATED_DIR, "cases.json"));
+const caseAlerts = loadJSON(path.join(GENERATED_DIR, "case_alerts.json"));
+const analystActions = loadJSON(
+  path.join(GENERATED_DIR, "analyst_actions.json"),
+);
+const auditEvents = loadJSON(path.join(GENERATED_DIR, "audit_events.json"));
 
 const manifest = loadJSON(path.join(GENERATED_DIR, "manifest.json"));
+const sourceManifest = loadJSON(
+  path.join(GENERATED_DIR, "source_manifest.json"),
+);
 const groundTruth = loadJSON(path.join(GROUND_TRUTH_DIR, "ground_truth.json"));
 
 // Build ID lookup sets
@@ -73,23 +90,44 @@ const merchantIds = new Set(merchants.map((item) => item.merchantId));
 const deviceIds = new Set(devices.map((item) => item.deviceId));
 const transactionIds = new Set(transactions.map((item) => item.transactionId));
 const alertIds = new Set(alerts.map((item) => item.alertId));
+const caseIds = new Set(cases.map((item) => item.caseId));
+const accountMap = new Map(accounts.map((item) => [item.accountId, item]));
+const alertMap = new Map(alerts.map((item) => [item.alertId, item]));
+const validRules = new Map(getRiskRules().map((rule) => [rule.ruleId, rule]));
+const riskRuleIds = new Set(riskRules.map((item) => item.ruleId));
 
 const transactionMap = new Map(
   transactions.map((item) => [item.transactionId, item]),
 );
+const accountStatusEventIds = new Set(
+  accountStatusEvents.map((item) => item.eventId),
+);
 
 // 1. Primary key uniqueness
 checkUnique(customers, "customerId", "Customers");
+checkUnique(customers, "email", "Customers");
+checkUnique(customers, "email", "Customers");
 checkUnique(accounts, "accountId", "Accounts");
+checkUnique(accountStatusEvents, "eventId", "Account status events");
 checkUnique(merchants, "merchantId", "Merchants");
 checkUnique(devices, "deviceId", "Devices");
 checkUnique(transactions, "transactionId", "Transactions");
 checkUnique(transfers, "transferId", "Transfers");
+checkUnique(riskRules, "ruleId", "Risk rules");
 checkUnique(alerts, "alertId", "Alerts");
 checkUnique(exceptions, "exceptionId", "Exceptions");
+checkUnique(cases, "caseId", "Cases");
+checkUnique(analystActions, "actionId", "Analyst actions");
+checkUnique(auditEvents, "eventId", "Audit events");
 
 // 2. Foreign key integrity
 checkReferences(accounts, "customerId", customerIds, "Accounts");
+checkReferences(
+  accountStatusEvents,
+  "accountId",
+  accountIds,
+  "Account status events",
+);
 checkReferences(transactions, "accountId", accountIds, "Transactions");
 
 const transactionsWithMerchant = transactions.filter(
@@ -110,14 +148,41 @@ checkReferences(transactionsWithDevice, "deviceId", deviceIds, "Transactions");
 
 checkReferences(alerts, "transactionId", transactionIds, "Alerts");
 checkReferences(alerts, "accountId", accountIds, "Alerts");
+checkReferences(alertRules, "alertId", alertIds, "Alert-rule links");
+checkReferences(alertRules, "ruleId", riskRuleIds, "Alert-rule links");
+checkReferences(caseAlerts, "caseId", caseIds, "Case-alert links");
+checkReferences(caseAlerts, "alertId", alertIds, "Case-alert links");
+checkReferences(analystActions, "alertId", alertIds, "Analyst actions");
+checkReferences(analystActions, "caseId", caseIds, "Analyst actions");
 
 // 3. Transaction validation and balance reconciliation
 let invalidAmounts = 0;
 let invalidBalances = 0;
 let invalidTypes = 0;
 let invalidTimestamps = 0;
+let invalidBalanceChains = 0;
+let invalidTransactionFields = 0;
+const lastBalanceByAccount = new Map(
+  accounts.map((account) => [account.accountId, account.initialBalance]),
+);
 
-for (const transaction of transactions) {
+const orderedTransactions = [...transactions].sort(
+  (left, right) => Date.parse(left.timestamp) - Date.parse(right.timestamp),
+);
+const transactionsByAccount = new Map();
+const firstUseByAccountDevice = new Set();
+const seenAccountDevices = new Set();
+
+for (const transaction of orderedTransactions) {
+  if (!transactionsByAccount.has(transaction.accountId)) {
+    transactionsByAccount.set(transaction.accountId, []);
+  }
+  transactionsByAccount.get(transaction.accountId).push(transaction);
+  const accountDevice = `${transaction.accountId}|${transaction.deviceId}`;
+  if (!seenAccountDevices.has(accountDevice)) {
+    firstUseByAccountDevice.add(transaction.transactionId);
+    seenAccountDevices.add(accountDevice);
+  }
   if (
     typeof transaction.amount !== "number" ||
     !Number.isFinite(transaction.amount) ||
@@ -151,6 +216,32 @@ for (const transaction of transactions) {
   if (Number.isNaN(Date.parse(transaction.timestamp))) {
     invalidTimestamps++;
   }
+  if (
+    !["CREDIT", "DEBIT", "TRANSFER_IN", "TRANSFER_OUT"].includes(
+      transaction.type,
+    ) ||
+    !["COMPLETED", "PENDING", "FAILED"].includes(transaction.status) ||
+    transaction.currency !== "INR"
+  ) {
+    invalidTransactionFields++;
+  }
+
+  const account = accountMap.get(transaction.accountId);
+  if (
+    account &&
+    (account.status === "CLOSED" ||
+      Date.parse(transaction.timestamp) < Date.parse(account.openedAt))
+  ) {
+    invalidBalanceChains++;
+  }
+  const previousBalance = lastBalanceByAccount.get(transaction.accountId);
+  if (
+    previousBalance !== undefined &&
+    Math.abs(previousBalance - transaction.balanceBefore) > 0.01
+  ) {
+    invalidBalanceChains++;
+  }
+  lastBalanceByAccount.set(transaction.accountId, transaction.balanceAfter);
 }
 
 check(
@@ -168,6 +259,14 @@ check(
 check(
   invalidTimestamps === 0,
   `Transactions: valid timestamps (${invalidTimestamps} invalid)`,
+);
+check(
+  invalidBalanceChains === 0,
+  `Transactions: per-account chronology and lifecycle reconcile (${invalidBalanceChains} invalid)`,
+);
+check(
+  invalidTransactionFields === 0,
+  `Transactions: valid types, statuses and currency (${invalidTransactionFields} invalid)`,
 );
 
 // 4. Account validation
@@ -192,9 +291,34 @@ check(
   invalidAccountStatuses.length === 0,
   `Accounts: valid account statuses (${invalidAccountStatuses.length} invalid)`,
 );
+const invalidCustomerEnums = customers.filter(
+  (customer) => !["VERIFIED", "PENDING"].includes(customer.kycStatus),
+);
+const invalidMerchantEnums = merchants.filter(
+  (merchant) =>
+    !["ACTIVE", "INACTIVE", "BLOCKED"].includes(merchant.status),
+);
+const invalidDevices = devices.filter(
+  (device) =>
+    typeof device.trusted !== "boolean" ||
+    !["MOBILE", "DESKTOP", "TABLET"].includes(device.deviceType),
+);
+check(
+  invalidCustomerEnums.length === 0,
+  `Customers: valid KYC statuses (${invalidCustomerEnums.length} invalid)`,
+);
+check(
+  invalidMerchantEnums.length === 0,
+  `Merchants: valid statuses (${invalidMerchantEnums.length} invalid)`,
+);
+check(
+  invalidDevices.length === 0,
+  `Devices: valid types and trust flags (${invalidDevices.length} invalid)`,
+);
 
 // 5. Transfer reconciliation
 let invalidTransfers = 0;
+const transferLegIds = new Set();
 
 for (const transfer of transfers) {
   const sourceTransaction = transactionMap.get(transfer.sourceTransactionId);
@@ -217,7 +341,13 @@ for (const transfer of transfers) {
     transfer.sourceAccountId !== transfer.destinationAccountId &&
     transfer.status === "RECONCILED";
 
-  if (!validTransfer) {
+  const duplicateLeg =
+    transferLegIds.has(transfer.sourceTransactionId) ||
+    transferLegIds.has(transfer.destinationTransactionId);
+  transferLegIds.add(transfer.sourceTransactionId);
+  transferLegIds.add(transfer.destinationTransactionId);
+
+  if (!validTransfer || duplicateLeg) {
     invalidTransfers++;
   }
 }
@@ -230,6 +360,17 @@ check(
 // 6. Alert validation
 let invalidAlertScores = 0;
 let invalidAlertRules = 0;
+let invalidAlertFacts = 0;
+let invalidAlertStatuses = 0;
+const alertRuleKeys = new Set();
+let invalidAlertRuleLinks = 0;
+for (const link of alertRules) {
+  const key = `${link.alertId}|${link.ruleId}`;
+  if (alertRuleKeys.has(key)) invalidAlertRuleLinks++;
+  alertRuleKeys.add(key);
+  const rule = validRules.get(link.ruleId);
+  if (!rule || link.points !== rule.points) invalidAlertRuleLinks++;
+}
 
 for (const alert of alerts) {
   if (
@@ -245,6 +386,41 @@ for (const alert of alerts) {
     alert.triggeredRules.length === 0
   ) {
     invalidAlertRules++;
+    continue;
+  }
+
+  const triggeredPoints = alert.triggeredRules.reduce((total, item) => {
+    const rule = validRules.get(item.ruleId);
+    const bridgeKey = `${alert.alertId}|${item.ruleId}`;
+    if (
+      !rule ||
+      item.points !== rule.points ||
+      !alertRuleKeys.has(bridgeKey)
+    ) {
+      invalidAlertFacts++;
+      return total;
+    }
+    return total + rule.points;
+  }, 0);
+  const transaction = transactionMap.get(alert.transactionId);
+  const expectedSeverity =
+    alert.riskScore >= 75
+      ? "CRITICAL"
+      : alert.riskScore >= 50
+        ? "HIGH"
+        : alert.riskScore >= 25
+          ? "MEDIUM"
+          : "LOW";
+  if (
+    !transaction ||
+    transaction.accountId !== alert.accountId ||
+    alert.riskScore !== Math.min(triggeredPoints, 100) ||
+    alert.severity !== expectedSeverity
+  ) {
+    invalidAlertFacts++;
+  }
+  if (!["OPEN", "ESCALATED", "DISMISSED", "RESOLVED"].includes(alert.status)) {
+    invalidAlertStatuses++;
   }
 }
 
@@ -257,6 +433,18 @@ check(
   invalidAlertRules === 0,
   `Alerts: at least one triggered rule (${invalidAlertRules} invalid)`,
 );
+check(
+  invalidAlertFacts === 0,
+  `Alerts: rules, scores and triggering transaction agree (${invalidAlertFacts} invalid)`,
+);
+check(
+  invalidAlertStatuses === 0,
+  `Alerts: valid lifecycle statuses (${invalidAlertStatuses} invalid)`,
+);
+check(
+  invalidAlertRuleLinks === 0,
+  `Alert-rule links: unique foreign keys and matching points (${invalidAlertRuleLinks} invalid)`,
+);
 
 // 7. Ground-truth validation
 const labels = Array.isArray(groundTruth.labels) ? groundTruth.labels : [];
@@ -266,10 +454,27 @@ const knownExceptions = Array.isArray(groundTruth.knownExceptions)
   : [];
 
 const invalidLabels = labels.filter(
-  (label) =>
-    !alertIds.has(label.alertId) ||
-    !transactionIds.has(label.transactionId) ||
-    !["SUSPICIOUS", "FALSE_POSITIVE"].includes(label.expectedLabel),
+  (label) => {
+    const alert = alertMap.get(label.alertId);
+    const hasAdditionalIndicator = alert?.triggeredRules?.some(
+      (rule) => rule.ruleId !== "R001",
+    );
+    const expectedLabel = hasAdditionalIndicator
+      ? "SUSPICIOUS"
+      : "FALSE_POSITIVE";
+    return (
+      !alert ||
+      !transactionIds.has(label.transactionId) ||
+      alert.transactionId !== label.transactionId ||
+      label.expectedLabel !== expectedLabel ||
+      label.expectedDecision !==
+        (expectedLabel === "FALSE_POSITIVE"
+          ? "DISMISS_ALERT"
+          : ["HIGH", "CRITICAL"].includes(alert.severity)
+            ? "ESCALATE_ALERT"
+            : "INVESTIGATE")
+    );
+  },
 );
 
 const expectedExceptionTypes = [
@@ -305,8 +510,131 @@ check(
   groundTruth.seed === manifest.seed && groundTruth.scale === manifest.scale,
   "Ground truth: seed and scale match the generation manifest",
 );
+check(
+  sourceManifest.seed === manifest.seed &&
+    sourceManifest.scale === manifest.scale &&
+    sourceManifest.sourceType === "Synthetic only; generated internally" &&
+    Array.isArray(sourceManifest.externalSources) &&
+    sourceManifest.externalSources.length === 0,
+  "Source manifest: synthetic provenance and generation settings match",
+);
 
-// 8. Manifest count validation
+// 8. Case, disposition and audit lifecycle validation
+const caseAlertKeys = new Set();
+let invalidCaseLinks = 0;
+for (const link of caseAlerts) {
+  const key = `${link.caseId}|${link.alertId}`;
+  if (caseAlertKeys.has(key)) invalidCaseLinks++;
+  caseAlertKeys.add(key);
+  const alert = alertMap.get(link.alertId);
+  const riskCase = cases.find((item) => item.caseId === link.caseId);
+  if (
+    !alert ||
+    !riskCase ||
+    Date.parse(riskCase.createdAt) > Date.parse(alert.createdAt)
+  ) {
+    invalidCaseLinks++;
+  }
+}
+const caseAlertCounts = new Map();
+for (const link of caseAlerts) {
+  caseAlertCounts.set(link.caseId, (caseAlertCounts.get(link.caseId) || 0) + 1);
+}
+const invalidCases = cases.filter(
+  (riskCase) =>
+    !["OPEN", "IN_REVIEW", "ESCALATED", "RESOLVED", "CLOSED"].includes(
+      riskCase.status,
+    ) ||
+    !caseAlertCounts.has(riskCase.caseId) ||
+    (riskCase.resolvedAt &&
+      Date.parse(riskCase.resolvedAt) < Date.parse(riskCase.createdAt)),
+);
+const allowedActions = [
+  "ESCALATE_ALERT",
+  "DISMISS_ALERT",
+  "RESOLVE_CASE",
+  "REOPEN_CASE",
+  "ADD_NOTE",
+];
+let invalidActions = 0;
+for (const action of analystActions) {
+  const alert = action.alertId ? alertMap.get(action.alertId) : null;
+  if (
+    !allowedActions.includes(action.actionType) ||
+    (!action.alertId && !action.caseId) ||
+    (action.alertId && !alert) ||
+    (action.caseId && !caseIds.has(action.caseId)) ||
+    (action.caseId &&
+      action.alertId &&
+      !caseAlertKeys.has(`${action.caseId}|${action.alertId}`)) ||
+    (alert && Date.parse(action.createdAt) < Date.parse(alert.createdAt)) ||
+    (action.actionType === "DISMISS_ALERT" && alert?.status !== "DISMISSED") ||
+    (action.actionType === "ESCALATE_ALERT" && alert?.status !== "ESCALATED")
+  ) {
+    invalidActions++;
+  }
+}
+const invalidAuditEvents = auditEvents.filter(
+  (event) =>
+    !["ALERT", "CASE"].includes(event.entityType) ||
+    !(event.entityType === "ALERT"
+      ? alertIds.has(event.entityId)
+      : caseIds.has(event.entityId)) ||
+    !event.eventType ||
+    Number.isNaN(Date.parse(event.createdAt)),
+);
+check(
+  invalidCaseLinks === 0,
+  `Cases: valid, unique bridge rows and ordered dates (${invalidCaseLinks} invalid)`,
+);
+check(
+  invalidCases.length === 0,
+  `Cases: valid lifecycle and alert membership (${invalidCases.length} invalid)`,
+);
+check(
+  invalidActions === 0,
+  `Analyst actions: valid targets, transitions and dates (${invalidActions} invalid)`,
+);
+check(
+  invalidAuditEvents.length === 0,
+  `Audit events: valid entity references and timestamps (${invalidAuditEvents.length} invalid)`,
+);
+const expectedAlertRuleLinks = alerts.reduce(
+  (count, alert) => count + (alert.triggeredRules?.length || 0),
+  0,
+);
+check(
+  alertRules.length === expectedAlertRuleLinks,
+  `Alert-rule links: all and only triggered rules are materialized (${alertRules.length} rows)`,
+);
+
+const expectedExceptionChecks = exceptions.filter((item) => {
+  if (item.issue_type === "TRANSACTION_ON_CLOSED_ACCOUNT") {
+    return accountMap.get(item.accountId)?.status === "CLOSED";
+  }
+  if (item.issue_type === "NEGATIVE_BALANCE_WITHOUT_OVERDRAFT") {
+    return (
+      item.balanceBefore - item.transactionAmount === item.balanceAfter &&
+      item.balanceAfter < 0
+    );
+  }
+  if (item.issue_type === "TRANSFER_LEG_MISMATCH") {
+    return item.sourceAmount !== item.destinationAmount;
+  }
+  if (item.issue_type === "ALERT_WITHOUT_TRANSACTION") {
+    return !transactionIds.has(item.transactionId);
+  }
+  if (item.issue_type === "CASE_DISPOSITION_PRECEDES_ALERT") {
+    return Date.parse(item.dispositionAt) < Date.parse(item.alertCreatedAt);
+  }
+  return false;
+});
+check(
+  expectedExceptionChecks.length === expectedExceptionTypes.length,
+  `Exceptions: all five labelled negative scenarios are reproducible (${expectedExceptionChecks.length} valid)`,
+);
+
+// 9. Manifest count validation and ground-truth evaluation metrics
 const actualCounts = {
   customers: customers.length,
   accounts: accounts.length,
@@ -314,7 +642,13 @@ const actualCounts = {
   devices: devices.length,
   transactions: transactions.length,
   transfers: transfers.length,
+  riskRules: riskRules.length,
   alerts: alerts.length,
+  alertRules: alertRules.length,
+  cases: cases.length,
+  caseAlerts: caseAlerts.length,
+  analystActions: analystActions.length,
+  auditEvents: auditEvents.length,
   exceptions: exceptions.length,
 };
 
@@ -331,13 +665,50 @@ check(
   `Manifest: generated record counts match (${manifestCountErrors} mismatches)`,
 );
 
-// 9. Print validation report
+const labelPredictions = labels.map((label) => {
+  const alert = alertMap.get(label.alertId);
+  return alert
+    ? {
+    expected: label.expectedLabel === "SUSPICIOUS",
+    predicted: alert.triggeredRules.some((rule) => rule.ruleId !== "R001"),
+      }
+    : { expected: label.expectedLabel === "SUSPICIOUS", predicted: false };
+});
+const truePositive = labelPredictions.filter(
+  (item) => item.expected && item.predicted,
+).length;
+const falsePositive = labelPredictions.filter(
+  (item) => !item.expected && item.predicted,
+).length;
+const trueNegative = labelPredictions.filter(
+  (item) => !item.expected && !item.predicted,
+).length;
+const falseNegative = labelPredictions.filter(
+  (item) => item.expected && !item.predicted,
+).length;
+const percentage = (numerator, denominator) =>
+  denominator ? Number(((numerator / denominator) * 100).toFixed(2)) : 0;
+
+// 10. Print validation report
 const report = {
   project: "RiskLens",
   seed: manifest.seed,
   scale: manifest.scale,
   validatedAt: new Date().toISOString(),
   counts: actualCounts,
+  evaluation: {
+    labeledAlerts: labels.length,
+    truePositive,
+    falsePositive,
+    trueNegative,
+    falseNegative,
+    precisionPercent: percentage(truePositive, truePositive + falsePositive),
+    recallPercent: percentage(truePositive, truePositive + falseNegative),
+    falsePositiveRatePercent: percentage(
+      falsePositive,
+      falsePositive + trueNegative,
+    ),
+  },
   checksPassed: checks.length,
   errorsFound: errors.length,
   status: errors.length === 0 ? "PASSED" : "FAILED",

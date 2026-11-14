@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import prisma from "../config/prisma.js";
 
 const ALLOWED_ACTIONS = [
@@ -21,6 +22,18 @@ export async function createAnalystAction({
 
   if (!ALLOWED_ACTIONS.includes(actionType)) {
     throw new Error("Invalid analyst action type");
+  }
+
+  if (typeof targetId !== "string" || !targetId.trim()) {
+    throw new Error("Target ID is required");
+  }
+
+  if (typeof analystId !== "string" || !analystId.trim()) {
+    throw new Error("Analyst ID is required");
+  }
+
+  if (typeof notes !== "string") {
+    throw new Error("Notes must be a string");
   }
 
   if (
@@ -52,6 +65,9 @@ export async function createAnalystAction({
       alertId = targetId;
 
       if (actionType === "ESCALATE_ALERT") {
+        if (alert.status !== "OPEN") {
+          throw new Error(`Invalid transition: cannot escalate an alert in ${alert.status} status`);
+        }
         await tx.alert.update({
           where: { alertId },
           data: { status: "ESCALATED" },
@@ -59,6 +75,9 @@ export async function createAnalystAction({
       }
 
       if (actionType === "DISMISS_ALERT") {
+        if (!["OPEN", "ESCALATED"].includes(alert.status)) {
+          throw new Error(`Invalid transition: cannot dismiss an alert in ${alert.status} status`);
+        }
         await tx.alert.update({
           where: { alertId },
           data: { status: "DISMISSED" },
@@ -73,6 +92,9 @@ export async function createAnalystAction({
       caseId = targetId;
 
       if (actionType === "RESOLVE_CASE") {
+        if (!["OPEN", "IN_REVIEW", "ESCALATED"].includes(riskCase.status)) {
+          throw new Error(`Invalid transition: cannot resolve a case in ${riskCase.status} status`);
+        }
         await tx.riskCase.update({
           where: { caseId },
           data: { status: "RESOLVED", resolvedAt: new Date() },
@@ -80,6 +102,9 @@ export async function createAnalystAction({
       }
 
       if (actionType === "REOPEN_CASE") {
+        if (!["RESOLVED", "CLOSED"].includes(riskCase.status)) {
+          throw new Error(`Invalid transition: cannot reopen a case in ${riskCase.status} status`);
+        }
         await tx.riskCase.update({
           where: { caseId },
           data: { status: "OPEN", resolvedAt: null },
@@ -87,8 +112,9 @@ export async function createAnalystAction({
       }
     }
 
-    const actionId = `ACT-${Date.now()}-${Math.floor(Math.random() * 100000)}`;
-    const eventId = `AUD-${Date.now()}-${Math.floor(Math.random() * 100000)}`;
+    const uniqueId = randomUUID().replaceAll("-", "").slice(0, 24);
+    const actionId = `ACT-${uniqueId}`;
+    const eventId = `AUD-${uniqueId}`;
 
     const action = await tx.analystAction.create({
       data: {

@@ -5,9 +5,11 @@ import {
     ArrowLeftRight,
     ShieldAlert,
     BriefcaseBusiness,
-    Settings,
+    ScrollText,
     ShieldCheck,
+    SlidersHorizontal,
 } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const navigation = [
     { label: "Overview", path: "/", icon: LayoutDashboard },
@@ -16,6 +18,8 @@ const navigation = [
     { label: "Transactions", path: "/transactions", icon: ArrowLeftRight },
     { label: "Alerts", path: "/alerts", icon: ShieldAlert },
     { label: "Cases", path: "/cases", icon: BriefcaseBusiness },
+    { label: "Risk Rules", path: "/rules", icon: SlidersHorizontal },
+    { label: "Audit Log", path: "/audit", icon: ScrollText },
 ];
 
 export default function Sidebar() {
@@ -32,25 +36,23 @@ export default function Sidebar() {
             <div className="nav-label">WORKSPACE</div>
 
             <nav>
-                {navigation.map(({ label, path, icon: Icon }, index) => (
-                    <a
+                {navigation.map(({ label, path, icon: Icon }) => (
+                    <NavLink
                         key={path}
-                        href={path}
-                        className={`nav-item ${index === 0 ? "active" : ""}`}
+                        to={path}
+                        end={path === "/"}
+                        className={({ isActive }) =>
+                            `nav-item${isActive ? " active" : ""}`
+                        }
                     >
                         <Icon size={18} />
                         <span>{label}</span>
-                    </a>
+                    </NavLink>
                 ))}
             </nav>
 
             <div className="sidebar-bottom">
-                <div className="nav-label">SYSTEM</div>
-                <a href="/settings" className="nav-item">
-                    <Settings size={18} />
-                    <span>Settings</span>
-                </a>
-
+                <div className="nav-label">ANALYST</div>
                 <div className="analyst-profile">
                     <div className="avatar">A</div>
                     <div>

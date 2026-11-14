@@ -21,7 +21,12 @@ import {
 } from "recharts";
 import { getDashboard } from "../services/api";
 
-const COLORS = ["#22c55e", "#eab308", "#f97316", "#ef4444"];
+const COLORS = [
+    "var(--color-brand)",
+    "var(--color-warning)",
+    "var(--color-info)",
+    "var(--color-danger)",
+];
 
 function MetricCard({ title, value, subtitle, icon: Icon }) {
     return (
@@ -190,11 +195,27 @@ export default function Dashboard() {
                         {transactionData.length > 0 ? (
                             <ResponsiveContainer width="100%" height="100%">
                                 <BarChart data={transactionData}>
-                                    <CartesianGrid strokeDasharray="3 3" stroke="#263244" />
-                                    <XAxis dataKey="type" stroke="#8b98aa" />
-                                    <YAxis stroke="#8b98aa" />
-                                    <Tooltip />
-                                    <Bar dataKey="count" fill="#38bdf8" radius={[5, 5, 0, 0]} />
+                                    <CartesianGrid
+                                        strokeDasharray="3 3"
+                                        stroke="var(--color-border)"
+                                    />
+                                    <XAxis
+                                        dataKey="type"
+                                        stroke="var(--color-text-secondary)"
+                                    />
+                                    <YAxis stroke="var(--color-text-secondary)" />
+                                    <Tooltip
+                                        contentStyle={{
+                                            backgroundColor: "var(--color-surface)",
+                                            borderColor: "var(--color-border)",
+                                            color: "var(--color-text-primary)",
+                                        }}
+                                    />
+                                    <Bar
+                                        dataKey="count"
+                                        fill="var(--color-brand)"
+                                        radius={[5, 5, 0, 0]}
+                                    />
                                 </BarChart>
                             </ResponsiveContainer>
                         ) : (
