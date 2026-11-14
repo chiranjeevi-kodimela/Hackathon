@@ -1,6 +1,6 @@
-import { getDataset } from "./dataService.js";
+import prisma from "../config/prisma.js";
 
-export function getTransactions({
+export async function getTransactions({
   page = 1,
   limit = 10,
   search = "",
@@ -12,78 +12,51 @@ export function getTransactions({
   startDate = "",
   endDate = "",
 }) {
-  let transactions = getDataset("transactions");
+  const where = {};
 
   if (search) {
-    const term = search.toLowerCase();
-
-    transactions = transactions.filter((transaction) =>
-      transaction.transactionId.toLowerCase().includes(term),
-    );
+    where.transactionId = { contains: search };
   }
 
-  if (accountId) {
-    transactions = transactions.filter(
-      (transaction) => transaction.accountId === accountId,
-    );
+  if (accountId) where.accountId = accountId;
+  if (type) where.type = type;
+  if (status) where.status = status;
+
+  if (minAmount !== undefined || maxAmount !== undefined) {
+    where.amount = {};
+    if (minAmount !== undefined) where.amount.gte = minAmount;
+    if (maxAmount !== undefined) where.amount.lte = maxAmount;
   }
 
-  if (type) {
-    transactions = transactions.filter(
-      (transaction) => transaction.type === type,
-    );
+  if (startDate || endDate) {
+    where.timestamp = {};
+    if (startDate) where.timestamp.gte = new Date(startDate);
+    if (endDate) where.timestamp.lte = new Date(endDate);
   }
 
-  if (status) {
-    transactions = transactions.filter(
-      (transaction) => transaction.status === status,
-    );
-  }
-
-  if (minAmount !== undefined) {
-    transactions = transactions.filter(
-      (transaction) => transaction.amount >= minAmount,
-    );
-  }
-
-  if (maxAmount !== undefined) {
-    transactions = transactions.filter(
-      (transaction) => transaction.amount <= maxAmount,
-    );
-  }
-
-  if (startDate) {
-    transactions = transactions.filter(
-      (transaction) => transaction.timestamp >= startDate,
-    );
-  }
-
-  if (endDate) {
-    transactions = transactions.filter(
-      (transaction) => transaction.timestamp <= endDate,
-    );
-  }
-
-  // Newest transactions first
-  transactions.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-
-  const total = transactions.length;
-  const totalPages = Math.ceil(total / limit);
-  const startIndex = (page - 1) * limit;
+  const [transactions, total] = await Promise.all([
+    prisma.transaction.findMany({
+      where,
+      skip: (page - 1) * limit,
+      take: limit,
+      orderBy: { timestamp: "desc" },
+    }),
+    prisma.transaction.count({ where }),
+  ]);
 
   return {
-    transactions: transactions.slice(startIndex, startIndex + limit),
+    transactions,
     pagination: {
       page,
       limit,
       total,
-      totalPages,
+      totalPages: Math.ceil(total / limit),
     },
   };
 }
 
-export function getTransactionById(transactionId) {
-  return getDataset("transactions").find(
-    (transaction) => transaction.transactionId === transactionId,
-  );
+export async function getTransactionById(transactionId) {
+  return prisma.transaction.findUnique({
+    where: { transactionId },
+  });
 }

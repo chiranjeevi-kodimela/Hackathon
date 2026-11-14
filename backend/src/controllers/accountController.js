@@ -1,6 +1,6 @@
 import { getAccounts, getAccountById } from "../services/accountService.js";
 
-export function listAccounts(req, res, next) {
+export async function listAccounts(req, res, next) {
   try {
     const page = Number.parseInt(req.query.page ?? "1", 10);
     const limit = Number.parseInt(req.query.limit ?? "10", 10);
@@ -24,7 +24,14 @@ export function listAccounts(req, res, next) {
       });
     }
 
-    const result = getAccounts({
+    if (status && !["ACTIVE", "DORMANT", "CLOSED"].includes(status)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid account status",
+      });
+    }
+
+    const result = await getAccounts({
       page,
       limit,
       search,
@@ -42,9 +49,9 @@ export function listAccounts(req, res, next) {
   }
 }
 
-export function showAccount(req, res, next) {
+export async function showAccount(req, res, next) {
   try {
-    const account = getAccountById(req.params.accountId);
+    const account = await getAccountById(req.params.accountId);
 
     if (!account) {
       return res.status(404).json({

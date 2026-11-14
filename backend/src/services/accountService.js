@@ -1,50 +1,48 @@
-import { getDataset } from "./dataService.js";
+import prisma from "../config/prisma.js";
 
-export function getAccounts({
+export async function getAccounts({
   page = 1,
   limit = 10,
   search = "",
   status = "",
   customerId = "",
 }) {
-  let accounts = getDataset("accounts");
+  const where = {};
 
   if (search) {
-    const term = search.toLowerCase();
-
-    accounts = accounts.filter((account) =>
-      [account.accountId, account.customerId, account.accountType]
-        .join(" ")
-        .toLowerCase()
-        .includes(term),
-    );
+    where.OR = [
+      { accountId: { contains: search } },
+      { customerId: { contains: search } },
+      { accountType: { equals: search.toUpperCase() } },
+    ];
   }
 
-  if (status) {
-    accounts = accounts.filter((account) => account.status === status);
-  }
+  if (status) where.status = status;
+  if (customerId) where.customerId = customerId;
 
-  if (customerId) {
-    accounts = accounts.filter((account) => account.customerId === customerId);
-  }
-
-  const total = accounts.length;
-  const totalPages = Math.ceil(total / limit);
-  const startIndex = (page - 1) * limit;
+  const [accounts, total] = await Promise.all([
+    prisma.account.findMany({
+      where,
+      skip: (page - 1) * limit,
+      take: limit,
+      orderBy: { accountId: "asc" },
+    }),
+    prisma.account.count({ where }),
+  ]);
 
   return {
-    accounts: accounts.slice(startIndex, startIndex + limit),
+    accounts,
     pagination: {
       page,
       limit,
       total,
-      totalPages,
+      totalPages: Math.ceil(total / limit),
     },
   };
 }
 
-export function getAccountById(accountId) {
-  return getDataset("accounts").find(
-    (account) => account.accountId === accountId,
-  );
+export async function getAccountById(accountId) {
+  return prisma.account.findUnique({
+    where: { accountId },
+  });
 }

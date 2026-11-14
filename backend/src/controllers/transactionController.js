@@ -3,7 +3,7 @@ import {
   getTransactionById,
 } from "../services/transactionService.js";
 
-export function listTransactions(req, res, next) {
+export async function listTransactions(req, res, next) {
   try {
     const page = Number.parseInt(req.query.page ?? "1", 10);
     const limit = Number.parseInt(req.query.limit ?? "10", 10);
@@ -67,6 +67,23 @@ export function listTransactions(req, res, next) {
       });
     }
 
+    const validTypes = ["CREDIT", "DEBIT", "TRANSFER_IN", "TRANSFER_OUT"];
+    const validStatuses = ["COMPLETED", "PENDING", "FAILED"];
+
+    if (type && !validTypes.includes(type)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid transaction type",
+      });
+    }
+
+    if (status && !validStatuses.includes(status)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid transaction status",
+      });
+    }
+
     if (
       (startDate && Number.isNaN(Date.parse(startDate))) ||
       (endDate && Number.isNaN(Date.parse(endDate)))
@@ -77,14 +94,14 @@ export function listTransactions(req, res, next) {
       });
     }
 
-    if (startDate && endDate && startDate > endDate) {
+    if (startDate && endDate && new Date(startDate) > new Date(endDate)) {
       return res.status(400).json({
         success: false,
         message: "startDate cannot be after endDate",
       });
     }
 
-    const result = getTransactions({
+    const result = await getTransactions({
       page,
       limit,
       search,
@@ -107,9 +124,9 @@ export function listTransactions(req, res, next) {
   }
 }
 
-export function showTransaction(req, res, next) {
+export async function showTransaction(req, res, next) {
   try {
-    const transaction = getTransactionById(req.params.transactionId);
+    const transaction = await getTransactionById(req.params.transactionId);
 
     if (!transaction) {
       return res.status(404).json({
